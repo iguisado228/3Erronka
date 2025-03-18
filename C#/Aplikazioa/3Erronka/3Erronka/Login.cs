@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    public partial class Form1 : Form
+    public partial class Login : UserControl
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
