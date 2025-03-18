@@ -241,3 +241,81 @@ main {
 .jarduerakIndibidual p {
     color: #7f8c8d;
 }
+ /* ordutegia */
+.ordutegiaKontainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ordutegiaKontainer h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.ordutegia-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.ordutegia-table th,
+.ordutegia-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.ordutegia-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+}
+
+.ordutegia-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Activity Colors */
+.yoga {
+    background-color: #FFE0E0;
+}
+
+.pilates {
+    background-color: #E0FFE0;
+}
+
+.spinning {
+    background-color: #E0E0FF;
+}
+
+.zumba {
+    background-color: #FFE0FF;
+}
+
+.boxeo {
+    background-color: #FFECE0;
+}
+
+.crossfit {
+    background-color: #E0FFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ordutegia-table {
+        font-size: 0.9rem;
+    }
+
+    .ordutegia-table th,
+    .ordutegia-table td {
+        padding: 0.5rem;
+    }
+}
