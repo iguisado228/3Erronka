@@ -1,0 +1,11 @@
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.csproj.AssemblyReference.cache
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.Login.resources
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.Menu.resources
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.Properties.Resources.resources
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.csproj.GenerateResource.cache
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\bin\Debug\3Erronka.exe.config
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\bin\Debug\3Erronka.exe
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\bin\Debug\3Erronka.pdb
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.exe
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.pdb

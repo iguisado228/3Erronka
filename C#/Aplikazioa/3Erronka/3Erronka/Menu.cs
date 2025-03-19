@@ -86,5 +86,20 @@ namespace _3Erronka
         {
 
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            LBLerreserba.Location = new Point(610, 30);
+            BTNErreserba.Location = new Point(1310, 735);
+            LBLerreserbaEguna.Location = new Point(20, 200);
+            LBLH_ordua.Location = new Point(20,275);
+            LBLA_ordua.Location = new Point(20, 350);
+            LBLEremua.Location = new Point(820, 200);
+
+            DTPEguna.Location = new Point(350, 210);
+            TXTH_ordua.Location = new Point(350, 285);
+            TXTA_ordua.Location = new Point(520, 360);
+            LSBEremuak.Location = new Point(830, 250);
+        }
     }
 }
