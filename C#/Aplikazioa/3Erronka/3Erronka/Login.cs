@@ -17,7 +17,16 @@ namespace _3Erronka
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+        private void button1_Click(object sender, EventArgs e)
+=======
         private void label1_Click(object sender, EventArgs e)
+>>>>>>> 3cad2f427bef77fa22d0ac96a5c9c56646bb73f5
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
