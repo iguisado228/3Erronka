@@ -1,13 +1,13 @@
 ﻿namespace _3Erronka
 {
-    partial class Form1
+    partial class Login
     {
-        /// <summary>
+        /// <summary> 
         /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Limpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
@@ -20,14 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Código generado por el Diseñador de componentes
 
-        /// <summary>
+        /// <summary> 
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD:C#/Aplikazioa/3Erronka/3Erronka/Form1.Designer.cs
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -49,6 +50,16 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+=======
+            this.SuspendLayout();
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "Login";
+            this.Size = new System.Drawing.Size(873, 425);
+>>>>>>> 2e6f857c18f42765874909db63bbb8e8e38a571a:C#/Aplikazioa/3Erronka/3Erronka/Login.Designer.cs
             this.ResumeLayout(false);
 
         }
@@ -58,4 +69,3 @@
         private System.Windows.Forms.Button button1;
     }
 }
-
