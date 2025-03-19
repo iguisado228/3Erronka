@@ -34,5 +34,10 @@ namespace _3Erronka
             men.Show();
             this.Hide();
         }
+
+        public void saioaHasi()
+        {
+
+        }
     }
 }
