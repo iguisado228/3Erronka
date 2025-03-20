@@ -98,6 +98,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bazkidea.cs" />
+    <Compile Include="ErreserbaIkusi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErreserbaIkusi.Designer.cs">
+      <DependentUpon>ErreserbaIkusi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kluba.cs" />
     <Compile Include="Konexioa.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -105,11 +113,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Erreserba.cs">
+    <Compile Include="ErreserbaEgin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Erreserba.Designer.cs">
-      <DependentUpon>Erreserba.cs</DependentUpon>
+    <Compile Include="ErreserbaEgin.Designer.cs">
+      <DependentUpon>ErreserbaEgin.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -119,11 +127,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ErreserbaIkusi.resx">
+      <DependentUpon>ErreserbaIkusi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Erreserba.resx">
-      <DependentUpon>Erreserba.cs</DependentUpon>
+    <EmbeddedResource Include="ErreserbaEgin.resx">
+      <DependentUpon>ErreserbaEgin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -154,6 +165,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BuruntzaldeaLogoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armarria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armarria1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-allurralde_EU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armarria2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\andoainMapa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\andoainMapa1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kiroldegia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

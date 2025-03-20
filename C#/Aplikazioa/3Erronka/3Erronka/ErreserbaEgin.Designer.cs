@@ -1,6 +1,6 @@
 ﻿namespace _3Erronka
 {
-    partial class Erreserba
+    partial class ErreserbaEgin
     {
         /// <summary>
         /// Required designer variable.
@@ -145,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1008, 709);
             this.Controls.Add(this.LBLEremua);
             this.Controls.Add(this.LSBEremuak);

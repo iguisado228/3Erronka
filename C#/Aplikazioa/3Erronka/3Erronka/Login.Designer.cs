@@ -34,7 +34,6 @@
             this.TXTIdentifikadorea = new System.Windows.Forms.TextBox();
             this.TXTPasahitza = new System.Windows.Forms.TextBox();
             this.BTNSaioaHasi = new System.Windows.Forms.Button();
-            this.LBLAgurra = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +85,7 @@
             // BTNSaioaHasi
             // 
             this.BTNSaioaHasi.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSaioaHasi.Location = new System.Drawing.Point(840, 700);
+            this.BTNSaioaHasi.Location = new System.Drawing.Point(1628, 700);
             this.BTNSaioaHasi.Name = "BTNSaioaHasi";
             this.BTNSaioaHasi.Size = new System.Drawing.Size(284, 50);
             this.BTNSaioaHasi.TabIndex = 5;
@@ -94,30 +93,20 @@
             this.BTNSaioaHasi.UseVisualStyleBackColor = true;
             this.BTNSaioaHasi.Click += new System.EventHandler(this.BTNSaioaHasi_Click);
             // 
-            // LBLAgurra
-            // 
-            this.LBLAgurra.AutoSize = true;
-            this.LBLAgurra.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLAgurra.Location = new System.Drawing.Point(885, 105);
-            this.LBLAgurra.Name = "LBLAgurra";
-            this.LBLAgurra.Size = new System.Drawing.Size(1162, 108);
-            this.LBLAgurra.TabIndex = 6;
-            this.LBLAgurra.Text = "Ongi etorri gure kiroldegiaren programara!\r\nSaioa hasi ezazu gure zerbitzuak erab" +
-    "iltzeko.";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1136, 762);
-            this.Controls.Add(this.LBLAgurra);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1924, 762);
             this.Controls.Add(this.BTNSaioaHasi);
             this.Controls.Add(this.TXTPasahitza);
             this.Controls.Add(this.TXTIdentifikadorea);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LBLPasahitza);
             this.Controls.Add(this.LBLIdentifikadorea);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ongi etorri gure programara!";
@@ -137,6 +126,5 @@
         private System.Windows.Forms.TextBox TXTIdentifikadorea;
         private System.Windows.Forms.TextBox TXTPasahitza;
         private System.Windows.Forms.Button BTNSaioaHasi;
-        private System.Windows.Forms.Label LBLAgurra;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    public partial class Erreserba : Form
+    public partial class ErreserbaEgin : Form
     {
-        public Erreserba()
+        public ErreserbaEgin()
         {
             InitializeComponent();
         }

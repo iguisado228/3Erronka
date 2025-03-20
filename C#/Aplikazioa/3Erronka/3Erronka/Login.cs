@@ -25,19 +25,14 @@ namespace _3Erronka
             LBLPasahitza.Location = new Point(420, 350);
             TXTPasahitza.Location = new Point(755, 350);
             BTNSaioaHasi.Location = new Point(1310, 735);
-            LBLAgurra.Location = new Point(560, 40);
         }
 
         private void BTNSaioaHasi_Click(object sender, EventArgs e)
         {
-            Erreserba men = new Erreserba();
-            men.Show();
-            this.Hide();
-        }
-
-        public void saioaHasi()
-        {
-
+            Bazkidea b = new Bazkidea();
+            b.Identifikadorea = TXTIdentifikadorea.Text;
+            b.Pasahitza = TXTPasahitza.Text;
+            b.bazkideLogina();
         }
     }
 }
