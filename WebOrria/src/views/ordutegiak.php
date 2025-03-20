@@ -9,8 +9,8 @@
         <main>
             <div class="ordutegiaKontainer">
                 <h1>Asteko Ordutegiak</h1>
-                <div class="table-responsive">
-                    <table class="ordutegia-table">
+                <div class="taula">
+                    <table class="ordutegiTaula">
                         
                             <tr>
                                 <th>Ordua</th>

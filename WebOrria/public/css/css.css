@@ -254,11 +254,11 @@ main {
     margin-bottom: 2rem;
 }
 
-.table-responsive {
+.taula {
     overflow-x: auto;
 }
 
-.ordutegia-table {
+.ordutegiTaula {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
@@ -266,24 +266,24 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.ordutegia-table th,
-.ordutegia-table td {
+.ordutegiTaula th,
+.ordutegiTaula td {
     padding: 1rem;
     text-align: center;
     border: 1px solid #e0e0e0;
 }
 
-.ordutegia-table th {
+.ordutegiTaula th {
     background-color: #2c3e50;
     color: white;
     font-weight: bold;
 }
 
-.ordutegia-table tr:nth-child(even) {
+.ordutegiTaula tr:nth-child(even) {
     background-color: #f8f9fa;
 }
 
-/* Activity Colors */
+/* Jardueren koloreak */
 .yoga {
     background-color: #FFE0E0;
 }
@@ -308,14 +308,106 @@ main {
     background-color: #E0FFFF;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .ordutegia-table {
+    .ordutegiTaula {
         font-size: 0.9rem;
     }
 
-    .ordutegia-table th,
-    .ordutegia-table td {
+    .ordutegiTaula th,
+    .ordutegiTaula td {
         padding: 0.5rem;
     }
+}
+
+/* Instalazioak */
+
+.instalazioakKontainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instalazioakKontainer h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.instalazioGuztiak {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.instalazioa {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.instalazioa:hover {
+    transform: translateY(-5px);
+}
+
+.instalazioa img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.instalazioakInfo {
+    padding: 1.5rem;
+}
+
+.instalazioakInfo h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.instalazioakInfo p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.instalazioakInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instalazioakInfo ul li {
+    color: #666;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.instalazioakInfo ul li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .instalazioakKontainer {
+        padding: 1rem;
+    }
+    
+    .instalazioGuztiak {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* headereko logoak */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.headerLogo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
