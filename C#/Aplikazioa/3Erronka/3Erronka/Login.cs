@@ -30,7 +30,7 @@ namespace _3Erronka
 
         private void BTNSaioaHasi_Click(object sender, EventArgs e)
         {
-            Menu men = new Menu();
+            Erreserba men = new Erreserba();
             men.Show();
             this.Hide();
         }
