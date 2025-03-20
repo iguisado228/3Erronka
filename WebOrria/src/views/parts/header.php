@@ -1,6 +1,9 @@
+<?php require_once 'estiloak.php'; ?>
 <nav class="nav-bar">
     <div class="logo">
-        <h1>Allurralde</h1>
+        <a target="blank" href="https://www.andoain.eus/es/"><img src="../../public/irudiak/andoaingoArmarria.png" alt="Andoaingo armarria" class="headerLogo"></a>
+        <a href="konfigurazioa.php"><h1>Allurralde</h1></a>
+        <img src="../../public/irudiak/alluraldeLogo.png" alt="Allurraldeko logoa" class="headerLogo">
     </div>
     <ul class="nav-menu">
         <li><a href="index.php">Hasiera</a></li>

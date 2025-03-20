@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 .logo h1 {
     color: #ffffff;
     margin: 0;
@@ -47,12 +51,22 @@ body {
 }
 
 .nav-bar {
-    background-color: #2c3e50;
+    background-color: var(--menuKolorea);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.logo h1 {
+    color: var(--textuKolorea);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+body {
+    background-color: var(--atzekaldeKolorea);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -254,11 +268,11 @@ main {
     margin-bottom: 2rem;
 }
 
-.table-responsive {
+.taula {
     overflow-x: auto;
 }
 
-.ordutegia-table {
+.ordutegiTaula {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
@@ -266,24 +280,24 @@ main {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.ordutegia-table th,
-.ordutegia-table td {
+.ordutegiTaula th,
+.ordutegiTaula td {
     padding: 1rem;
     text-align: center;
     border: 1px solid #e0e0e0;
 }
 
-.ordutegia-table th {
+.ordutegiTaula th {
     background-color: #2c3e50;
     color: white;
     font-weight: bold;
 }
 
-.ordutegia-table tr:nth-child(even) {
+.ordutegiTaula tr:nth-child(even) {
     background-color: #f8f9fa;
 }
 
-/* Activity Colors */
+/* Jardueren koloreak */
 .yoga {
     background-color: #FFE0E0;
 }
@@ -308,14 +322,175 @@ main {
     background-color: #E0FFFF;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .ordutegia-table {
+    .ordutegiTaula {
         font-size: 0.9rem;
     }
 
-    .ordutegia-table th,
-    .ordutegia-table td {
+    .ordutegiTaula th,
+    .ordutegiTaula td {
         padding: 0.5rem;
     }
+}
+
+/* Instalazioak */
+
+.instalazioakKontainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instalazioakKontainer h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.instalazioGuztiak {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.instalazioa {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.instalazioa:hover {
+    transform: translateY(-5px);
+}
+
+.instalazioa img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.instalazioakInfo {
+    padding: 1.5rem;
+}
+
+.instalazioakInfo h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.instalazioakInfo p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.instalazioakInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instalazioakInfo ul li {
+    color: #666;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.instalazioakInfo ul li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .instalazioakKontainer {
+        padding: 1rem;
+    }
+    
+    .instalazioGuztiak {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* headereko logoak */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.headerLogo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* konfigurazioa */
+.konfigurazioKontainerra {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.konfigurazioAukerak {
+    margin-bottom: 2rem;
+}
+
+.konfigurazioAukerak h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.koloreaAukeratu {
+    display: grid;
+    gap: 1rem;
+}
+
+.koloreaAukeratu label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.konfigurazioBotoiak {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.konfigurazioBotoiak button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.konfigurazioBotoiak button[name="gorde"] {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.konfigurazioBotoiak button[name="berrezarri"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.ongiAteraDaEmaitza {
+    background-color: #2ecc71;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+select {
+    padding: 0.5rem;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }

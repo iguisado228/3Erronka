@@ -10,23 +10,32 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    public partial class Login : UserControl
+    public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-        private void button1_Click(object sender, EventArgs e)
-=======
-        private void label1_Click(object sender, EventArgs e)
->>>>>>> 3cad2f427bef77fa22d0ac96a5c9c56646bb73f5
+        private void Login_Load(object sender, EventArgs e)
         {
-
+            pictureBox1.Location = new Point(0, 0);
+            LBLIdentifikadorea.Location = new Point(420, 300);
+            TXTIdentifikadorea.Location = new Point(755, 300);
+            LBLPasahitza.Location = new Point(420, 350);
+            TXTPasahitza.Location = new Point(755, 350);
+            BTNSaioaHasi.Location = new Point(1310, 735);
+            LBLAgurra.Location = new Point(560, 40);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void BTNSaioaHasi_Click(object sender, EventArgs e)
+        {
+            Erreserba men = new Erreserba();
+            men.Show();
+            this.Hide();
+        }
+
+        public void saioaHasi()
         {
 
         }
