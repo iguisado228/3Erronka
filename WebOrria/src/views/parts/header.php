@@ -11,6 +11,6 @@
         <li><a href="jarduerak.php">Jarduerak</a></li>
         <li><a href="ordutegiak.php">Ordutegiak</a></li>
         <li><a href="erreserbak.php">Erreserbak</a></li>
-        <li><a href="kontaktua.php">Kontaktua</a></li>
+        <li><a href="iritziak.php">Iritziak</a></li>
     </ul>
 </nav>
