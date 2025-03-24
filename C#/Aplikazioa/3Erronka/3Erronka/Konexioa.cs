@@ -15,14 +15,14 @@ namespace Konexioa
         public virtual string Servidor { get; set; } = "localhost";
         public virtual string Puerto { get; set; } = "3306";
         public virtual string Usuario { get; set; } = "root";
-        public virtual string Contraseña { get; set; } = "";
+        public virtual string Contraseña { get; set; } = "1mg2024";
         public virtual string BaseDeDatos { get; set; } = "3erronka";
         public virtual string SslMode { get; set; } = "None";
 
         //Konexio katea sortzeko metodoa
         public string konexioKatea()
         {
-            return $"Server={Servidor}; Port={Puerto}; Database={BaseDeDatos}; User ID={Usuario}; Password={Contraseña}; SslMode={SslMode};";
+            return $"Server={Servidor}; Port={Puerto}; Database={BaseDeDatos}; User ID={Usuario}; Password={Contraseña}; SslMode=Preferred;";
         }
 
         //konexioa lortzeko metodoa 
@@ -35,9 +35,13 @@ namespace Konexioa
                 conn.Open();
                 MessageBox.Show("Ongi konektatu da " + BaseDeDatos + " datu baseetara");
             }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Konexio errorea: " + ex.Message + ex.Number);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Konexio errorea: " + ex.Message);
+                MessageBox.Show("Error general: " + ex.Message);
             }
         }
 

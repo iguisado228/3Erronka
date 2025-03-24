@@ -32,7 +32,16 @@ namespace _3Erronka
             Bazkidea b = new Bazkidea();
             b.Identifikadorea = TXTIdentifikadorea.Text;
             b.Pasahitza = TXTPasahitza.Text;
-            b.bazkideLogina();
+            
+            
+           if (b.bazkideLogina())
+            {
+                MessageBox.Show($"Ongi etorri!");
+                Menu men = new Menu();
+                men.Show();
+                this.Hide();
+            }
+            
         }
     }
 }

@@ -20,10 +20,11 @@ namespace _3Erronka
         public virtual String Abizena { get; }
         public virtual String Helbidea { get; }
 
-        public void bazkideLogina()
+        public bool bazkideLogina()
+
         {
+            Boolean loginaEginda = false;
             Konexioa.Konexioa k = new Konexioa.Konexioa();
-            k.Contraseña = "1mg2024";
             k.konektatu();
 
             if (k.conn.State == System.Data.ConnectionState.Open)
@@ -33,25 +34,27 @@ namespace _3Erronka
                 {
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = k.conn;
-                    command.CommandText = "Select identifikadorea, pasahitza from bazkidea where identifikadorea = '@valor1' and pasahitza = '@valor2'";
+                    command.CommandText = "Select identifikadorea, pasahitza from bazkidea where identifikadorea = @valor1 and pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
 
-                    MessageBox.Show(command.CommandText);
-                    transaction.Commit();
+                    int count = Convert.ToInt32(command.ExecuteScalar());
 
-                    MessageBox.Show($"Ongi etorri!");
+                    if (count > 0)
+                    {
+                        loginaEginda = true;
+                    }else
+                    {
+                        MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");
+                    }
                 }
                 catch (Exception ex)
                 {
-                    transaction.Rollback();
-                    MessageBox.Show("Errorea transakzioan: " + ex.Message);
-                }
-                finally
-                {
-                    k.conn.Close();
-                }
+                    MessageBox.Show("Errorea loginean: " + ex.Message);
+                }  
+                k.conn.Close();
             }
+            return loginaEginda;
         }
 
     }
