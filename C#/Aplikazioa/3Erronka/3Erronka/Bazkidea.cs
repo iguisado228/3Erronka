@@ -29,7 +29,7 @@ namespace _3Erronka
 
             if (k.conn.State == System.Data.ConnectionState.Open)
             {
-                MySqlTransaction transaction = k.conn.BeginTransaction();
+
                 try
                 {
                     MySqlCommand command = new MySqlCommand();
@@ -37,17 +37,17 @@ namespace _3Erronka
                     command.CommandText = "Select identifikadorea, pasahitza from bazkidea where identifikadorea = @valor1 and pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
-
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-
-                    if (count > 0)
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
                     {
                         loginaEginda = true;
                     }else
                     {
                         MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");
                     }
+                    
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show("Errorea loginean: " + ex.Message);
