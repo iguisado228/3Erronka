@@ -10,7 +10,7 @@ namespace _3Erronka
 {
     internal class Kluba
     {
-        public virtual int idKluba { get;}
+        public virtual int idKluba { get; set;}
         public virtual String Identifikadorea { get; set;}
         public virtual String Pasahitza { get; set;}
         public virtual String izena { get; set;}
@@ -34,7 +34,6 @@ namespace _3Erronka
 
             if (k.conn.State == System.Data.ConnectionState.Open)
             {
-
                 try
                 {
                     MySqlCommand command = new MySqlCommand();
@@ -45,9 +44,11 @@ namespace _3Erronka
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        reader.Read();
+                        idKluba = reader.GetInt32("idKluba");  // Store the ID
                         loginaEginda = true;
                     }
-                    
+                    reader.Close();
                 }
                 catch (Exception ex)
                 {

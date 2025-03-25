@@ -12,7 +12,7 @@ namespace _3Erronka
 {
     internal class Bazkidea
     {
-        public virtual int idBazkidea { get; }
+        public virtual int idBazkidea { get; set; }  // Changed from { get; } to { get; set; }
         public virtual String Identifikadorea { get; set; }
         public virtual String Pasahitza { get; set; }
         public virtual String NAN { get; }
@@ -21,7 +21,6 @@ namespace _3Erronka
         public virtual String Helbidea { get; }
 
         public bool bazkideLogina()
-
         {
             Boolean loginaEginda = false;
             Konexioa.Konexioa k = new Konexioa.Konexioa();
@@ -29,25 +28,22 @@ namespace _3Erronka
 
             if (k.conn.State == System.Data.ConnectionState.Open)
             {
-
                 try
                 {
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = k.conn;
-                    command.CommandText = "Select identifikadorea, pasahitza from bazkidea where identifikadorea = @valor1 and pasahitza = @valor2";
+                    command.CommandText = "Select identifikadorea, pasahitza, idBazkidea from bazkidea where identifikadorea = @valor1 and pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
-                    
+                        reader.Read();
+                        idBazkidea = reader.GetInt32("idBazkidea");  // Store the ID
                         loginaEginda = true;
-                    
                     }
-
+                    reader.Close();
                 }
-                
-                
                 catch (Exception ex)
                 {
                     MessageBox.Show("Errorea loginean: " + ex.Message);
