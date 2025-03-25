@@ -33,7 +33,7 @@ namespace Konexioa
             try
             {
                 conn.Open();
-                MessageBox.Show("Ongi konektatu da " + BaseDeDatos + " datu baseetara");
+                
             }
             catch (MySqlException ex)
             {

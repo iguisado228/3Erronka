@@ -38,12 +38,19 @@ namespace _3Erronka
             kl.Pasahitza = TXTPasahitza.Text;
             
             
-           if (b.bazkideLogina() || kl.klubLogina())
+           if (b.bazkideLogina())
             {
                 MessageBox.Show($"Ongi etorri!");
                 Menu men = new Menu();
                 men.Show();
                 this.Hide();
+            }else if (kl.klubLogina()){
+                MessageBox.Show($"Ongi etorri!");
+                Menu men = new Menu();
+                men.Show();
+            }else
+            {
+                MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");
             }
             
         }

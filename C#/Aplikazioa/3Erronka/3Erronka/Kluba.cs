@@ -39,10 +39,7 @@ namespace _3Erronka
                     {
                         loginaEginda = true;
                     }
-                    else
-                    {
-                        MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");
-                    }
+                    
                 }
                 catch (Exception ex)
                 {

@@ -40,14 +40,14 @@ namespace _3Erronka
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        loginaEginda = true;
-                    }else
-                    {
-                        MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");
-                    }
                     
-                }
+                        loginaEginda = true;
+                    
+                    }
 
+                }
+                
+                
                 catch (Exception ex)
                 {
                     MessageBox.Show("Errorea loginean: " + ex.Message);
