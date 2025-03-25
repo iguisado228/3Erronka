@@ -32,6 +32,10 @@ namespace _3Erronka
             Bazkidea b = new Bazkidea();
             b.Identifikadorea = TXTIdentifikadorea.Text;
             b.Pasahitza = TXTPasahitza.Text;
+
+            Kluba kl = new Kluba();
+            kl.Identifikadorea = TXTIdentifikadorea.Text;
+            kl.Pasahitza = TXTPasahitza.Text;
             
             
            if (b.bazkideLogina())
@@ -40,8 +44,20 @@ namespace _3Erronka
                 Menu men = new Menu();
                 men.Show();
                 this.Hide();
+            }else if (kl.klubLogina()){
+                MessageBox.Show($"Ongi etorri!");
+                Menu men = new Menu();
+                men.Show();
+            }else
+            {
+                MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");
             }
             
+        }
+
+        private void TXTPasahitza_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

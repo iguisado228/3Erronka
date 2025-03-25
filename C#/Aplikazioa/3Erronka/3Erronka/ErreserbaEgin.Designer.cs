@@ -49,7 +49,6 @@
             this.LBLerreserba.Size = new System.Drawing.Size(385, 54);
             this.LBLerreserba.TabIndex = 0;
             this.LBLerreserba.Text = "Erreserba egin";
-            this.LBLerreserba.Click += new System.EventHandler(this.label1_Click);
             // 
             // LBLerreserbaEguna
             // 
@@ -60,7 +59,6 @@
             this.LBLerreserbaEguna.Size = new System.Drawing.Size(418, 54);
             this.LBLerreserbaEguna.TabIndex = 1;
             this.LBLerreserbaEguna.Text = "Erreserba eguna:";
-            this.LBLerreserbaEguna.Click += new System.EventHandler(this.LBLerreserbaEguna_Click);
             // 
             // DTPEguna
             // 
@@ -69,7 +67,6 @@
             this.DTPEguna.Name = "DTPEguna";
             this.DTPEguna.Size = new System.Drawing.Size(352, 37);
             this.DTPEguna.TabIndex = 2;
-            this.DTPEguna.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // LBLH_ordua
             // 
@@ -80,7 +77,6 @@
             this.LBLH_ordua.Size = new System.Drawing.Size(414, 54);
             this.LBLH_ordua.TabIndex = 3;
             this.LBLH_ordua.Text = "Erreserba ordua:";
-            this.LBLH_ordua.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // LBLA_ordua
             // 
@@ -109,7 +105,6 @@
             this.TXTA_ordua.Name = "TXTA_ordua";
             this.TXTA_ordua.Size = new System.Drawing.Size(206, 37);
             this.TXTA_ordua.TabIndex = 6;
-            this.TXTA_ordua.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // BTNErreserba
             // 

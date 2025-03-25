@@ -15,7 +15,7 @@ namespace Konexioa
         public virtual string Servidor { get; set; } = "localhost";
         public virtual string Puerto { get; set; } = "3306";
         public virtual string Usuario { get; set; } = "root";
-        public virtual string Contraseña { get; set; } = "1mg2024";
+        public virtual string Contraseña { get; set; } = "1MG2024";
         public virtual string BaseDeDatos { get; set; } = "3erronka";
         public virtual string SslMode { get; set; } = "None";
 
@@ -33,7 +33,7 @@ namespace Konexioa
             try
             {
                 conn.Open();
-                MessageBox.Show("Ongi konektatu da " + BaseDeDatos + " datu baseetara");
+                
             }
             catch (MySqlException ex)
             {

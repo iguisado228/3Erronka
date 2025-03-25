@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Crypto.Generators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,69 +13,40 @@ namespace _3Erronka
 {
     public partial class ErreserbaEgin : Form
     {
+        private Kluba loggedInKluba;
+        private Bazkidea loggedInBazkidea;
+
+        // Default constructor for the designer
         public ErreserbaEgin()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        // Constructor for actual use
+        internal ErreserbaEgin(Kluba kluba, Bazkidea bazkidea) : this()
         {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LBLerreserbaEguna_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-
+            this.loggedInKluba = kluba;
+            this.loggedInBazkidea = bazkidea;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Erreserba er = new Erreserba();
+                
+                er.idBazkidea = loggedInBazkidea.idBazkidea;
+                er.idKluba = loggedInKluba.idKluba;
+                er.idEremua = Convert.ToInt32(LSBEremuak.SelectedItem.ToString());
+                er.erreserbaEguna = DTPEguna.Value.Date;
+                er.erreserbaOrdua = TXTH_ordua.Text;
+                er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
+    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error creating reservation: " + ex.Message);
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
