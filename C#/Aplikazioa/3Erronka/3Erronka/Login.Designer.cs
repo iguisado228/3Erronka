@@ -81,6 +81,7 @@
             this.TXTPasahitza.Name = "TXTPasahitza";
             this.TXTPasahitza.Size = new System.Drawing.Size(276, 43);
             this.TXTPasahitza.TabIndex = 4;
+            this.TXTPasahitza.TextChanged += new System.EventHandler(this.TXTPasahitza_TextChanged);
             // 
             // BTNSaioaHasi
             // 

@@ -18,6 +18,14 @@ namespace _3Erronka
         public virtual int jokalariKopurua { get; set;}
         public virtual int taldeKopurua { get; set;}
 
+        public Kluba()
+        {
+
+        }
+        public Kluba(int idKluba)
+        {
+            this.idKluba = idKluba;
+        }
         public bool klubLogina()
         {
             Boolean loginaEginda = false;
@@ -31,7 +39,7 @@ namespace _3Erronka
                 {
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = k.conn;
-                    command.CommandText = "Select identifikadorea, pasahitza from kluba where identifikadorea = @valor1 and pasahitza = @valor2";
+                    command.CommandText = "Select identifikadorea, pasahitza, idKluba from kluba where identifikadorea = @valor1 and pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
                     MySqlDataReader reader = command.ExecuteReader();

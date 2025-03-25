@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Crypto.Generators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,7 +75,14 @@ namespace _3Erronka
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Erreserba er = new Erreserba();
+            
+            er.idBazkidea = Convert.ToInt32();
+            er.idKluba = K1.idKluba;
+            er.idEremua = Convert.ToInt32(LBLEremua);
+            er.erreserbaEguna = Convert.ToDateTime(LBLerreserbaEguna);
+            er.erreserbaOrdua = TXTH_ordua.Text;
+            er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
         }
 
         private void label2_Click(object sender, EventArgs e)

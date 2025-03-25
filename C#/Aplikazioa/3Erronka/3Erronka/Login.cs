@@ -54,5 +54,10 @@ namespace _3Erronka
             }
             
         }
+
+        private void TXTPasahitza_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

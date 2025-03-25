@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bazkidea.cs" />
+    <Compile Include="Erreserba.cs" />
     <Compile Include="ErreserbaIkusi.cs">
       <SubType>Form</SubType>
     </Compile>
