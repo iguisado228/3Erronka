@@ -36,8 +36,8 @@
             this.TXTH_ordua = new System.Windows.Forms.TextBox();
             this.TXTA_ordua = new System.Windows.Forms.TextBox();
             this.BTNErreserba = new System.Windows.Forms.Button();
-            this.LSBEremuak = new System.Windows.Forms.ListBox();
             this.LBLEremua = new System.Windows.Forms.Label();
+            this.CBeremua = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LBLerreserba
@@ -117,15 +117,6 @@
             this.BTNErreserba.UseVisualStyleBackColor = true;
             this.BTNErreserba.Click += new System.EventHandler(this.button1_Click);
             // 
-            // LSBEremuak
-            // 
-            this.LSBEremuak.FormattingEnabled = true;
-            this.LSBEremuak.ItemHeight = 16;
-            this.LSBEremuak.Location = new System.Drawing.Point(44, 439);
-            this.LSBEremuak.Name = "LSBEremuak";
-            this.LSBEremuak.Size = new System.Drawing.Size(572, 148);
-            this.LSBEremuak.TabIndex = 8;
-            // 
             // LBLEremua
             // 
             this.LBLEremua.AutoSize = true;
@@ -136,14 +127,24 @@
             this.LBLEremua.TabIndex = 9;
             this.LBLEremua.Text = "Aukeratu erabiliko duzun eremua: ";
             // 
-            // Erreserba
+            // CBeremua
+            // 
+            this.CBeremua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBeremua.FormattingEnabled = true;
+            this.CBeremua.Location = new System.Drawing.Point(180, 456);
+            this.CBeremua.Name = "CBeremua";
+            this.CBeremua.Size = new System.Drawing.Size(238, 37);
+            this.CBeremua.TabIndex = 11;
+            this.CBeremua.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // ErreserbaEgin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1008, 709);
+            this.ClientSize = new System.Drawing.Size(1924, 959);
+            this.Controls.Add(this.CBeremua);
             this.Controls.Add(this.LBLEremua);
-            this.Controls.Add(this.LSBEremuak);
             this.Controls.Add(this.BTNErreserba);
             this.Controls.Add(this.TXTA_ordua);
             this.Controls.Add(this.TXTH_ordua);
@@ -152,7 +153,7 @@
             this.Controls.Add(this.DTPEguna);
             this.Controls.Add(this.LBLerreserbaEguna);
             this.Controls.Add(this.LBLerreserba);
-            this.Name = "Erreserba";
+            this.Name = "ErreserbaEgin";
             this.Text = "Erreserba";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Erreserba_Load);
@@ -171,7 +172,7 @@
         private System.Windows.Forms.TextBox TXTH_ordua;
         private System.Windows.Forms.TextBox TXTA_ordua;
         private System.Windows.Forms.Button BTNErreserba;
-        private System.Windows.Forms.ListBox LSBEremuak;
         private System.Windows.Forms.Label LBLEremua;
+        private System.Windows.Forms.ComboBox CBeremua;
     }
 }

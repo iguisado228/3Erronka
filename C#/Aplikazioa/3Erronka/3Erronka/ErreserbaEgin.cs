@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _3Erronka
 {
@@ -37,7 +38,7 @@ namespace _3Erronka
                 
                 er.idBazkidea = loggedInBazkidea.idBazkidea;
                 er.idKluba = loggedInKluba.idKluba;
-                er.idEremua = Convert.ToInt32(LSBEremuak.SelectedItem.ToString());
+                er.idEremua = Convert.ToInt32(CBeremua.SelectedItem.ToString());
                 er.erreserbaEguna = DTPEguna.Value.Date;
                 er.erreserbaOrdua = TXTH_ordua.Text;
                 er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
@@ -71,7 +72,16 @@ namespace _3Erronka
             DTPEguna.Location = new Point(350, 210);
             TXTH_ordua.Location = new Point(350, 285);
             TXTA_ordua.Location = new Point(520, 360);
-            LSBEremuak.Location = new Point(830, 250);
+
+            Erreserba er = new Erreserba();
+
+            CBeremua.DataSource = er.bilaketak("SELECT izena FROM eremua");
+            CBeremua.DisplayMember = "izena";
+            CBeremua.ValueMember = "izena"; 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

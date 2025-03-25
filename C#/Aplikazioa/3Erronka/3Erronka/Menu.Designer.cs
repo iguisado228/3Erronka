@@ -70,6 +70,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1924, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.UseWaitCursor = true;
             // 
             // erreserbaEginToolStripMenuItem
             // 
@@ -85,20 +86,20 @@
             // eginToolStripMenuItem
             // 
             this.eginToolStripMenuItem.Name = "eginToolStripMenuItem";
-            this.eginToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.eginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eginToolStripMenuItem.Text = "Egin";
             this.eginToolStripMenuItem.Click += new System.EventHandler(this.eginToolStripMenuItem_Click);
             // 
             // ikusiToolStripMenuItem
             // 
             this.ikusiToolStripMenuItem.Name = "ikusiToolStripMenuItem";
-            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ikusiToolStripMenuItem.Text = "Ikusi";
             // 
             // ezabatuToolStripMenuItem
             // 
             this.ezabatuToolStripMenuItem.Name = "ezabatuToolStripMenuItem";
-            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ezabatuToolStripMenuItem.Text = "Ezabatu";
             // 
             // zelaiakIkusiToolStripMenuItem
@@ -154,6 +155,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2300, 168);
             this.panel1.TabIndex = 3;
+            this.panel1.UseWaitCursor = true;
             // 
             // armarria
             // 
@@ -163,6 +165,7 @@
             this.armarria.Size = new System.Drawing.Size(127, 160);
             this.armarria.TabIndex = 2;
             this.armarria.TabStop = false;
+            this.armarria.UseWaitCursor = true;
             // 
             // logoaZ
             // 
@@ -172,6 +175,7 @@
             this.logoaZ.Size = new System.Drawing.Size(225, 150);
             this.logoaZ.TabIndex = 1;
             this.logoaZ.TabStop = false;
+            this.logoaZ.UseWaitCursor = true;
             // 
             // panel2
             // 
@@ -181,6 +185,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1942, 761);
             this.panel2.TabIndex = 4;
+            this.panel2.UseWaitCursor = true;
             // 
             // panel3
             // 
@@ -191,6 +196,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(910, 561);
             this.panel3.TabIndex = 9;
+            this.panel3.UseWaitCursor = true;
             // 
             // pictureBox1
             // 
@@ -200,6 +206,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(900, 550);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
             // 
             // panel4
             // 
@@ -211,6 +218,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(515, 312);
             this.panel4.TabIndex = 8;
+            this.panel4.UseWaitCursor = true;
             // 
             // pictureBox2
             // 
@@ -220,6 +228,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(501, 298);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.UseWaitCursor = true;
             // 
             // Menu
             // 
@@ -234,6 +243,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu";
+            this.UseWaitCursor = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
