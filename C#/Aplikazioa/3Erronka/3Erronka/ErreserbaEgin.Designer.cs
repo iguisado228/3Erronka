@@ -141,12 +141,12 @@
             this.LBLEremua.TabIndex = 9;
             this.LBLEremua.Text = "Aukeratu erabiliko duzun eremua: ";
             // 
-            // Erreserba
+            // ErreserbaEgin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1008, 709);
+            this.ClientSize = new System.Drawing.Size(1424, 861);
             this.Controls.Add(this.LBLEremua);
             this.Controls.Add(this.LSBEremuak);
             this.Controls.Add(this.BTNErreserba);
@@ -157,7 +157,7 @@
             this.Controls.Add(this.DTPEguna);
             this.Controls.Add(this.LBLerreserbaEguna);
             this.Controls.Add(this.LBLerreserba);
-            this.Name = "Erreserba";
+            this.Name = "ErreserbaEgin";
             this.Text = "Erreserba";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Erreserba_Load);
