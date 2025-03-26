@@ -16,10 +16,17 @@ namespace _3Erronka
     {
         private Kluba loggedInKluba;
 
+        public Menu()
+        {
+            InitializeComponent();
+        }
+
+
         public Menu(Kluba kluba)
         {
             InitializeComponent();
             this.loggedInKluba = kluba;
+            MessageBox.Show($"Kluba hurrengo Id-arekin sartu da: {kluba.idKluba} ");
         }
 
         private void erreserbakIkusiToolStripMenuItem_Click(object sender, EventArgs e)

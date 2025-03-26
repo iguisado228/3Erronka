@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    internal class Kluba
+    public class Kluba
     {
         public virtual int idKluba { get; set;}
         public virtual String Identifikadorea { get; set;}
@@ -18,10 +18,13 @@ namespace _3Erronka
         public virtual int jokalariKopurua { get; set;}
         public virtual int taldeKopurua { get; set;}
 
-        public Kluba()
-        {
 
-        }
+
+
+
+
+
+
         public Kluba(int idKluba)
         {
             this.idKluba = idKluba;
@@ -43,10 +46,9 @@ namespace _3Erronka
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
 
                     MySqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
-                        reader.Read();
-                        idKluba = reader.GetInt32("idKluba"); 
+                        idKluba = reader.GetInt32(0); 
                         loginaEginda = true;
                     }
                     reader.Close();
