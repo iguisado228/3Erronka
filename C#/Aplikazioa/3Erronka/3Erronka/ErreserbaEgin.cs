@@ -8,81 +8,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _3Erronka
 {
     public partial class ErreserbaEgin : Form
     {
+        private Kluba loggedInKluba;
+        private Bazkidea loggedInBazkidea;
+
+        // Default constructor for the designer
         public ErreserbaEgin()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        // Constructor for actual use
+        internal ErreserbaEgin(Kluba kluba, Bazkidea bazkidea) : this()
         {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LBLerreserbaEguna_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-
+            this.loggedInKluba = kluba;
+            this.loggedInBazkidea = bazkidea;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Erreserba er = new Erreserba();
-            
-            er.idBazkidea = Convert.ToInt32();
-            er.idKluba = K1.idKluba;
-            er.idEremua = Convert.ToInt32(LBLEremua);
-            er.erreserbaEguna = Convert.ToDateTime(LBLerreserbaEguna);
-            er.erreserbaOrdua = TXTH_ordua.Text;
-            er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
+            try
+            {
+                Erreserba er = new Erreserba();
+                
+                er.idBazkidea = loggedInBazkidea.idBazkidea;
+                er.idKluba = loggedInKluba.idKluba;
+                er.idEremua = Convert.ToInt32(CBeremua.SelectedItem.ToString());
+                er.erreserbaEguna = DTPEguna.Value.Date;
+                er.erreserbaOrdua = TXTH_ordua.Text;
+                er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
+    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error creating reservation: " + ex.Message);
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -107,7 +72,16 @@ namespace _3Erronka
             DTPEguna.Location = new Point(350, 210);
             TXTH_ordua.Location = new Point(350, 285);
             TXTA_ordua.Location = new Point(520, 360);
-            LSBEremuak.Location = new Point(830, 250);
+
+            Erreserba er = new Erreserba();
+
+            CBeremua.DataSource = er.bilaketak("SELECT izena FROM eremua");
+            CBeremua.DisplayMember = "izena";
+            CBeremua.ValueMember = "izena"; 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
