@@ -44,3 +44,6 @@ C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\bin\Debug\System.Thread
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.csproj.Up2Date
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.ErreserbaIkusi.resources
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.ErreserbaEgin.resources
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.zelaiakIkusi.resources
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.atletismoPista.resources
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.eskubaloiPista.resources

@@ -86,20 +86,20 @@
             // eginToolStripMenuItem
             // 
             this.eginToolStripMenuItem.Name = "eginToolStripMenuItem";
-            this.eginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eginToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.eginToolStripMenuItem.Text = "Egin";
             this.eginToolStripMenuItem.Click += new System.EventHandler(this.eginToolStripMenuItem_Click);
             // 
             // ikusiToolStripMenuItem
             // 
             this.ikusiToolStripMenuItem.Name = "ikusiToolStripMenuItem";
-            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.ikusiToolStripMenuItem.Text = "Ikusi";
             // 
             // ezabatuToolStripMenuItem
             // 
             this.ezabatuToolStripMenuItem.Name = "ezabatuToolStripMenuItem";
-            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.ezabatuToolStripMenuItem.Text = "Ezabatu";
             // 
             // zelaiakIkusiToolStripMenuItem
@@ -114,8 +114,9 @@
             // ikusiToolStripMenuItem1
             // 
             this.ikusiToolStripMenuItem1.Name = "ikusiToolStripMenuItem1";
-            this.ikusiToolStripMenuItem1.Size = new System.Drawing.Size(121, 26);
+            this.ikusiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.ikusiToolStripMenuItem1.Text = "Ikusi";
+            this.ikusiToolStripMenuItem1.Click += new System.EventHandler(this.ikusiToolStripMenuItem1_Click);
             // 
             // ordutegiakIkusiToolStripMenuItem
             // 
@@ -156,6 +157,7 @@
             this.panel1.Size = new System.Drawing.Size(2300, 168);
             this.panel1.TabIndex = 3;
             this.panel1.UseWaitCursor = true;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // armarria
             // 

@@ -42,6 +42,7 @@ namespace _3Erronka
                 er.erreserbaEguna = DTPEguna.Value.Date;
                 er.erreserbaOrdua = TXTH_ordua.Text;
                 er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
+                er.gehitu();
     
             }
             catch (Exception ex)
@@ -82,6 +83,12 @@ namespace _3Erronka
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void LBLerreserbaEguna_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

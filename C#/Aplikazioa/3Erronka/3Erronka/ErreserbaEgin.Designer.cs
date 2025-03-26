@@ -59,6 +59,7 @@
             this.LBLerreserbaEguna.Size = new System.Drawing.Size(418, 54);
             this.LBLerreserbaEguna.TabIndex = 1;
             this.LBLerreserbaEguna.Text = "Erreserba eguna:";
+            this.LBLerreserbaEguna.Click += new System.EventHandler(this.LBLerreserbaEguna_Click);
             // 
             // DTPEguna
             // 

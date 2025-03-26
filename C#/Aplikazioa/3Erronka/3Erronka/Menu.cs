@@ -11,10 +11,15 @@ using System.Windows.Forms;
 namespace _3Erronka
 {
     public partial class Menu : Form
+
+
     {
-        public Menu()
+        private Kluba loggedInKluba;
+
+        public Menu(Kluba kluba)
         {
             InitializeComponent();
+            this.loggedInKluba = kluba;
         }
 
         private void erreserbakIkusiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,9 +60,24 @@ namespace _3Erronka
 
         private void eginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ErreserbaEgin egin = new ErreserbaEgin();
-            egin.Show();
+   
 
+            Bazkidea bazkidea = new Bazkidea(); // Asegúrate de cargarlo correctamente
+            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, bazkidea);
+            erreserbaEgin.Show();
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ikusiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
+            zelaiakikusi.Show();
         }
     }
 }

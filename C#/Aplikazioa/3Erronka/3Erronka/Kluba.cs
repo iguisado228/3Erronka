@@ -38,26 +38,28 @@ namespace _3Erronka
                 {
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = k.conn;
-                    command.CommandText = "Select identifikadorea, pasahitza, idKluba from kluba where identifikadorea = @valor1 and pasahitza = @valor2";
+                    command.CommandText = "SELECT identifikadorea, pasahitza, idKluba FROM kluba WHERE identifikadorea = @valor1 AND pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
+
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        idKluba = reader.GetInt32("idKluba");  // Store the ID
+                        idKluba = reader.GetInt32("idKluba"); 
                         loginaEginda = true;
                     }
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Errorea loginean: " + ex.Message);
+                    MessageBox.Show("Error en el login: " + ex.Message);
                 }
                 k.conn.Close();
             }
             return loginaEginda;
         }
+
 
     }
 }
