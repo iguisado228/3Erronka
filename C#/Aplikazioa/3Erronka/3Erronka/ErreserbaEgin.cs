@@ -78,7 +78,7 @@ namespace _3Erronka
 
             CBeremua.DataSource = er.bilaketak("SELECT izena FROM eremua");
             CBeremua.DisplayMember = "izena";
-            CBeremua.ValueMember = "izena"; 
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

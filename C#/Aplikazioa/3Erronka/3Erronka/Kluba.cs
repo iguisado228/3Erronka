@@ -48,7 +48,7 @@ namespace _3Erronka
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        idKluba = reader.GetInt32(0); 
+                        idKluba = reader.GetInt32("idKluba"); 
                         loginaEginda = true;
                     }
                     reader.Close();

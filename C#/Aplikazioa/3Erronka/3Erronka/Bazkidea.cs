@@ -36,9 +36,8 @@ namespace _3Erronka
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
                     MySqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
-                        reader.Read();
                         idBazkidea = reader.GetInt32("idBazkidea");  // Store the ID
                         loginaEginda = true;
                     }

@@ -154,6 +154,7 @@
             this.Controls.Add(this.BTNgimnasioa);
             this.Name = "zelaiakIkusi";
             this.Text = "zelaiakIkusi";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.zelaiakIkusi_Load);
             this.ResumeLayout(false);
 
