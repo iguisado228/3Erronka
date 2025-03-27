@@ -40,8 +40,9 @@ namespace _3Erronka
                 er.idKluba = loggedInKluba.idKluba;
                 er.idEremua = Convert.ToInt32(CBeremua.SelectedItem.ToString());
                 er.erreserbaEguna = DTPEguna.Value.Date;
-                er.erreserbaOrdua = TXTH_ordua.Text;
-                er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
+                er.erreserbaOrdua = CHasiera.SelectedValue.ToString();
+                er.erreserbaAmaieraOrdua = CAmaiera.SelectedValue.ToString();
+
                 er.gehitu();
     
             }
@@ -63,21 +64,23 @@ namespace _3Erronka
 
         private void Erreserba_Load(object sender, EventArgs e)
         {
-            LBLerreserba.Location = new Point(610, 30);
-            BTNErreserba.Location = new Point(1310, 735);
-            LBLerreserbaEguna.Location = new Point(20, 200);
-            LBLH_ordua.Location = new Point(20,275);
-            LBLA_ordua.Location = new Point(20, 350);
-            LBLEremua.Location = new Point(820, 200);
-
-            DTPEguna.Location = new Point(350, 210);
-            TXTH_ordua.Location = new Point(350, 285);
-            TXTA_ordua.Location = new Point(520, 360);
+            
 
             Erreserba er = new Erreserba();
 
-            CBeremua.DataSource = er.bilaketak("SELECT izena FROM eremua");
+            DataTable dtEremua = er.bilaketak("Select idEremua, izena from eremua");
+            DataTable dtHasiera = er.bilaketak("SELECT hasieraOrdua FROM ordutegia");
+            DataTable dtAmaiera = er.bilaketak("SELECT amaieraOrdua FROM ordutegia");
+
+            CBeremua.DataSource = dtEremua.Copy();
             CBeremua.DisplayMember = "izena";
+            CBeremua.ValueMember = "idEremua";
+
+            CHasiera.DataSource = dtHasiera.Copy();
+            CHasiera.DisplayMember = "hasieraOrdua";
+
+            CAmaiera.DataSource = dtAmaiera.Copy();
+            CAmaiera.DisplayMember = "amaieraOrdua";
 
         }
 
@@ -87,6 +90,28 @@ namespace _3Erronka
         }
 
         private void LBLerreserbaEguna_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNAtzera_Click(object sender, EventArgs e)
+        {
+            Menu men = new Menu();
+            men.Show();
+            this.Hide();
+        }
+
+        private void COrdua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CAmaiera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DTPEguna_ValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -37,6 +37,7 @@
             this.BTNatletismoPista = new System.Windows.Forms.Button();
             this.BTNkanpokoSaskibaloiPista = new System.Windows.Forms.Button();
             this.BTNkanpokoEskubaloiPista = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BTNgimnasioa
@@ -138,11 +139,23 @@
             this.BTNkanpokoEskubaloiPista.UseVisualStyleBackColor = true;
             this.BTNkanpokoEskubaloiPista.Click += new System.EventHandler(this.BTNkanpokoEskubaloiPista_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1757, 904);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 43);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Atzera joan";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // zelaiakIkusi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 959);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BTNkanpokoEskubaloiPista);
             this.Controls.Add(this.BTNkanpokoSaskibaloiPista);
             this.Controls.Add(this.BTNatletismoPista);
@@ -171,5 +184,6 @@
         private System.Windows.Forms.Button BTNatletismoPista;
         private System.Windows.Forms.Button BTNkanpokoSaskibaloiPista;
         private System.Windows.Forms.Button BTNkanpokoEskubaloiPista;
+        private System.Windows.Forms.Button button1;
     }
 }

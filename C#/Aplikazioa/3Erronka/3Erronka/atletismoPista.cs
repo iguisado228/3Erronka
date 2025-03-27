@@ -21,5 +21,12 @@ namespace _3Erronka
         {
 
         }
+
+        private void BTNAtzera_Click(object sender, EventArgs e)
+        {
+            zelaiakIkusi zel = new zelaiakIkusi();
+            zel.Show();
+            this.Hide();
+        }
     }
 }

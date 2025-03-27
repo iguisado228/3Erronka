@@ -72,6 +72,7 @@ namespace _3Erronka
             Bazkidea bazkidea = new Bazkidea(); // Asegúrate de cargarlo correctamente
             ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, bazkidea);
             erreserbaEgin.Show();
+            this.Hide();
 
 
         }
@@ -85,6 +86,7 @@ namespace _3Erronka
         {
             zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
             zelaiakikusi.Show();
+            this.Hide();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

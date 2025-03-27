@@ -16,5 +16,17 @@ namespace _3Erronka
         {
             InitializeComponent();
         }
+
+        private void Gimnasioa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNAtzera_Click(object sender, EventArgs e)
+        {
+            zelaiakIkusi zel = new zelaiakIkusi();
+            zel.Show();
+            this.Hide();
+        }
     }
 }

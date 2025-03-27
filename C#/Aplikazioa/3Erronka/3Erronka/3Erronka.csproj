@@ -200,6 +200,21 @@
     <EmbeddedResource Include="ErreserbaEgin.resx">
       <DependentUpon>ErreserbaEgin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="futbolZelaia.resx">
+      <DependentUpon>futbolZelaia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gimnasioa.resx">
+      <DependentUpon>Gimnasioa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="igerilekua.resx">
+      <DependentUpon>igerilekua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kanpokoEskubaloiPista.resx">
+      <DependentUpon>kanpokoEskubaloiPista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kanpokoSaskibaloiPista.resx">
+      <DependentUpon>kanpokoSaskibaloiPista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +231,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="saskibaloiPista.resx">
+      <DependentUpon>saskibaloiPista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tenisZelaia.resx">
+      <DependentUpon>tenisZelaia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="zelaiakIkusi.resx">
       <DependentUpon>zelaiakIkusi.cs</DependentUpon>
     </EmbeddedResource>
