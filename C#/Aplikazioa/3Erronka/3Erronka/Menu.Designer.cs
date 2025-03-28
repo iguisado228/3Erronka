@@ -114,7 +114,7 @@
             // ikusiToolStripMenuItem1
             // 
             this.ikusiToolStripMenuItem1.Name = "ikusiToolStripMenuItem1";
-            this.ikusiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.ikusiToolStripMenuItem1.Size = new System.Drawing.Size(121, 26);
             this.ikusiToolStripMenuItem1.Text = "Ikusi";
             this.ikusiToolStripMenuItem1.Click += new System.EventHandler(this.ikusiToolStripMenuItem1_Click);
             // 
@@ -188,6 +188,7 @@
             this.panel2.Size = new System.Drawing.Size(1942, 761);
             this.panel2.TabIndex = 4;
             this.panel2.UseWaitCursor = true;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 

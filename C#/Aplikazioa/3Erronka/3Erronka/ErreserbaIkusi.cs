@@ -16,5 +16,17 @@ namespace _3Erronka
         {
             InitializeComponent();
         }
+
+        private void ErreserbaIkusi_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BTNAtzera_Click(object sender, EventArgs e)
+        {
+            Menu men = new Menu();
+            men.Show();
+            this.Hide();
+        }
     }
 }

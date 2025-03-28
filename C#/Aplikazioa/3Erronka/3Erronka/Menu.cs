@@ -16,10 +16,17 @@ namespace _3Erronka
     {
         private Kluba loggedInKluba;
 
+        public Menu()
+        {
+            InitializeComponent();
+        }
+
+
         public Menu(Kluba kluba)
         {
             InitializeComponent();
             this.loggedInKluba = kluba;
+            MessageBox.Show($"Kluba hurrengo Id-arekin sartu da: {kluba.idKluba} ");
         }
 
         private void erreserbakIkusiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,6 +72,7 @@ namespace _3Erronka
             Bazkidea bazkidea = new Bazkidea(); // Asegúrate de cargarlo correctamente
             ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, bazkidea);
             erreserbaEgin.Show();
+            this.Hide();
 
 
         }
@@ -78,6 +86,12 @@ namespace _3Erronka
         {
             zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
             zelaiakikusi.Show();
+            this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

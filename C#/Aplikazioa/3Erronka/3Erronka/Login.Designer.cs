@@ -1,4 +1,6 @@
-﻿namespace _3Erronka
+﻿using System;
+
+namespace _3Erronka
 {
     partial class Login
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.LBLIdentifikadorea = new System.Windows.Forms.Label();
             this.LBLPasahitza = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -119,6 +122,11 @@
 
         }
 
+        private EventHandler BTNSaioaHasi_Click()
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label LBLIdentifikadorea;
@@ -127,5 +135,6 @@
         private System.Windows.Forms.TextBox TXTIdentifikadorea;
         private System.Windows.Forms.TextBox TXTPasahitza;
         private System.Windows.Forms.Button BTNSaioaHasi;
+        private readonly object idKluba;
     }
 }

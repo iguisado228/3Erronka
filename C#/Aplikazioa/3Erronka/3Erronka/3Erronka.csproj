@@ -98,12 +98,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="atletismoPista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="atletismoPista.Designer.cs">
-      <DependentUpon>atletismoPista.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bazkidea.cs" />
     <Compile Include="Erreserba.cs" />
     <Compile Include="ErreserbaIkusi.cs">
@@ -112,55 +106,19 @@
     <Compile Include="ErreserbaIkusi.Designer.cs">
       <DependentUpon>ErreserbaIkusi.cs</DependentUpon>
     </Compile>
-    <Compile Include="eskubaloiPista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="eskubaloiPista.Designer.cs">
-      <DependentUpon>eskubaloiPista.cs</DependentUpon>
-    </Compile>
-    <Compile Include="futbolZelaia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="futbolZelaia.Designer.cs">
-      <DependentUpon>futbolZelaia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gimnasioa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gimnasioa.Designer.cs">
-      <DependentUpon>Gimnasioa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="igerilekua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="igerilekua.Designer.cs">
-      <DependentUpon>igerilekua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kanpokoEskubaloiPista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kanpokoEskubaloiPista.Designer.cs">
-      <DependentUpon>kanpokoEskubaloiPista.cs</DependentUpon>
-    </Compile>
-    <Compile Include="kanpokoSaskibaloiPista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="kanpokoSaskibaloiPista.Designer.cs">
-      <DependentUpon>kanpokoSaskibaloiPista.cs</DependentUpon>
-    </Compile>
     <Compile Include="Kluba.cs" />
     <Compile Include="Konexioa.cs" />
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="ErreserbaEgin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ErreserbaEgin.Designer.cs">
       <DependentUpon>ErreserbaEgin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -170,38 +128,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="saskibaloiPista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="saskibaloiPista.Designer.cs">
-      <DependentUpon>saskibaloiPista.cs</DependentUpon>
-    </Compile>
-    <Compile Include="tenisZelaia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tenisZelaia.Designer.cs">
-      <DependentUpon>tenisZelaia.cs</DependentUpon>
-    </Compile>
     <Compile Include="zelaiakIkusi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="zelaiakIkusi.Designer.cs">
       <DependentUpon>zelaiakIkusi.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="atletismoPista.resx">
-      <DependentUpon>atletismoPista.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ErreserbaIkusi.resx">
       <DependentUpon>ErreserbaIkusi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="eskubaloiPista.resx">
-      <DependentUpon>eskubaloiPista.cs</DependentUpon>
+    <EmbeddedResource Include="ErreserbaEgin.resx">
+      <DependentUpon>ErreserbaEgin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ErreserbaEgin.resx">
-      <DependentUpon>ErreserbaEgin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
