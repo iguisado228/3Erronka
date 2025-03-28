@@ -96,7 +96,7 @@
             // 
             this.LBLEremua.AutoSize = true;
             this.LBLEremua.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLEremua.Location = new System.Drawing.Point(1014, 252);
+            this.LBLEremua.Location = new System.Drawing.Point(1014, 250);
             this.LBLEremua.Name = "LBLEremua";
             this.LBLEremua.Size = new System.Drawing.Size(898, 54);
             this.LBLEremua.TabIndex = 9;
@@ -106,7 +106,7 @@
             // 
             this.CBeremua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBeremua.FormattingEnabled = true;
-            this.CBeremua.Location = new System.Drawing.Point(1023, 321);
+            this.CBeremua.Location = new System.Drawing.Point(1023, 319);
             this.CBeremua.Name = "CBeremua";
             this.CBeremua.Size = new System.Drawing.Size(238, 37);
             this.CBeremua.TabIndex = 11;
@@ -137,7 +137,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(133, 565);
+            this.label1.Location = new System.Drawing.Point(129, 736);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(385, 54);
             this.label1.TabIndex = 14;
@@ -147,7 +147,7 @@
             // 
             this.CAmaiera.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CAmaiera.FormattingEnabled = true;
-            this.CAmaiera.Location = new System.Drawing.Point(584, 582);
+            this.CAmaiera.Location = new System.Drawing.Point(580, 753);
             this.CAmaiera.Name = "CAmaiera";
             this.CAmaiera.Size = new System.Drawing.Size(238, 37);
             this.CAmaiera.TabIndex = 15;

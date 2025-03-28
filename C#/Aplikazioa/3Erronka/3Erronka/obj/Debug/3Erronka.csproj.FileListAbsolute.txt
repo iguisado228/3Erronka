@@ -1,7 +1,5 @@
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.csproj.AssemblyReference.cache
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.atletismoPista.resources
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.ErreserbaIkusi.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.eskubaloiPista.resources
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.Login.resources
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.ErreserbaEgin.resources
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.Menu.resources
@@ -47,10 +45,3 @@ C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\bin\Debug\System.Thread
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.csproj.Up2Date
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.exe
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.pdb
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.futbolZelaia.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.Gimnasioa.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.igerilekua.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.kanpokoEskubaloiPista.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.kanpokoSaskibaloiPista.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.saskibaloiPista.resources
-C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.tenisZelaia.resources

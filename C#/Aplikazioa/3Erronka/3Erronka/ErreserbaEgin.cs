@@ -69,8 +69,8 @@ namespace _3Erronka
             Erreserba er = new Erreserba();
 
             DataTable dtEremua = er.bilaketak("Select idEremua, izena from eremua");
-            DataTable dtHasiera = er.bilaketak("SELECT hasieraOrdua FROM ordutegia");
-            DataTable dtAmaiera = er.bilaketak("SELECT amaieraOrdua FROM ordutegia");
+            DataTable dtHasiera = er.bilaketak("SELECT hasieraOrdua FROM erreserba");
+            DataTable dtAmaiera = er.bilaketak("SELECT amaieraOrdua FROM erreserba");
 
             CBeremua.DataSource = dtEremua.Copy();
             CBeremua.DisplayMember = "izena";
