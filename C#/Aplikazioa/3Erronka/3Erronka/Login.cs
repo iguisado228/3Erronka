@@ -40,8 +40,7 @@ namespace _3Erronka
             if (b.bazkideLogina())
             {
                 MessageBox.Show($"Ongi etorri, bazkidea!");
-                Kluba klubHutsa = new Kluba(0);
-                Menu men = new Menu(klubHutsa);
+                Menu men = new Menu();
                 men.Show();
                 this.Hide();
             }

@@ -36,9 +36,9 @@
             this.LBLEremua = new System.Windows.Forms.Label();
             this.CBeremua = new System.Windows.Forms.ComboBox();
             this.BTNAtzera = new System.Windows.Forms.Button();
-            this.CHasiera = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CAmaiera = new System.Windows.Forms.ComboBox();
+            this.TXTerreserbaHasieraOrdua = new System.Windows.Forms.TextBox();
+            this.TXTerreserbaAmaieraOrdua = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LBLerreserba
@@ -65,7 +65,7 @@
             // DTPEguna
             // 
             this.DTPEguna.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPEguna.Location = new System.Drawing.Point(543, 267);
+            this.DTPEguna.Location = new System.Drawing.Point(612, 267);
             this.DTPEguna.Name = "DTPEguna";
             this.DTPEguna.Size = new System.Drawing.Size(352, 37);
             this.DTPEguna.TabIndex = 2;
@@ -123,16 +123,6 @@
             this.BTNAtzera.UseVisualStyleBackColor = true;
             this.BTNAtzera.Click += new System.EventHandler(this.BTNAtzera_Click);
             // 
-            // CHasiera
-            // 
-            this.CHasiera.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHasiera.FormattingEnabled = true;
-            this.CHasiera.Location = new System.Drawing.Point(584, 486);
-            this.CHasiera.Name = "CHasiera";
-            this.CHasiera.Size = new System.Drawing.Size(238, 37);
-            this.CHasiera.TabIndex = 13;
-            this.CHasiera.SelectedIndexChanged += new System.EventHandler(this.COrdua_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -143,15 +133,23 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Amaiera ordua:";
             // 
-            // CAmaiera
+            // TXTerreserbaHasieraOrdua
             // 
-            this.CAmaiera.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CAmaiera.FormattingEnabled = true;
-            this.CAmaiera.Location = new System.Drawing.Point(580, 753);
-            this.CAmaiera.Name = "CAmaiera";
-            this.CAmaiera.Size = new System.Drawing.Size(238, 37);
-            this.CAmaiera.TabIndex = 15;
-            this.CAmaiera.SelectedIndexChanged += new System.EventHandler(this.CAmaiera_SelectedIndexChanged);
+            this.TXTerreserbaHasieraOrdua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTerreserbaHasieraOrdua.Location = new System.Drawing.Point(543, 486);
+            this.TXTerreserbaHasieraOrdua.Name = "TXTerreserbaHasieraOrdua";
+            this.TXTerreserbaHasieraOrdua.Size = new System.Drawing.Size(199, 36);
+            this.TXTerreserbaHasieraOrdua.TabIndex = 15;
+            this.TXTerreserbaHasieraOrdua.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // TXTerreserbaAmaieraOrdua
+            // 
+            this.TXTerreserbaAmaieraOrdua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTerreserbaAmaieraOrdua.Location = new System.Drawing.Point(543, 753);
+            this.TXTerreserbaAmaieraOrdua.Name = "TXTerreserbaAmaieraOrdua";
+            this.TXTerreserbaAmaieraOrdua.Size = new System.Drawing.Size(199, 36);
+            this.TXTerreserbaAmaieraOrdua.TabIndex = 16;
+            this.TXTerreserbaAmaieraOrdua.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
             // 
             // ErreserbaEgin
             // 
@@ -159,9 +157,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1924, 959);
-            this.Controls.Add(this.CAmaiera);
+            this.Controls.Add(this.TXTerreserbaAmaieraOrdua);
+            this.Controls.Add(this.TXTerreserbaHasieraOrdua);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CHasiera);
             this.Controls.Add(this.BTNAtzera);
             this.Controls.Add(this.CBeremua);
             this.Controls.Add(this.LBLEremua);
@@ -189,8 +187,8 @@
         private System.Windows.Forms.Label LBLEremua;
         private System.Windows.Forms.ComboBox CBeremua;
         private System.Windows.Forms.Button BTNAtzera;
-        private System.Windows.Forms.ComboBox CHasiera;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox CAmaiera;
+        private System.Windows.Forms.TextBox TXTerreserbaHasieraOrdua;
+        private System.Windows.Forms.TextBox TXTerreserbaAmaieraOrdua;
     }
 }

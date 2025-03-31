@@ -11,21 +11,18 @@ namespace Konexioa
 {
     internal class Konexioa
     {
-        //Propiedades públicas para modificar la configuración si es necesario
-        public virtual string Servidor { get; set; } = "localhost";
+        public virtual string Servidor { get; set; } = "172.16.237.150";
         public virtual string Puerto { get; set; } = "3306";
-        public virtual string Usuario { get; set; } = "root";
-        public virtual string Contraseña { get; set; } = "1mg2024";
-        public virtual string BaseDeDatos { get; set; } = "3erronka";
+        public virtual string Usuario { get; set; } = "langilea";
+        public virtual string Contraseña { get; set; } = "1234";
+        public virtual string BaseDeDatos { get; set; } = "erronka3";
         public virtual string SslMode { get; set; } = "None";
 
-        //Konexio katea sortzeko metodoa
         public string konexioKatea()
         {
             return $"Server={Servidor}; Port={Puerto}; Database={BaseDeDatos}; User ID={Usuario}; Password={Contraseña}; SslMode=Preferred;";
         }
 
-        //konexioa lortzeko metodoa 
         public MySqlConnection conn;
         public void konektatu()
         {

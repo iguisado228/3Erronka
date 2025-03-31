@@ -28,6 +28,11 @@ namespace _3Erronka
         {
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
+
+            if (loggedInBazkidea != null)
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,13 +43,15 @@ namespace _3Erronka
                 
                 er.idBazkidea = loggedInBazkidea.idBazkidea;
                 er.idKluba = loggedInKluba.idKluba;
-                er.idEremua = Convert.ToInt32(CBeremua.SelectedItem.ToString());
+                er.idEremua = Convert.ToInt32(CBeremua.SelectedValue);
                 er.erreserbaEguna = DTPEguna.Value.Date;
-                er.erreserbaOrdua = CHasiera.SelectedValue.ToString();
-                er.erreserbaAmaieraOrdua = CAmaiera.SelectedValue.ToString();
+                er.hasieraOrdua = TXTerreserbaHasieraOrdua.Text.ToString();
+                er.amaieraOrdua = TXTerreserbaAmaieraOrdua.Text.ToString();
 
                 er.gehitu();
-    
+
+                MessageBox.Show("ID seleccionado: " + CBeremua.SelectedValue.ToString());
+
             }
             catch (Exception ex)
             {
@@ -69,19 +76,13 @@ namespace _3Erronka
             Erreserba er = new Erreserba();
 
             DataTable dtEremua = er.bilaketak("Select idEremua, izena from eremua");
-            DataTable dtHasiera = er.bilaketak("SELECT hasieraOrdua FROM erreserba");
-            DataTable dtAmaiera = er.bilaketak("SELECT amaieraOrdua FROM erreserba");
+            
 
             CBeremua.DataSource = dtEremua.Copy();
             CBeremua.DisplayMember = "izena";
             CBeremua.ValueMember = "idEremua";
 
-            CHasiera.DataSource = dtHasiera.Copy();
-            CHasiera.DisplayMember = "hasieraOrdua";
-
-            CAmaiera.DataSource = dtAmaiera.Copy();
-            CAmaiera.DisplayMember = "amaieraOrdua";
-
+          
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,6 +113,16 @@ namespace _3Erronka
         }
 
         private void DTPEguna_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
 
         }

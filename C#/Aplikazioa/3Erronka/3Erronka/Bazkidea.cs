@@ -12,7 +12,7 @@ namespace _3Erronka
 {
     internal class Bazkidea
     {
-        public virtual int idBazkidea { get; set; }  // Changed from { get; } to { get; set; }
+        public virtual int idBazkidea { get; set; }  
         public virtual String Identifikadorea { get; set; }
         public virtual String Pasahitza { get; set; }
         public virtual String NAN { get; }
@@ -38,7 +38,7 @@ namespace _3Erronka
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        idBazkidea = reader.GetInt32("idBazkidea");  // Store the ID
+                        idBazkidea = reader.GetInt32("idBazkidea");  
                         loginaEginda = true;
                     }
                     reader.Close();
