@@ -92,5 +92,12 @@ namespace _3Erronka
         {
 
         }
+
+        private void ikusiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ErreserbaIkusi erIk = new ErreserbaIkusi();
+            erIk.Show();
+            this.Hide();
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.BTNAtzera = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNAtzera
@@ -42,17 +44,33 @@
             this.BTNAtzera.UseVisualStyleBackColor = true;
             this.BTNAtzera.Click += new System.EventHandler(this.BTNAtzera_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 98);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1900, 672);
+            this.dataGridView1.TabIndex = 14;
+            // 
             // ErreserbaIkusi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1924, 851);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNAtzera);
             this.Name = "ErreserbaIkusi";
             this.Text = "ErreserbaIkusi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ErreserbaIkusi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -60,5 +78,6 @@
         #endregion
 
         private System.Windows.Forms.Button BTNAtzera;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

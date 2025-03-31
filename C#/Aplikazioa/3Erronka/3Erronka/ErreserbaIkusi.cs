@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,24 @@ namespace _3Erronka
 
         private void ErreserbaIkusi_Load(object sender, EventArgs e)
         {
-            
+            Konexioa.Konexioa K = new Konexioa.Konexioa();
+            K.konektatu();
+
+            try
+            {
+                DataTable table = new DataTable();
+
+                MySqlCommand command = new MySqlCommand("Select * from erreserba", K.conn);
+                
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                adapter.Fill(table);
+
+                dataGridView1.DataSource = table;
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Errorea select-ean: " + ex.Message);
+            }
         }
 
         private void BTNAtzera_Click(object sender, EventArgs e)
