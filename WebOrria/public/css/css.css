@@ -562,6 +562,12 @@ select {
     border-radius: 5px;
     font-size: 16px;
 }
+.erreserbaFormularioa select {
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+    box-sizing:content-box;
+}
 
 .erreserbaFormularioa input:focus,
 .erreserbaFormularioa select:focus {
