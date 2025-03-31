@@ -100,6 +100,12 @@
   <ItemGroup>
     <Compile Include="Bazkidea.cs" />
     <Compile Include="Erreserba.cs" />
+    <Compile Include="erreserbaEzabatu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="erreserbaEzabatu.Designer.cs">
+      <DependentUpon>erreserbaEzabatu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ErreserbaIkusi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="zelaiakIkusi.Designer.cs">
       <DependentUpon>zelaiakIkusi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="erreserbaEzabatu.resx">
+      <DependentUpon>erreserbaEzabatu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ErreserbaIkusi.resx">
       <DependentUpon>ErreserbaIkusi.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    internal class Bazkidea
+    public class Bazkidea
     {
         public virtual int idBazkidea { get; set; }  
         public virtual String Identifikadorea { get; set; }

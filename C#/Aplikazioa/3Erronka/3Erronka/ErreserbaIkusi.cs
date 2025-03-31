@@ -36,7 +36,7 @@ namespace _3Erronka
                 dataGridView1.DataSource = table;
             }catch (Exception ex)
             {
-                MessageBox.Show("Errorea select-ean: " + ex.Message);
+                MessageBox.Show("Errorea erreserbak bilatzean: " + ex.Message);
             }
         }
 

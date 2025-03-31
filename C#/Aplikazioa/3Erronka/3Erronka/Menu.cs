@@ -15,6 +15,7 @@ namespace _3Erronka
 
     {
         private Kluba loggedInKluba;
+        private Bazkidea loggedInBazkidea;
 
         public Menu()
         {
@@ -95,9 +96,23 @@ namespace _3Erronka
 
         private void ikusiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show($"Bazkidea: {(loggedInBazkidea != null ? loggedInBazkidea.idBazkidea.ToString() : "NULL")}, " +
+                $"Kluba: {(loggedInKluba != null ? loggedInKluba.idKluba.ToString() : "NULL")}");
             ErreserbaIkusi erIk = new ErreserbaIkusi();
             erIk.Show();
             this.Hide();
+        }
+
+        private void ezabatuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            erreserbaEzabatu erEz = new erreserbaEzabatu(loggedInKluba, loggedInBazkidea);
+            erEz.Show();
+            this.Hide();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
