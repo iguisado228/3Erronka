@@ -28,21 +28,19 @@ namespace _3Erronka
         {
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
-
-            if (loggedInBazkidea != null)
-            {
-
-            }
         }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 Erreserba er = new Erreserba();
-                
-                er.idBazkidea = loggedInBazkidea.idBazkidea;
-                er.idKluba = loggedInKluba.idKluba;
+
+                er.idBazkidea = (loggedInBazkidea != null) ? loggedInBazkidea.idBazkidea : 999;
+                er.idKluba = (loggedInKluba != null) ? loggedInKluba.idKluba : 999;
                 er.idEremua = Convert.ToInt32(CBeremua.SelectedValue);
                 er.erreserbaEguna = DTPEguna.Value.Date;
                 er.hasieraOrdua = TXTerreserbaHasieraOrdua.Text.ToString();

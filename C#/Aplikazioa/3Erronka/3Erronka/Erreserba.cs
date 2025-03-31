@@ -38,7 +38,16 @@ namespace _3Erronka
                 command.Connection = k.conn;
                 command.CommandText = "INSERT INTO erreserba (idEremua, idBazkidea, idKluba, erreserbaEguna, hasieraOrdua, amaieraOrdua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5, @valor6)";
                 command.Parameters.AddWithValue("@valor1", idEremua);
+                
+                if (idBazkidea == 0)
+                    {
+                        idBazkidea = 999;
+                    }
                 command.Parameters.AddWithValue("@valor2", idBazkidea);
+                if (idKluba == 0)
+                    {
+                        idKluba = 999;
+                    }
                 command.Parameters.AddWithValue("@valor3", idKluba);
                 command.Parameters.AddWithValue("@valor4", erreserbaEguna);
                 command.Parameters.AddWithValue("@valor5", hasieraOrdua);
@@ -50,7 +59,7 @@ namespace _3Erronka
                 int rowsAffected = command.ExecuteNonQuery();
                 transaction.Commit();
 
-                MessageBox.Show($"Afektatutako lerroak: {rowsAffected}");
+                MessageBox.Show($"Eragiketa egoki burutu da.");
 
 
             }
@@ -93,7 +102,7 @@ namespace _3Erronka
                 //si todo va bien, confirmar la transaccion
                 transaction.Commit();
 
-                MessageBox.Show($"Afektatutako lerroak: {rowsAffected}");
+                MessageBox.Show($"Eragiketa egoki burutu da.");
 
 
             }
