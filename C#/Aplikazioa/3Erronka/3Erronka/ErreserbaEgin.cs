@@ -30,20 +30,26 @@ namespace _3Erronka
             this.loggedInBazkidea = bazkidea;
         }
 
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 Erreserba er = new Erreserba();
-                
-                er.idBazkidea = loggedInBazkidea.idBazkidea;
-                er.idKluba = loggedInKluba.idKluba;
-                er.idEremua = Convert.ToInt32(CBeremua.SelectedItem.ToString());
+
+                er.idBazkidea = (loggedInBazkidea != null) ? loggedInBazkidea.idBazkidea : 999;
+                er.idKluba = (loggedInKluba != null) ? loggedInKluba.idKluba : 999;
+                er.idEremua = Convert.ToInt32(CBeremua.SelectedValue);
                 er.erreserbaEguna = DTPEguna.Value.Date;
-                er.erreserbaOrdua = TXTH_ordua.Text;
-                er.erreserbaAmaieraOrdua = TXTA_ordua.Text;
+                er.hasieraOrdua = TXTerreserbaHasieraOrdua.Text.ToString();
+                er.amaieraOrdua = TXTerreserbaAmaieraOrdua.Text.ToString();
+
                 er.gehitu();
-    
+
+                MessageBox.Show("ID seleccionado: " + CBeremua.SelectedValue.ToString());
+
             }
             catch (Exception ex)
             {
@@ -63,22 +69,18 @@ namespace _3Erronka
 
         private void Erreserba_Load(object sender, EventArgs e)
         {
-            LBLerreserba.Location = new Point(610, 30);
-            BTNErreserba.Location = new Point(1310, 735);
-            LBLerreserbaEguna.Location = new Point(20, 200);
-            LBLH_ordua.Location = new Point(20,275);
-            LBLA_ordua.Location = new Point(20, 350);
-            LBLEremua.Location = new Point(820, 200);
-
-            DTPEguna.Location = new Point(350, 210);
-            TXTH_ordua.Location = new Point(350, 285);
-            TXTA_ordua.Location = new Point(520, 360);
+            
 
             Erreserba er = new Erreserba();
 
-            CBeremua.DataSource = er.bilaketak("SELECT izena FROM eremua");
+            DataTable dtEremua = er.bilaketak("Select idEremua, izena from eremua");
+            
+
+            CBeremua.DataSource = dtEremua.Copy();
             CBeremua.DisplayMember = "izena";
-            CBeremua.ValueMember = "izena"; 
+            CBeremua.ValueMember = "idEremua";
+
+          
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,6 +89,38 @@ namespace _3Erronka
         }
 
         private void LBLerreserbaEguna_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNAtzera_Click(object sender, EventArgs e)
+        {
+            Menu men = new Menu();
+            men.Show();
+            this.Hide();
+        }
+
+        private void COrdua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CAmaiera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DTPEguna_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
         {
 
         }

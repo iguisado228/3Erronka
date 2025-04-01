@@ -71,6 +71,7 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.UseWaitCursor = true;
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // erreserbaEginToolStripMenuItem
             // 
@@ -95,12 +96,14 @@
             this.ikusiToolStripMenuItem.Name = "ikusiToolStripMenuItem";
             this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.ikusiToolStripMenuItem.Text = "Ikusi";
+            this.ikusiToolStripMenuItem.Click += new System.EventHandler(this.ikusiToolStripMenuItem_Click);
             // 
             // ezabatuToolStripMenuItem
             // 
             this.ezabatuToolStripMenuItem.Name = "ezabatuToolStripMenuItem";
             this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.ezabatuToolStripMenuItem.Text = "Ezabatu";
+            this.ezabatuToolStripMenuItem.Click += new System.EventHandler(this.ezabatuToolStripMenuItem_Click);
             // 
             // zelaiakIkusiToolStripMenuItem
             // 
@@ -114,7 +117,7 @@
             // ikusiToolStripMenuItem1
             // 
             this.ikusiToolStripMenuItem1.Name = "ikusiToolStripMenuItem1";
-            this.ikusiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.ikusiToolStripMenuItem1.Size = new System.Drawing.Size(121, 26);
             this.ikusiToolStripMenuItem1.Text = "Ikusi";
             this.ikusiToolStripMenuItem1.Click += new System.EventHandler(this.ikusiToolStripMenuItem1_Click);
             // 
@@ -188,6 +191,7 @@
             this.panel2.Size = new System.Drawing.Size(1942, 761);
             this.panel2.TabIndex = 4;
             this.panel2.UseWaitCursor = true;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 

@@ -15,6 +15,13 @@ namespace _3Erronka
 
     {
         private Kluba loggedInKluba;
+        private Bazkidea loggedInBazkidea;
+
+        public Menu()
+        {
+            InitializeComponent();
+        }
+
 
         public Menu(Kluba kluba)
         {
@@ -65,6 +72,7 @@ namespace _3Erronka
             Bazkidea bazkidea = new Bazkidea(); // Asegúrate de cargarlo correctamente
             ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, bazkidea);
             erreserbaEgin.Show();
+            this.Hide();
 
 
         }
@@ -78,6 +86,33 @@ namespace _3Erronka
         {
             zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
             zelaiakikusi.Show();
+            this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ikusiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Bazkidea: {(loggedInBazkidea != null ? loggedInBazkidea.idBazkidea.ToString() : "NULL")}, " +
+                $"Kluba: {(loggedInKluba != null ? loggedInKluba.idKluba.ToString() : "NULL")}");
+            ErreserbaIkusi erIk = new ErreserbaIkusi();
+            erIk.Show();
+            this.Hide();
+        }
+
+        private void ezabatuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            erreserbaEzabatu erEz = new erreserbaEzabatu(loggedInKluba, loggedInBazkidea);
+            erEz.Show();
+            this.Hide();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

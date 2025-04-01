@@ -33,7 +33,7 @@ namespace _3Erronka
             b.Identifikadorea = TXTIdentifikadorea.Text;
             b.Pasahitza = TXTPasahitza.Text;
 
-            Kluba kl = new Kluba();
+            Kluba kl = new Kluba(0);
             kl.Identifikadorea = TXTIdentifikadorea.Text;
             kl.Pasahitza = TXTPasahitza.Text;
 
@@ -44,12 +44,10 @@ namespace _3Erronka
                 men.Show();
                 this.Hide();
             }
-            else if (kl.klubLogina()) // Aquí ya se obtiene el idKluba dentro del método klubLogina()
+            else if (kl.klubLogina())
             {
                 MessageBox.Show($"Ongi etorri, kluba!");
-
-                // PASAMOS EL OBJETO `kl` A `Menu`, ASEGURÁNDONOS DE QUE TIENE EL idKluba
-                Menu men = new Menu(kl); // Asegúrate de modificar el constructor de Menu si es necesario
+                Menu men = new Menu(kl);
                 men.Show();
                 this.Hide();
             }
@@ -66,3 +64,4 @@ namespace _3Erronka
         }
     }
 }
+
