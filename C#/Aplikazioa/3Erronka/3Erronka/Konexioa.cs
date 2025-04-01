@@ -11,11 +11,11 @@ namespace Konexioa
 {
     internal class Konexioa
     {
-        public virtual string Servidor { get; set; } = "localhost";
+        public virtual string Servidor { get; set; } = "172.16.237.150";
         public virtual string Puerto { get; set; } = "3306";
-        public virtual string Usuario { get; set; } = "root";
-        public virtual string Contraseña { get; set; } = "1mg2024";
-        public virtual string BaseDeDatos { get; set; } = "3erronka";
+        public virtual string Usuario { get; set; } = "langilea";
+        public virtual string Contraseña { get; set; } = "123";
+        public virtual string BaseDeDatos { get; set; } = "erronka3";
         public virtual string SslMode { get; set; } = "None";
 
         public string konexioKatea()

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|c:\\xampp\\htdocs\\3erronka\\c#\\aplikazioa\\3erronka\\3erronka\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\erreserbaegin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\erreserbaegin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\konexioa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\konexioa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|c:\\xampp\\htdocs\\3erronka\\c#\\aplikazioa\\3erronka\\3erronka\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|c:\\xampp\\htdocs\\3erronka\\c#\\aplikazioa\\3erronka\\3erronka\\erreserbaezabatu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\erreserbaezabatu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\erreserba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\erreserbaikusi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\erreserbaikusi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3erronka\\erreserbaegin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38DF5D91-31DE-4E79-A581-1E6B8E840072}|3Erronka\\3Erronka.csproj|solutionrelative:3erronka\\erreserbaegin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +34,22 @@
       "DocumentGroups": [
         {
           "DockedHeight": 357,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ErreserbaEgin.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\ErreserbaEgin.cs",
+              "RelativeDocumentMoniker": "3Erronka\\ErreserbaEgin.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\ErreserbaEgin.cs",
+              "RelativeToolTip": "3Erronka\\ErreserbaEgin.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAA2wHMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T08:02:29.224Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -61,76 +75,59 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Konexioa.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Konexioa.cs",
+              "RelativeDocumentMoniker": "3Erronka\\Konexioa.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Konexioa.cs",
+              "RelativeToolTip": "3Erronka\\Konexioa.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T12:03:39.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Menu.cs",
               "RelativeDocumentMoniker": "3Erronka\\Menu.cs",
               "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Menu.cs",
               "RelativeToolTip": "3Erronka\\Menu.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAmwGMAAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T12:01:53.141Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-03-31T12:01:53.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Menu.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Menu.cs",
               "RelativeDocumentMoniker": "3Erronka\\Menu.cs",
               "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Menu.cs [Dise\u00F1o]",
               "RelativeToolTip": "3Erronka\\Menu.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T12:01:50.723Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "erreserbaEzabatu.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\erreserbaEzabatu.cs",
-              "RelativeDocumentMoniker": "3Erronka\\erreserbaEzabatu.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\erreserbaEzabatu.cs",
-              "RelativeToolTip": "3Erronka\\erreserbaEzabatu.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T07:49:52.544Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-03-31T12:01:50.723Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ErreserbaEgin.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\ErreserbaEgin.cs",
-              "RelativeDocumentMoniker": "3Erronka\\ErreserbaEgin.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\ErreserbaEgin.cs",
-              "RelativeToolTip": "3Erronka\\ErreserbaEgin.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAAAHMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T08:02:29.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "ErreserbaIkusi.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\ErreserbaIkusi.cs",
               "RelativeDocumentMoniker": "3Erronka\\ErreserbaIkusi.cs",
               "ToolTip": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\ErreserbaIkusi.cs",
               "RelativeToolTip": "3Erronka\\ErreserbaIkusi.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T07:24:02.497Z",
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-03-31T07:24:02.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Erreserba.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\3Erronka\\C#\\Aplikazioa\\3Erronka\\3Erronka\\Erreserba.cs",
               "RelativeDocumentMoniker": "3Erronka\\Erreserba.cs",
@@ -138,8 +135,7 @@
               "RelativeToolTip": "3Erronka\\Erreserba.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAuwKMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T07:58:21.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T07:58:21.529Z"
             }
           ]
         },
