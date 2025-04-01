@@ -29,7 +29,7 @@ namespace _3Erronka
 
         private void BTNSaioaHasi_Click(object sender, EventArgs e)
         {
-            Bazkidea b = new Bazkidea();
+            Bazkidea b = new Bazkidea(0);
             b.Identifikadorea = TXTIdentifikadorea.Text;
             b.Pasahitza = TXTPasahitza.Text;
 
@@ -45,7 +45,7 @@ namespace _3Erronka
             }
             else if (kl.klubLogina())
             {
-                Menu men = new Menu(kl, new Bazkidea { idBazkidea = 999 });
+                Menu men = new Menu(kl, b);
                 men.Show();
                 this.Hide();
             }

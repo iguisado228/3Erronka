@@ -37,7 +37,6 @@ namespace _3Erronka
                     command.CommandText = "SELECT identifikadorea, pasahitza, idKluba FROM kluba WHERE identifikadorea = @valor1 AND pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
-
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
@@ -48,7 +47,7 @@ namespace _3Erronka
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error en el login: " + ex.Message);
+                    MessageBox.Show("Errorea loginean: " + ex.Message);
                 }
                 k.conn.Close();
             }

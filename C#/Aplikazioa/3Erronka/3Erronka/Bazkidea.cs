@@ -20,6 +20,11 @@ namespace _3Erronka
         public virtual String Abizena { get; }
         public virtual String Helbidea { get; }
 
+        public Bazkidea (int idBazkidea)
+        {
+            this.idBazkidea = idBazkidea;
+        }
+
         public bool bazkideLogina()
         {
             Boolean loginaEginda = false;
@@ -39,7 +44,6 @@ namespace _3Erronka
                     if (reader.Read())
                     {
                         idBazkidea = reader.GetInt32("idBazkidea");
-                        MessageBox.Show(idBazkidea.ToString());
                         loginaEginda = true;
                     }
                     reader.Close();

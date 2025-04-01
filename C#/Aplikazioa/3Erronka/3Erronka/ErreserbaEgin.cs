@@ -21,7 +21,7 @@ namespace _3Erronka
         {
             InitializeComponent();
             this.loggedInKluba = kluba ?? new Kluba(999);
-            this.loggedInBazkidea = bazkidea ?? new Bazkidea { idBazkidea = 999 };
+            this.loggedInBazkidea = bazkidea ?? new Bazkidea(999);
         }
 
 

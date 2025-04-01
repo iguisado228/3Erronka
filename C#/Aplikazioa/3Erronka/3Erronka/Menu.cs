@@ -22,7 +22,7 @@ namespace _3Erronka
         {
             InitializeComponent();
             this.loggedInKluba = kluba ?? new Kluba (999);
-            this.loggedInBazkidea = bazkidea ?? new Bazkidea { idBazkidea = 999 };
+            this.loggedInBazkidea = bazkidea ?? new Bazkidea(999);
         }
 
 
@@ -63,7 +63,7 @@ namespace _3Erronka
         }
 
         private void eginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
             ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, loggedInBazkidea);
             erreserbaEgin.Show();
             this.Hide();
