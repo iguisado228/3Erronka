@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTN_Atzera = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,22 +54,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Zure erreserbak:";
             // 
-            // button1
+            // BTN_Atzera
             // 
-            this.button1.Location = new System.Drawing.Point(782, 334);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 63);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Konprobatu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BTN_Atzera.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Atzera.Location = new System.Drawing.Point(1690, 896);
+            this.BTN_Atzera.Name = "BTN_Atzera";
+            this.BTN_Atzera.Size = new System.Drawing.Size(222, 51);
+            this.BTN_Atzera.TabIndex = 2;
+            this.BTN_Atzera.Text = "Atzera joan";
+            this.BTN_Atzera.UseVisualStyleBackColor = true;
+            this.BTN_Atzera.Click += new System.EventHandler(this.BTN_Atzera_Click);
             // 
             // erreserbaEzabatu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 959);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTN_Atzera);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "erreserbaEzabatu";
@@ -86,6 +87,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_Atzera;
     }
 }

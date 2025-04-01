@@ -13,9 +13,14 @@ namespace _3Erronka
 {
     public partial class ErreserbaIkusi : Form
     {
-        public ErreserbaIkusi()
+        private Kluba loggedInKluba;
+        private Bazkidea loggedInBazkidea;
+
+        public ErreserbaIkusi(Kluba kluba = null, Bazkidea bazkidea = null)
         {
             InitializeComponent();
+            this.loggedInKluba = kluba ?? new Kluba(999);
+            this.loggedInBazkidea = bazkidea ?? new Bazkidea { idBazkidea = 999 };
         }
 
         private void ErreserbaIkusi_Load(object sender, EventArgs e)
@@ -42,7 +47,7 @@ namespace _3Erronka
 
         private void BTNAtzera_Click(object sender, EventArgs e)
         {
-            Menu men = new Menu();
+            Menu men = new Menu(loggedInKluba, loggedInBazkidea);
             men.Show();
             this.Hide();
         }

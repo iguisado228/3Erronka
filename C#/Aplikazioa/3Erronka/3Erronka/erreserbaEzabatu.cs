@@ -36,6 +36,7 @@ namespace _3Erronka
                 if (loggedInKluba != null && loggedInKluba.idKluba != 999)
                 {
                     query += " AND idKluba = @idKluba";
+
                 }else if (loggedInBazkidea != null && loggedInBazkidea.idBazkidea != 999)
                 {
                     query += " AND idBazkidea = @idBazkidea";
@@ -43,10 +44,11 @@ namespace _3Erronka
 
                 MySqlCommand command = new MySqlCommand(query, K.conn);
 
-                if (loggedInKluba != null && loggedInKluba.idKluba != 999)
+                if (loggedInKluba.idKluba != 999)
                 {
                     command.Parameters.AddWithValue("@idKluba", loggedInKluba.idKluba);
-                } else if (loggedInBazkidea != null && loggedInBazkidea.idBazkidea != 999)
+
+                } else if (loggedInBazkidea.idBazkidea != 999)
                 {
                     command.Parameters.AddWithValue("@idBazkidea", loggedInBazkidea.idBazkidea);
                 }
@@ -54,9 +56,8 @@ namespace _3Erronka
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(table);
-
                 dataGridView1.DataSource = table;
-                Console.WriteLine(query);
+
 
             }
             catch (Exception ex)
@@ -65,23 +66,11 @@ namespace _3Erronka
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BTN_Atzera_Click(object sender, EventArgs e)
         {
-            if (loggedInBazkidea != null)
-            {
-                MessageBox.Show("Bazkidea: " + loggedInBazkidea.idBazkidea);
-            }else
-            {
-                MessageBox.Show("Bazkidea: " + loggedInBazkidea.idBazkidea);
-            }
-
-            if (loggedInKluba != null)
-            {
-                MessageBox.Show("Kluba: " + loggedInKluba.idKluba);
-            }else
-            {
-                MessageBox.Show("Kluba: " + loggedInKluba.idKluba);
-            }
+            Menu men = new Menu(loggedInKluba, loggedInBazkidea);
+            men.Show();
+            this.Hide();
         }
     }
 }

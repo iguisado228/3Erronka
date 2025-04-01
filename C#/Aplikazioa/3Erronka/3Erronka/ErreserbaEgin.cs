@@ -17,17 +17,11 @@ namespace _3Erronka
         private Kluba loggedInKluba;
         private Bazkidea loggedInBazkidea;
 
-        // Default constructor for the designer
-        public ErreserbaEgin()
+        internal ErreserbaEgin(Kluba kluba, Bazkidea bazkidea)
         {
             InitializeComponent();
-        }
-
-        // Constructor for actual use
-        internal ErreserbaEgin(Kluba kluba, Bazkidea bazkidea) : this()
-        {
-            this.loggedInKluba = kluba;
-            this.loggedInBazkidea = bazkidea;
+            this.loggedInKluba = kluba ?? new Kluba(999);
+            this.loggedInBazkidea = bazkidea ?? new Bazkidea { idBazkidea = 999 };
         }
 
 
@@ -95,7 +89,7 @@ namespace _3Erronka
 
         private void BTNAtzera_Click(object sender, EventArgs e)
         {
-            Menu men = new Menu();
+            Menu men = new Menu(loggedInKluba, loggedInBazkidea);
             men.Show();
             this.Hide();
         }

@@ -39,15 +39,13 @@ namespace _3Erronka
 
             if (b.bazkideLogina())
             {
-                MessageBox.Show($"Ongi etorri, bazkidea!");
-                Menu men = new Menu();
+                Menu men = new Menu(kl, b);
                 men.Show();
                 this.Hide();
             }
             else if (kl.klubLogina())
             {
-                MessageBox.Show($"Ongi etorri, kluba!");
-                Menu men = new Menu(kl);
+                Menu men = new Menu(kl, new Bazkidea { idBazkidea = 999 });
                 men.Show();
                 this.Hide();
             }

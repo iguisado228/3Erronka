@@ -38,37 +38,19 @@ namespace _3Erronka
                 command.Connection = k.conn;
                 command.CommandText = "INSERT INTO erreserba (idEremua, idBazkidea, idKluba, erreserbaEguna, hasieraOrdua, amaieraOrdua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5, @valor6)";
                 command.Parameters.AddWithValue("@valor1", idEremua);
-                
-                if (idBazkidea == 0)
-                    {
-                        idBazkidea = 999;
-                    }
-                command.Parameters.AddWithValue("@valor2", idBazkidea);
-                if (idKluba == 0)
-                    {
-                        idKluba = 999;
-                    }
-                command.Parameters.AddWithValue("@valor3", idKluba);
+                command.Parameters.AddWithValue("@valor2", idBazkidea == 0 ? 999 : idBazkidea);
+                command.Parameters.AddWithValue("@valor3", idKluba == 0 ? 999 : idKluba);
                 command.Parameters.AddWithValue("@valor4", erreserbaEguna);
                 command.Parameters.AddWithValue("@valor5", hasieraOrdua);
                 command.Parameters.AddWithValue("@valor6", amaieraOrdua);
-
-
-                MessageBox.Show(command.CommandText);
-
-                int rowsAffected = command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 transaction.Commit();
-
                 MessageBox.Show($"Eragiketa egoki burutu da.");
-
-
             }
             catch (Exception ex)
             {
                 transaction.Rollback();
                 MessageBox.Show("Errore bat egon da;" + ex.Message);
-
-
             }
             finally
             {
