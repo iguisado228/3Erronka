@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    internal class Kluba
+    public class Kluba
     {
         public virtual int idKluba { get; set;}
         public virtual String Identifikadorea { get; set;}
@@ -18,10 +18,13 @@ namespace _3Erronka
         public virtual int jokalariKopurua { get; set;}
         public virtual int taldeKopurua { get; set;}
 
-        public Kluba()
-        {
 
-        }
+
+
+
+
+
+
         public Kluba(int idKluba)
         {
             this.idKluba = idKluba;
@@ -38,26 +41,27 @@ namespace _3Erronka
                 {
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = k.conn;
-                    command.CommandText = "Select identifikadorea, pasahitza, idKluba from kluba where identifikadorea = @valor1 and pasahitza = @valor2";
+                    command.CommandText = "SELECT identifikadorea, pasahitza, idKluba FROM kluba WHERE identifikadorea = @valor1 AND pasahitza = @valor2";
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
+
                     MySqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
-                        reader.Read();
-                        idKluba = reader.GetInt32("idKluba");  // Store the ID
+                        idKluba = reader.GetInt32("idKluba"); 
                         loginaEginda = true;
                     }
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Errorea loginean: " + ex.Message);
+                    MessageBox.Show("Error en el login: " + ex.Message);
                 }
                 k.conn.Close();
             }
             return loginaEginda;
         }
+
 
     }
 }

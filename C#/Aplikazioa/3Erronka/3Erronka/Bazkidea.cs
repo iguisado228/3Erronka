@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _3Erronka
 {
-    internal class Bazkidea
+    public class Bazkidea
     {
-        public virtual int idBazkidea { get; set; }  // Changed from { get; } to { get; set; }
+        public virtual int idBazkidea { get; set; }  
         public virtual String Identifikadorea { get; set; }
         public virtual String Pasahitza { get; set; }
         public virtual String NAN { get; }
@@ -36,10 +36,9 @@ namespace _3Erronka
                     command.Parameters.AddWithValue("@valor1", Identifikadorea);
                     command.Parameters.AddWithValue("@valor2", Pasahitza);
                     MySqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
-                        reader.Read();
-                        idBazkidea = reader.GetInt32("idBazkidea");  // Store the ID
+                        idBazkidea = reader.GetInt32("idBazkidea");  
                         loginaEginda = true;
                     }
                     reader.Close();
