@@ -49,6 +49,7 @@ namespace _3Erronka
                 men.Show();
                 this.Hide();
             }
+
             else
             {
                 MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");

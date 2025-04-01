@@ -25,6 +25,7 @@ namespace _3Erronka
             this.loggedInBazkidea = bazkidea ?? new Bazkidea { idBazkidea = 999 };
         }
 
+
         private void erreserbakIkusiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             

@@ -22,12 +22,16 @@ namespace _3Erronka
             InitializeComponent();
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
+
+            MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
+                            $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
         }
+
 
         private void erreserbaEzabatu_Load(object sender, EventArgs e)
         {
             Konexioa.Konexioa K = new Konexioa.Konexioa();
-            K.konektatu();
+            K.konektatu();  
 
             try
             {
