@@ -18,13 +18,6 @@ namespace _3Erronka
         public virtual int jokalariKopurua { get; set;}
         public virtual int taldeKopurua { get; set;}
 
-
-
-
-
-
-
-
         public Kluba(int idKluba)
         {
             this.idKluba = idKluba;

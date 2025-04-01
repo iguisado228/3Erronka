@@ -64,15 +64,9 @@ namespace _3Erronka
 
         private void eginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-   
-
-            Bazkidea bazkidea = new Bazkidea(); 
-
             ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, loggedInBazkidea);
             erreserbaEgin.Show();
             this.Hide();
-
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
