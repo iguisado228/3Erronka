@@ -14,7 +14,7 @@ namespace Konexioa
         public virtual string Servidor { get; set; } = "172.16.237.150";
         public virtual string Puerto { get; set; } = "3306";
         public virtual string Usuario { get; set; } = "langilea";
-        public virtual string Contraseña { get; set; } = "123";
+        public virtual string Contraseña { get; set; } = "1234";
         public virtual string BaseDeDatos { get; set; } = "erronka3";
         public virtual string SslMode { get; set; } = "None";
 

@@ -22,12 +22,16 @@ namespace _3Erronka
             InitializeComponent();
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
+
+            MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
+                            $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
         }
+
 
         private void erreserbaEzabatu_Load(object sender, EventArgs e)
         {
             Konexioa.Konexioa K = new Konexioa.Konexioa();
-            K.konektatu();
+            K.konektatu();  
 
             try
             {
@@ -36,7 +40,8 @@ namespace _3Erronka
                 if (loggedInKluba != null && loggedInKluba.idKluba != 999)
                 {
                     query += " AND idKluba = @idKluba";
-                }else if (loggedInBazkidea != null && loggedInBazkidea.idBazkidea != 999)
+                }
+                else if (loggedInBazkidea != null && loggedInBazkidea.idBazkidea != 999)
                 {
                     query += " AND idBazkidea = @idBazkidea";
                 }

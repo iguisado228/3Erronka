@@ -23,11 +23,13 @@ namespace _3Erronka
         }
 
 
-        public Menu(Kluba kluba)
+        public Menu(Kluba kluba, Bazkidea bazkidea)
         {
             InitializeComponent();
             this.loggedInKluba = kluba;
+            this.loggedInBazkidea = bazkidea;
         }
+
 
         private void erreserbakIkusiToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,8 +71,7 @@ namespace _3Erronka
         {
    
 
-            Bazkidea bazkidea = new Bazkidea(); // Asegúrate de cargarlo correctamente
-            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, bazkidea);
+            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, loggedInBazkidea);
             erreserbaEgin.Show();
             this.Hide();
 
