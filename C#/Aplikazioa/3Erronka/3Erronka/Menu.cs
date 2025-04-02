@@ -21,8 +21,8 @@ namespace _3Erronka
         public Menu(Kluba kluba = null, Bazkidea bazkidea = null)
         {
             InitializeComponent();
-            this.loggedInKluba = kluba ?? new Kluba (999);
-            this.loggedInBazkidea = bazkidea ?? new Bazkidea(999);
+            this.loggedInKluba = (kluba == null || kluba.idKluba == 0) ? new Kluba (999) : kluba;
+            this.loggedInBazkidea = (bazkidea == null || bazkidea.idBazkidea == 0) ? new Bazkidea(999) : bazkidea;
         }
 
 
