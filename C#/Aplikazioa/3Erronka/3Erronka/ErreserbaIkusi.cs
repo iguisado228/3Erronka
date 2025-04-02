@@ -39,6 +39,7 @@ namespace _3Erronka
                 adapter.Fill(table);
 
                 dataGridView1.DataSource = table;
+
             }catch (Exception ex)
             {
                 MessageBox.Show("Errorea erreserbak bilatzean: " + ex.Message);

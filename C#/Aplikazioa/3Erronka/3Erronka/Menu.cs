@@ -107,5 +107,12 @@ namespace _3Erronka
         {
 
         }
+
+        private void kudeatuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            erreserbaKudeatu erKu = new erreserbaKudeatu(loggedInKluba, loggedInBazkidea);
+            erKu.Show();
+            this.Hide();
+        }
     }
 }

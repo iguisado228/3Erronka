@@ -33,6 +33,7 @@
             this.eginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ikusiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ezabatuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kudeatuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zelaiakIkusiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ikusiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ordutegiakIkusiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +79,8 @@
             this.erreserbaEginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eginToolStripMenuItem,
             this.ikusiToolStripMenuItem,
-            this.ezabatuToolStripMenuItem});
+            this.ezabatuToolStripMenuItem,
+            this.kudeatuToolStripMenuItem});
             this.erreserbaEginToolStripMenuItem.Name = "erreserbaEginToolStripMenuItem";
             this.erreserbaEginToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.erreserbaEginToolStripMenuItem.Text = "Erreserbak";
@@ -87,23 +89,30 @@
             // eginToolStripMenuItem
             // 
             this.eginToolStripMenuItem.Name = "eginToolStripMenuItem";
-            this.eginToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.eginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eginToolStripMenuItem.Text = "Egin";
             this.eginToolStripMenuItem.Click += new System.EventHandler(this.eginToolStripMenuItem_Click);
             // 
             // ikusiToolStripMenuItem
             // 
             this.ikusiToolStripMenuItem.Name = "ikusiToolStripMenuItem";
-            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ikusiToolStripMenuItem.Text = "Ikusi";
             this.ikusiToolStripMenuItem.Click += new System.EventHandler(this.ikusiToolStripMenuItem_Click);
             // 
             // ezabatuToolStripMenuItem
             // 
             this.ezabatuToolStripMenuItem.Name = "ezabatuToolStripMenuItem";
-            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ezabatuToolStripMenuItem.Text = "Ezabatu";
             this.ezabatuToolStripMenuItem.Click += new System.EventHandler(this.ezabatuToolStripMenuItem_Click);
+            // 
+            // kudeatuToolStripMenuItem
+            // 
+            this.kudeatuToolStripMenuItem.Name = "kudeatuToolStripMenuItem";
+            this.kudeatuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kudeatuToolStripMenuItem.Text = "Kudeatu";
+            this.kudeatuToolStripMenuItem.Click += new System.EventHandler(this.kudeatuToolStripMenuItem_Click);
             // 
             // zelaiakIkusiToolStripMenuItem
             // 
@@ -288,5 +297,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem kudeatuToolStripMenuItem;
     }
 }

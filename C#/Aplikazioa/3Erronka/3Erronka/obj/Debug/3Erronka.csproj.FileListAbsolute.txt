@@ -46,3 +46,4 @@ C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.cspr
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.exe
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\3Erronka.pdb
 C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\bin\Debug\3Erronka.pdb
+C:\xampp\htdocs\3Erronka\C#\Aplikazioa\3Erronka\3Erronka\obj\Debug\_3Erronka.erreserbaKudeatu.resources
