@@ -17,17 +17,14 @@ namespace _3Erronka
         private Kluba loggedInKluba;
         private Bazkidea loggedInBazkidea;
 
-        public Menu()
+
+        public Menu(Kluba kluba = null, Bazkidea bazkidea = null)
         {
             InitializeComponent();
+            this.loggedInKluba = (kluba == null || kluba.idKluba == 0) ? new Kluba (999) : kluba;
+            this.loggedInBazkidea = (bazkidea == null || bazkidea.idBazkidea == 0) ? new Bazkidea(999) : bazkidea;
         }
 
-
-        public Menu(Kluba kluba)
-        {
-            InitializeComponent();
-            this.loggedInKluba = kluba;
-        }
 
         private void erreserbakIkusiToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -66,15 +63,10 @@ namespace _3Erronka
         }
 
         private void eginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-   
-
-            Bazkidea bazkidea = new Bazkidea(); // Asegúrate de cargarlo correctamente
-            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, bazkidea);
+        {   
+            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, loggedInBazkidea);
             erreserbaEgin.Show();
             this.Hide();
-
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -84,7 +76,7 @@ namespace _3Erronka
 
         private void ikusiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
+            zelaiakIkusi zelaiakikusi = new zelaiakIkusi(loggedInKluba, loggedInBazkidea);
             zelaiakikusi.Show();
             this.Hide();
         }
@@ -98,7 +90,8 @@ namespace _3Erronka
         {
             MessageBox.Show($"Bazkidea: {(loggedInBazkidea != null ? loggedInBazkidea.idBazkidea.ToString() : "NULL")}, " +
                 $"Kluba: {(loggedInKluba != null ? loggedInKluba.idKluba.ToString() : "NULL")}");
-            ErreserbaIkusi erIk = new ErreserbaIkusi();
+            
+            ErreserbaIkusi erIk = new ErreserbaIkusi(loggedInKluba, loggedInBazkidea);
             erIk.Show();
             this.Hide();
         }
@@ -113,6 +106,13 @@ namespace _3Erronka
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void kudeatuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            erreserbaKudeatu erKu = new erreserbaKudeatu(loggedInKluba, loggedInBazkidea);
+            erKu.Show();
+            this.Hide();
         }
     }
 }

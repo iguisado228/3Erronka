@@ -5,36 +5,48 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _3Erronka
 {
-
-    public partial class erreserbaEzabatu : Form
+    public partial class erreserbaKudeatu : Form
     {
-        private Kluba loggedInKluba; 
+
+        private Kluba loggedInKluba;
         private Bazkidea loggedInBazkidea;
 
-        public erreserbaEzabatu(Kluba kluba, Bazkidea bazkidea)
+        public erreserbaKudeatu(Kluba kluba, Bazkidea bazkidea)
         {
             InitializeComponent();
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
 
+            CErreserba.SelectedIndexChanged += CErreserba_SelectedIndexChanged;
+
             MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
                             $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
         }
 
-
-        private void erreserbaEzabatu_Load(object sender, EventArgs e)
+        private void erreserbaKudeatu_Load(object sender, EventArgs e)
         {
-            ErreserbakAgertuCB();
-            ErreserbakAgertuDGV();
+                ErreserbakAgertuCB();
+                ErreserbakAgertuDGV();
+           
+
+
+                Erreserba er = new Erreserba();
+
+                DataTable dtEremua = er.bilaketak("Select idEremua, izena from eremua");
+
+
+                CBeremua.DataSource = dtEremua.Copy();
+                CBeremua.DisplayMember = "izena";
+                CBeremua.ValueMember = "idEremua";
+
         }
-            
+
         private void ErreserbakAgertuCB()
         {
             try
@@ -82,7 +94,15 @@ namespace _3Erronka
         {
             try
             {
-                string query = "select * from erreserba where 1=1";
+                string query = @"SELECT 
+                    e.idErreserba AS 'Erreserba IDa',
+                    er.izena AS 'Eremua',
+                    e.erreserbaEguna AS 'Eguna',
+                    e.hasieraOrdua AS 'Hasiera Ordua',
+                    e.amaieraOrdua AS 'Amaiera Ordua'
+                 FROM erreserba e
+                 JOIN eremua er ON e.idEremua = er.idEremua
+                 WHERE 1=1";
 
                 if (loggedInKluba.idKluba != 999)
                 {
@@ -118,58 +138,91 @@ namespace _3Erronka
             }
         }
 
+        private void CErreserba_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CErreserba.SelectedValue != null && CErreserba.SelectedValue.ToString() != "")
+            {
+                try
+                {
+                    string query = "SELECT * FROM erreserba WHERE idErreserba = @idErreserba";
 
-        private void BTN_Atzera_Click(object sender, EventArgs e)
+                    Konexioa.Konexioa K = new Konexioa.Konexioa();
+                    K.konektatu();
+                    MySqlCommand command = new MySqlCommand(query, K.conn);
+                    command.Parameters.AddWithValue("@idErreserba", CErreserba.SelectedValue);
+
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        
+                        DTP_Eguna.Text = reader["erreserbaEguna"].ToString();
+                        TXT_hasieraOrdua.Text = reader["hasieraOrdua"].ToString();
+                        TXT_amaieraOrdua.Text = reader["amaieraOrdua"].ToString();
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar los datos de la reserva: " + ex.Message);
+                }
+            }
+        }
+
+        private void BTNAtzera_Click(object sender, EventArgs e)
         {
             Menu men = new Menu(loggedInKluba, loggedInBazkidea);
             men.Show();
             this.Hide();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BTN_Ezabatu_Click(object sender, EventArgs e)
-        {
-            if (CErreserba.SelectedValue == null)
-            {
-                MessageBox.Show("Lehenik erreserba bat aukeratu mesedez.");
-                return;
-            }
-
-            int idErreserba = Convert.ToInt32(CErreserba.SelectedValue);
-
-            try
-            {
-                Konexioa.Konexioa K = new Konexioa.Konexioa();
-                K.konektatu();
-                string query = "Delete from erreserba where idErreserba = @id";
-
-                MySqlCommand command = new MySqlCommand(query, K.conn);
-                command.Parameters.AddWithValue("@id", idErreserba);
-
-                int ilarak = command.ExecuteNonQuery();
-
-                if (ilarak > 0)
-                {
-                    MessageBox.Show("Erreserba ezabatu da.");   
-                    ErreserbakAgertuCB();
-                    ErreserbakAgertuDGV();
-                }else
-                {
-                    MessageBox.Show("Ez da erreserbarik agertu.");
-                }
-
-            }catch (Exception ex)
-            {
-                MessageBox.Show("Estebe Arazoa erreserba ezabatzean: " + ex.Message);
-            }
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Kudeatu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CBeremua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DTP_Eguna_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBL_hasieraOrdua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBL_erreserbaEguna_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_amaieraOrdua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_hasieraOrdua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBL_amaieraOrdua_Click(object sender, EventArgs e)
         {
 
         }

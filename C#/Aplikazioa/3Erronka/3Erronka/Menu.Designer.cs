@@ -33,6 +33,7 @@
             this.eginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ikusiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ezabatuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kudeatuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zelaiakIkusiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ikusiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ordutegiakIkusiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,20 +43,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.armarria = new System.Windows.Forms.PictureBox();
             this.logoaZ = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.armarria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoaZ)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -78,7 +79,8 @@
             this.erreserbaEginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eginToolStripMenuItem,
             this.ikusiToolStripMenuItem,
-            this.ezabatuToolStripMenuItem});
+            this.ezabatuToolStripMenuItem,
+            this.kudeatuToolStripMenuItem});
             this.erreserbaEginToolStripMenuItem.Name = "erreserbaEginToolStripMenuItem";
             this.erreserbaEginToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.erreserbaEginToolStripMenuItem.Text = "Erreserbak";
@@ -87,23 +89,30 @@
             // eginToolStripMenuItem
             // 
             this.eginToolStripMenuItem.Name = "eginToolStripMenuItem";
-            this.eginToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.eginToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eginToolStripMenuItem.Text = "Egin";
             this.eginToolStripMenuItem.Click += new System.EventHandler(this.eginToolStripMenuItem_Click);
             // 
             // ikusiToolStripMenuItem
             // 
             this.ikusiToolStripMenuItem.Name = "ikusiToolStripMenuItem";
-            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.ikusiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ikusiToolStripMenuItem.Text = "Ikusi";
             this.ikusiToolStripMenuItem.Click += new System.EventHandler(this.ikusiToolStripMenuItem_Click);
             // 
             // ezabatuToolStripMenuItem
             // 
             this.ezabatuToolStripMenuItem.Name = "ezabatuToolStripMenuItem";
-            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.ezabatuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ezabatuToolStripMenuItem.Text = "Ezabatu";
             this.ezabatuToolStripMenuItem.Click += new System.EventHandler(this.ezabatuToolStripMenuItem_Click);
+            // 
+            // kudeatuToolStripMenuItem
+            // 
+            this.kudeatuToolStripMenuItem.Name = "kudeatuToolStripMenuItem";
+            this.kudeatuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kudeatuToolStripMenuItem.Text = "Kudeatu";
+            this.kudeatuToolStripMenuItem.Click += new System.EventHandler(this.kudeatuToolStripMenuItem_Click);
             // 
             // zelaiakIkusiToolStripMenuItem
             // 
@@ -182,38 +191,6 @@
             this.logoaZ.TabStop = false;
             this.logoaZ.UseWaitCursor = true;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(3, 205);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1942, 761);
-            this.panel2.TabIndex = 4;
-            this.panel2.UseWaitCursor = true;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.panel3.Location = new System.Drawing.Point(934, 100);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(910, 561);
-            this.panel3.TabIndex = 9;
-            this.panel3.UseWaitCursor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::_3Erronka.Properties.Resources.andoainMapa1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(900, 550);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -236,6 +213,38 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.UseWaitCursor = true;
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.panel3.Location = new System.Drawing.Point(934, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(910, 561);
+            this.panel3.TabIndex = 9;
+            this.panel3.UseWaitCursor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::_3Erronka.Properties.Resources.andoainMapa1;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(900, 550);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.UseWaitCursor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Location = new System.Drawing.Point(0, 205);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1945, 761);
+            this.panel2.TabIndex = 4;
+            this.panel2.UseWaitCursor = true;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,11 +266,11 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.armarria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoaZ)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,11 +285,6 @@
         private System.Windows.Forms.PictureBox logoaZ;
         private System.Windows.Forms.PictureBox armarria;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem eginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ikusiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ikusiToolStripMenuItem1;
@@ -288,5 +292,11 @@
         private System.Windows.Forms.ToolStripMenuItem orduaEzabatuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aldatuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordutegianErreserbakIkusiToolStripMenuItem;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem kudeatuToolStripMenuItem;
     }
 }

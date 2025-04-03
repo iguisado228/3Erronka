@@ -29,7 +29,7 @@ namespace _3Erronka
 
         private void BTNSaioaHasi_Click(object sender, EventArgs e)
         {
-            Bazkidea b = new Bazkidea();
+            Bazkidea b = new Bazkidea(0);
             b.Identifikadorea = TXTIdentifikadorea.Text;
             b.Pasahitza = TXTPasahitza.Text;
 
@@ -39,18 +39,17 @@ namespace _3Erronka
 
             if (b.bazkideLogina())
             {
-                MessageBox.Show($"Ongi etorri, bazkidea!");
-                Menu men = new Menu();
+                Menu men = new Menu(kl, b);
                 men.Show();
                 this.Hide();
             }
             else if (kl.klubLogina())
             {
-                MessageBox.Show($"Ongi etorri, kluba!");
-                Menu men = new Menu(kl);
+                Menu men = new Menu(kl, b);
                 men.Show();
                 this.Hide();
             }
+
             else
             {
                 MessageBox.Show("Identifikadorea edo pasahitza ez dira zuzenak.");

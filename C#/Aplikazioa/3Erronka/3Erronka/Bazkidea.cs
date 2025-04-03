@@ -20,6 +20,11 @@ namespace _3Erronka
         public virtual String Abizena { get; }
         public virtual String Helbidea { get; }
 
+        public Bazkidea (int idBazkidea)
+        {
+            this.idBazkidea = idBazkidea;
+        }
+
         public bool bazkideLogina()
         {
             Boolean loginaEginda = false;
@@ -38,7 +43,7 @@ namespace _3Erronka
                     MySqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        idBazkidea = reader.GetInt32("idBazkidea");  
+                        idBazkidea = reader.GetInt32("idBazkidea");
                         loginaEginda = true;
                     }
                     reader.Close();
