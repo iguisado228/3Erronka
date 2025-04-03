@@ -76,7 +76,7 @@ namespace _3Erronka
 
         private void ikusiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
+            zelaiakIkusi zelaiakikusi = new zelaiakIkusi(loggedInKluba, loggedInBazkidea);
             zelaiakikusi.Show();
             this.Hide();
         }

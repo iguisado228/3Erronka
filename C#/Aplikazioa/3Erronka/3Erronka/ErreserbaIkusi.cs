@@ -32,8 +32,9 @@ namespace _3Erronka
             {
                 DataTable table = new DataTable();
 
-                MySqlCommand command = new MySqlCommand("Select * from erreserba", K.conn);
-                
+                MySqlCommand command = new MySqlCommand("SELECT e.idErreserba AS 'Erreserbaren IDa', k.izena AS 'Kluba', b.izena AS 'Bazkidea', er.izena AS 'Eremua', e.erreserbaEguna AS 'Eguna', e.hasieraOrdua AS 'Hasiera Ordua', e.amaieraOrdua AS 'Amaiera ordua' FROM erreserba e JOIN eremua er ON e.idEremua = er.idEremua LEFT JOIN kluba k ON e.idKluba = k.idKluba LEFT JOIN bazkidea b ON e.idBazkidea = b.idBazkidea WHERE 1=1", K.conn);
+
+
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
 
                 adapter.Fill(table);

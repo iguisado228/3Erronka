@@ -94,7 +94,15 @@ namespace _3Erronka
         {
             try
             {
-                string query = "select * from erreserba where 1=1";
+                string query = @"SELECT 
+                    e.idErreserba AS 'Erreserba IDa',
+                    er.izena AS 'Eremua',
+                    e.erreserbaEguna AS 'Eguna',
+                    e.hasieraOrdua AS 'Hasiera Ordua',
+                    e.amaieraOrdua AS 'Amaiera Ordua'
+                 FROM erreserba e
+                 JOIN eremua er ON e.idEremua = er.idEremua
+                 WHERE 1=1";
 
                 if (loggedInKluba.idKluba != 999)
                 {
@@ -200,6 +208,21 @@ namespace _3Erronka
         }
 
         private void LBL_erreserbaEguna_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_amaieraOrdua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_hasieraOrdua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBL_amaieraOrdua_Click(object sender, EventArgs e)
         {
 
         }
