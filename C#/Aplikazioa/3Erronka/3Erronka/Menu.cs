@@ -114,5 +114,12 @@ namespace _3Erronka
             erKu.Show();
             this.Hide();
         }
+
+        private void BTN_SaioaItxi_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+        }
     }
 }

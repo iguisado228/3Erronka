@@ -53,7 +53,7 @@
             // 
             this.LBLerreserbaEguna.AutoSize = true;
             this.LBLerreserbaEguna.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLerreserbaEguna.Location = new System.Drawing.Point(129, 252);
+            this.LBLerreserbaEguna.Location = new System.Drawing.Point(448, 490);
             this.LBLerreserbaEguna.Name = "LBLerreserbaEguna";
             this.LBLerreserbaEguna.Size = new System.Drawing.Size(418, 54);
             this.LBLerreserbaEguna.TabIndex = 1;
@@ -62,10 +62,11 @@
             // 
             // DTPEguna
             // 
-            this.DTPEguna.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPEguna.Location = new System.Drawing.Point(612, 267);
+            this.DTPEguna.CalendarFont = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPEguna.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPEguna.Location = new System.Drawing.Point(986, 501);
             this.DTPEguna.Name = "DTPEguna";
-            this.DTPEguna.Size = new System.Drawing.Size(352, 37);
+            this.DTPEguna.Size = new System.Drawing.Size(661, 43);
             this.DTPEguna.TabIndex = 2;
             this.DTPEguna.ValueChanged += new System.EventHandler(this.DTPEguna_ValueChanged);
             // 
@@ -73,7 +74,7 @@
             // 
             this.LBLH_ordua.AutoSize = true;
             this.LBLH_ordua.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLH_ordua.Location = new System.Drawing.Point(353, 469);
+            this.LBLH_ordua.Location = new System.Drawing.Point(448, 621);
             this.LBLH_ordua.Name = "LBLH_ordua";
             this.LBLH_ordua.Size = new System.Drawing.Size(184, 54);
             this.LBLH_ordua.TabIndex = 3;
@@ -94,7 +95,7 @@
             // 
             this.LBLEremua.AutoSize = true;
             this.LBLEremua.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLEremua.Location = new System.Drawing.Point(1014, 250);
+            this.LBLEremua.Location = new System.Drawing.Point(448, 258);
             this.LBLEremua.Name = "LBLEremua";
             this.LBLEremua.Size = new System.Drawing.Size(898, 54);
             this.LBLEremua.TabIndex = 9;
@@ -102,20 +103,20 @@
             // 
             // CBeremua
             // 
-            this.CBeremua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBeremua.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBeremua.FormattingEnabled = true;
-            this.CBeremua.Location = new System.Drawing.Point(1023, 319);
+            this.CBeremua.Location = new System.Drawing.Point(457, 327);
             this.CBeremua.Name = "CBeremua";
-            this.CBeremua.Size = new System.Drawing.Size(238, 37);
+            this.CBeremua.Size = new System.Drawing.Size(467, 44);
             this.CBeremua.TabIndex = 11;
             this.CBeremua.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // BTNAtzera
             // 
             this.BTNAtzera.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNAtzera.Location = new System.Drawing.Point(1854, 904);
+            this.BTNAtzera.Location = new System.Drawing.Point(1643, 875);
             this.BTNAtzera.Name = "BTNAtzera";
-            this.BTNAtzera.Size = new System.Drawing.Size(155, 43);
+            this.BTNAtzera.Size = new System.Drawing.Size(269, 72);
             this.BTNAtzera.TabIndex = 12;
             this.BTNAtzera.Text = "Atzera joan";
             this.BTNAtzera.UseVisualStyleBackColor = true;
@@ -125,7 +126,7 @@
             // 
             this.CBOrdua.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBOrdua.FormattingEnabled = true;
-            this.CBOrdua.Location = new System.Drawing.Point(612, 479);
+            this.CBOrdua.Location = new System.Drawing.Point(756, 633);
             this.CBOrdua.Name = "CBOrdua";
             this.CBOrdua.Size = new System.Drawing.Size(190, 44);
             this.CBOrdua.TabIndex = 13;

@@ -30,7 +30,6 @@ namespace _3Erronka
         /// </summary>
         private void InitializeComponent()
         {
-
             this.LBLIdentifikadorea = new System.Windows.Forms.Label();
             this.LBLPasahitza = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -89,9 +88,9 @@ namespace _3Erronka
             // BTNSaioaHasi
             // 
             this.BTNSaioaHasi.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSaioaHasi.Location = new System.Drawing.Point(1628, 700);
+            this.BTNSaioaHasi.Location = new System.Drawing.Point(1643, 875);
             this.BTNSaioaHasi.Name = "BTNSaioaHasi";
-            this.BTNSaioaHasi.Size = new System.Drawing.Size(284, 50);
+            this.BTNSaioaHasi.Size = new System.Drawing.Size(269, 72);
             this.BTNSaioaHasi.TabIndex = 5;
             this.BTNSaioaHasi.Text = "Saioa hasi";
             this.BTNSaioaHasi.UseVisualStyleBackColor = true;

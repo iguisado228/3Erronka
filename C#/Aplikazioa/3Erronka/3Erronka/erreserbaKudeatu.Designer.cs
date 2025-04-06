@@ -31,7 +31,6 @@
             this.BTNAtzera = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CErreserba = new System.Windows.Forms.ComboBox();
-            this.BTN_Kudeatu = new System.Windows.Forms.Button();
             this.LBL_Kudeatu = new System.Windows.Forms.Label();
             this.LBL_Erreserba = new System.Windows.Forms.Label();
             this.LBL_eremua = new System.Windows.Forms.Label();
@@ -59,7 +58,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(97, 146);
+            this.dataGridView1.Location = new System.Drawing.Point(102, 275);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -79,18 +78,6 @@
             this.CErreserba.TabIndex = 16;
             this.CErreserba.SelectedIndexChanged += new System.EventHandler(this.CErreserba_SelectedIndexChanged);
             // 
-            // BTN_Kudeatu
-            // 
-            this.BTN_Kudeatu.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Kudeatu.Location = new System.Drawing.Point(1552, 162);
-            this.BTN_Kudeatu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BTN_Kudeatu.Name = "BTN_Kudeatu";
-            this.BTN_Kudeatu.Size = new System.Drawing.Size(347, 42);
-            this.BTN_Kudeatu.TabIndex = 18;
-            this.BTN_Kudeatu.Text = "Erreserba Kudeatu";
-            this.BTN_Kudeatu.UseVisualStyleBackColor = true;
-            this.BTN_Kudeatu.Click += new System.EventHandler(this.BTN_Kudeatu_Click);
-            // 
             // LBL_Kudeatu
             // 
             this.LBL_Kudeatu.AutoSize = true;
@@ -106,7 +93,7 @@
             // 
             this.LBL_Erreserba.AutoSize = true;
             this.LBL_Erreserba.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Erreserba.Location = new System.Drawing.Point(91, 95);
+            this.LBL_Erreserba.Location = new System.Drawing.Point(96, 224);
             this.LBL_Erreserba.Name = "LBL_Erreserba";
             this.LBL_Erreserba.Size = new System.Drawing.Size(283, 36);
             this.LBL_Erreserba.TabIndex = 20;
@@ -116,7 +103,7 @@
             // 
             this.LBL_eremua.AutoSize = true;
             this.LBL_eremua.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_eremua.Location = new System.Drawing.Point(185, 474);
+            this.LBL_eremua.Location = new System.Drawing.Point(1261, 391);
             this.LBL_eremua.Name = "LBL_eremua";
             this.LBL_eremua.Size = new System.Drawing.Size(146, 36);
             this.LBL_eremua.TabIndex = 21;
@@ -126,7 +113,7 @@
             // 
             this.LBL_hasieraOrdua.AutoSize = true;
             this.LBL_hasieraOrdua.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_hasieraOrdua.Location = new System.Drawing.Point(813, 477);
+            this.LBL_hasieraOrdua.Location = new System.Drawing.Point(1261, 275);
             this.LBL_hasieraOrdua.Name = "LBL_hasieraOrdua";
             this.LBL_hasieraOrdua.Size = new System.Drawing.Size(125, 36);
             this.LBL_hasieraOrdua.TabIndex = 22;
@@ -137,7 +124,7 @@
             // 
             this.CBeremua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBeremua.FormattingEnabled = true;
-            this.CBeremua.Location = new System.Drawing.Point(347, 476);
+            this.CBeremua.Location = new System.Drawing.Point(1423, 393);
             this.CBeremua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CBeremua.Name = "CBeremua";
             this.CBeremua.Size = new System.Drawing.Size(239, 37);
@@ -147,7 +134,7 @@
             // DTP_Eguna
             // 
             this.DTP_Eguna.Font = new System.Drawing.Font("Lucida Fax", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTP_Eguna.Location = new System.Drawing.Point(347, 561);
+            this.DTP_Eguna.Location = new System.Drawing.Point(1565, 470);
             this.DTP_Eguna.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DTP_Eguna.Name = "DTP_Eguna";
             this.DTP_Eguna.Size = new System.Drawing.Size(352, 37);
@@ -158,7 +145,7 @@
             // 
             this.LBL_erreserbaEguna.AutoSize = true;
             this.LBL_erreserbaEguna.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_erreserbaEguna.Location = new System.Drawing.Point(43, 562);
+            this.LBL_erreserbaEguna.Location = new System.Drawing.Point(1261, 471);
             this.LBL_erreserbaEguna.Name = "LBL_erreserbaEguna";
             this.LBL_erreserbaEguna.Size = new System.Drawing.Size(288, 36);
             this.LBL_erreserbaEguna.TabIndex = 28;
@@ -168,19 +155,20 @@
             // BTN_erreserbaEguneratu
             // 
             this.BTN_erreserbaEguneratu.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_erreserbaEguneratu.Location = new System.Drawing.Point(715, 656);
+            this.BTN_erreserbaEguneratu.Location = new System.Drawing.Point(1266, 559);
             this.BTN_erreserbaEguneratu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_erreserbaEguneratu.Name = "BTN_erreserbaEguneratu";
             this.BTN_erreserbaEguneratu.Size = new System.Drawing.Size(437, 42);
             this.BTN_erreserbaEguneratu.TabIndex = 30;
             this.BTN_erreserbaEguneratu.Text = "Erreserba Eguneratu";
             this.BTN_erreserbaEguneratu.UseVisualStyleBackColor = true;
+            this.BTN_erreserbaEguneratu.Click += new System.EventHandler(this.BTN_erreserbaEguneratu_Click);
             // 
             // CBOrduaEgun
             // 
             this.CBOrduaEgun.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBOrduaEgun.FormattingEnabled = true;
-            this.CBOrduaEgun.Location = new System.Drawing.Point(965, 477);
+            this.CBOrduaEgun.Location = new System.Drawing.Point(1413, 275);
             this.CBOrduaEgun.Name = "CBOrduaEgun";
             this.CBOrduaEgun.Size = new System.Drawing.Size(152, 44);
             this.CBOrduaEgun.TabIndex = 31;
@@ -189,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 846);
+            this.ClientSize = new System.Drawing.Size(1924, 959);
             this.Controls.Add(this.CBOrduaEgun);
             this.Controls.Add(this.BTN_erreserbaEguneratu);
             this.Controls.Add(this.LBL_erreserbaEguna);
@@ -199,7 +187,6 @@
             this.Controls.Add(this.LBL_eremua);
             this.Controls.Add(this.LBL_Erreserba);
             this.Controls.Add(this.LBL_Kudeatu);
-            this.Controls.Add(this.BTN_Kudeatu);
             this.Controls.Add(this.CErreserba);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNAtzera);
@@ -219,7 +206,6 @@
         private System.Windows.Forms.Button BTNAtzera;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox CErreserba;
-        private System.Windows.Forms.Button BTN_Kudeatu;
         private System.Windows.Forms.Label LBL_Kudeatu;
         private System.Windows.Forms.Label LBL_Erreserba;
         private System.Windows.Forms.Label LBL_eremua;

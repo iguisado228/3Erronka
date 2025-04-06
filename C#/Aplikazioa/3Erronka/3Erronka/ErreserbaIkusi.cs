@@ -26,6 +26,18 @@ namespace _3Erronka
 
         private void ErreserbaIkusi_Load(object sender, EventArgs e)
         {
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.BackgroundColor = Color.FromArgb(240, 240, 240);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+
             Konexioa.Konexioa K = new Konexioa.Konexioa();
             K.konektatu();
 
