@@ -1,6 +1,6 @@
 ﻿namespace _3Erronka
 {
-    partial class ErreserbaEgin
+    partial class erreserbaEgin
     {
         /// <summary>
         /// Required designer variable.
@@ -36,9 +36,7 @@
             this.LBLEremua = new System.Windows.Forms.Label();
             this.CBeremua = new System.Windows.Forms.ComboBox();
             this.BTNAtzera = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TXTerreserbaHasieraOrdua = new System.Windows.Forms.TextBox();
-            this.TXTerreserbaAmaieraOrdua = new System.Windows.Forms.TextBox();
+            this.CBOrdua = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LBLerreserba
@@ -75,11 +73,11 @@
             // 
             this.LBLH_ordua.AutoSize = true;
             this.LBLH_ordua.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLH_ordua.Location = new System.Drawing.Point(129, 469);
+            this.LBLH_ordua.Location = new System.Drawing.Point(353, 469);
             this.LBLH_ordua.Name = "LBLH_ordua";
-            this.LBLH_ordua.Size = new System.Drawing.Size(368, 54);
+            this.LBLH_ordua.Size = new System.Drawing.Size(184, 54);
             this.LBLH_ordua.TabIndex = 3;
-            this.LBLH_ordua.Text = "Hasiera ordua:";
+            this.LBLH_ordua.Text = "Ordua:";
             // 
             // BTNErreserba
             // 
@@ -123,43 +121,23 @@
             this.BTNAtzera.UseVisualStyleBackColor = true;
             this.BTNAtzera.Click += new System.EventHandler(this.BTNAtzera_Click);
             // 
-            // label1
+            // CBOrdua
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Fax", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(129, 736);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(385, 54);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Amaiera ordua:";
+            this.CBOrdua.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBOrdua.FormattingEnabled = true;
+            this.CBOrdua.Location = new System.Drawing.Point(612, 479);
+            this.CBOrdua.Name = "CBOrdua";
+            this.CBOrdua.Size = new System.Drawing.Size(190, 44);
+            this.CBOrdua.TabIndex = 13;
+            this.CBOrdua.SelectedIndexChanged += new System.EventHandler(this.CBOrdua_SelectedIndexChanged);
             // 
-            // TXTerreserbaHasieraOrdua
-            // 
-            this.TXTerreserbaHasieraOrdua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTerreserbaHasieraOrdua.Location = new System.Drawing.Point(543, 486);
-            this.TXTerreserbaHasieraOrdua.Name = "TXTerreserbaHasieraOrdua";
-            this.TXTerreserbaHasieraOrdua.Size = new System.Drawing.Size(199, 36);
-            this.TXTerreserbaHasieraOrdua.TabIndex = 15;
-            this.TXTerreserbaHasieraOrdua.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // TXTerreserbaAmaieraOrdua
-            // 
-            this.TXTerreserbaAmaieraOrdua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTerreserbaAmaieraOrdua.Location = new System.Drawing.Point(543, 753);
-            this.TXTerreserbaAmaieraOrdua.Name = "TXTerreserbaAmaieraOrdua";
-            this.TXTerreserbaAmaieraOrdua.Size = new System.Drawing.Size(199, 36);
-            this.TXTerreserbaAmaieraOrdua.TabIndex = 16;
-            this.TXTerreserbaAmaieraOrdua.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
-            // 
-            // ErreserbaEgin
+            // erreserbaEgin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1924, 959);
-            this.Controls.Add(this.TXTerreserbaAmaieraOrdua);
-            this.Controls.Add(this.TXTerreserbaHasieraOrdua);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CBOrdua);
             this.Controls.Add(this.BTNAtzera);
             this.Controls.Add(this.CBeremua);
             this.Controls.Add(this.LBLEremua);
@@ -168,7 +146,7 @@
             this.Controls.Add(this.DTPEguna);
             this.Controls.Add(this.LBLerreserbaEguna);
             this.Controls.Add(this.LBLerreserba);
-            this.Name = "ErreserbaEgin";
+            this.Name = "erreserbaEgin";
             this.Text = "Erreserba";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Erreserba_Load);
@@ -187,8 +165,6 @@
         private System.Windows.Forms.Label LBLEremua;
         private System.Windows.Forms.ComboBox CBeremua;
         private System.Windows.Forms.Button BTNAtzera;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TXTerreserbaHasieraOrdua;
-        private System.Windows.Forms.TextBox TXTerreserbaAmaieraOrdua;
+        private System.Windows.Forms.ComboBox CBOrdua;
     }
 }

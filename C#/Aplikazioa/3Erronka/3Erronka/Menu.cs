@@ -64,7 +64,7 @@ namespace _3Erronka
 
         private void eginToolStripMenuItem_Click(object sender, EventArgs e)
         {   
-            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, loggedInBazkidea);
+            erreserbaEgin erreserbaEgin = new erreserbaEgin(loggedInKluba, loggedInBazkidea);
             erreserbaEgin.Show();
             this.Hide();
         }
@@ -76,7 +76,7 @@ namespace _3Erronka
 
         private void ikusiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            zelaiakIkusi zelaiakikusi = new zelaiakIkusi();
+            zelaiakIkusi zelaiakikusi = new zelaiakIkusi(loggedInKluba, loggedInBazkidea);
             zelaiakikusi.Show();
             this.Hide();
         }

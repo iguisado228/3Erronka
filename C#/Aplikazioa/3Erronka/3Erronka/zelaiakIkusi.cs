@@ -12,11 +12,18 @@ namespace _3Erronka
 {
     public partial class zelaiakIkusi : Form
     {
-        public zelaiakIkusi()
+        private Kluba loggedInKluba;
+        private Bazkidea loggedInBazkidea;
+
+        internal zelaiakIkusi(Kluba kluba, Bazkidea bazkidea)
         {
             InitializeComponent();
-        }
+            this.loggedInKluba = kluba;
+            this.loggedInBazkidea = bazkidea;
 
+            MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
+                            $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -68,7 +75,7 @@ namespace _3Erronka
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Menu men = new Menu();
+            Menu men = new Menu(loggedInKluba, loggedInBazkidea);
             men.Show();
             this.Hide();
         }

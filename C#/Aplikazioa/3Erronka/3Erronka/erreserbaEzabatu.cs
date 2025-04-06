@@ -39,7 +39,7 @@ namespace _3Erronka
         {
             try
             {
-                string query = "select idErreserba from erreserba where 1=1";
+                string query = "select idErreserba from erreserba1 where 1=1";
 
                 if (loggedInKluba.idKluba != 999)
                 {
@@ -82,7 +82,7 @@ namespace _3Erronka
         {
             try
             {
-                string query = "select * from erreserba where 1=1";
+                string query = "select * from erreserba1 where 1=1";
 
                 if (loggedInKluba.idKluba != 999)
                 {
@@ -145,7 +145,7 @@ namespace _3Erronka
             {
                 Konexioa.Konexioa K = new Konexioa.Konexioa();
                 K.konektatu();
-                string query = "Delete from erreserba where idErreserba = @id";
+                string query = "Delete from erreserba1 where idErreserba = @id";
 
                 MySqlCommand command = new MySqlCommand(query, K.conn);
                 command.Parameters.AddWithValue("@id", idErreserba);

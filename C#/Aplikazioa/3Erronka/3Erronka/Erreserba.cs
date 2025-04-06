@@ -18,8 +18,7 @@ namespace _3Erronka
         public virtual int idEremua {get; set;}
         public virtual int idBazkidea {get; set;}
         public virtual DateTime erreserbaEguna {get; set;}
-        public virtual string hasieraOrdua { get; set; }
-        public virtual string amaieraOrdua { get; set; }
+        public virtual int ordua { get; set; }
         public virtual int idErreserba { get; set;}
 
     public void gehitu()
@@ -36,13 +35,12 @@ namespace _3Erronka
 
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = k.conn;
-                command.CommandText = "INSERT INTO erreserba (idEremua, idBazkidea, idKluba, erreserbaEguna, hasieraOrdua, amaieraOrdua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5, @valor6)";
+                command.CommandText = "INSERT INTO erreserba1 (idEremua, idBazkidea, idKluba, erreserbaEguna, ordua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5)";
                 command.Parameters.AddWithValue("@valor1", idEremua);
                 command.Parameters.AddWithValue("@valor2", idBazkidea == 0 ? 999 : idBazkidea);
                 command.Parameters.AddWithValue("@valor3", idKluba == 0 ? 999 : idKluba);
                 command.Parameters.AddWithValue("@valor4", erreserbaEguna);
-                command.Parameters.AddWithValue("@valor5", hasieraOrdua);
-                command.Parameters.AddWithValue("@valor6", amaieraOrdua);
+                command.Parameters.AddWithValue("@valor5", ordua);
                 command.ExecuteNonQuery();
                 transaction.Commit();
                 MessageBox.Show($"Eragiketa egoki burutu da.");
@@ -73,7 +71,7 @@ namespace _3Erronka
                 //komandoa sortuko dugu
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = k.conn;
-                command.CommandText = "DELETE FROM erreserbak WHERE id = @id";
+                command.CommandText = "DELETE FROM erreserba1 WHERE id = @id";
                 command.Parameters.AddWithValue("@id", idErreserba);
 
 
