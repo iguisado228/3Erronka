@@ -128,7 +128,7 @@
             this.CBOrdua.FormattingEnabled = true;
             this.CBOrdua.Location = new System.Drawing.Point(756, 633);
             this.CBOrdua.Name = "CBOrdua";
-            this.CBOrdua.Size = new System.Drawing.Size(190, 44);
+            this.CBOrdua.Size = new System.Drawing.Size(341, 44);
             this.CBOrdua.TabIndex = 13;
             this.CBOrdua.SelectedIndexChanged += new System.EventHandler(this.CBOrdua_SelectedIndexChanged);
             // 

@@ -17,7 +17,10 @@ namespace _3Erronka
     {
         private Kluba loggedInKluba;
         private Bazkidea loggedInBazkidea;
-        private List<int> orduakLibre = Enumerable.Range(1, 10).ToList();
+        private Dictionary<int, string> orduakLibre = new Dictionary<int, string>();
+
+        
+           
 
         internal erreserbaEgin(Kluba kluba, Bazkidea bazkidea)
         {
@@ -26,9 +29,44 @@ namespace _3Erronka
             this.loggedInBazkidea = bazkidea ?? new Bazkidea(999);
 
 
-            CBOrdua.DataSource = orduakLibre;
+            foreach (int i in Enumerable.Range(1, 10))
+            {
+                int hasieraOrdua = 7 + i;
+                orduakLibre.Add(i, $"{hasieraOrdua}:00 - {hasieraOrdua + 1}:00");
+            }
 
         }
+
+        private List<int> lortuOkupatutakoOrduak(int idEremua, DateTime data)
+        {
+            List<int> okupatutakoOrduak = new List<int>();
+
+            try
+            {
+                Konexioa.Konexioa K = new Konexioa.Konexioa();
+                K.konektatu();
+
+                string query2 = "Select ordua from erreserba1 where idEremua = @idEremua and erreserbaEguna = @data";
+                MySqlCommand com = new MySqlCommand(query2, K.conn);
+                com.Parameters.AddWithValue("@idEremua", idEremua);
+                com.Parameters.AddWithValue("@data", data.Date);
+
+                MySqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    okupatutakoOrduak.Add(reader.GetInt32("ordua"));
+                }
+                reader.Close();
+                K.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errorea ordu okupatuak lortzean: " + ex.Message);
+            }
+            return okupatutakoOrduak;
+        }
+
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,13 +79,13 @@ namespace _3Erronka
                 er.idKluba = (loggedInKluba != null) ? loggedInKluba.idKluba : 999;
                 er.idEremua = Convert.ToInt32(CBeremua.SelectedValue);
                 er.erreserbaEguna = DTPEguna.Value.Date;
-                er.ordua = Convert.ToInt32(CBOrdua.SelectedValue);
+                er.ordua = ((KeyValuePair<int, string>)CBOrdua.SelectedItem).Key;
 
                 er.gehitu();
 
-                int orduErreala = 7 + er.ordua;
+                string aukeratutakoOrdua = ((KeyValuePair<int, string>)CBOrdua.SelectedItem).Value;
                 MessageBox.Show($"Erreserba egoki burutu da {er.erreserbaEguna.ToShortDateString()} egunean  " +
-                       $" {orduErreala}:00 - {orduErreala + 1}:00 ordutan {CBeremua.Text} eremuan");
+                       $" {aukeratutakoOrdua} ordutan {CBeremua.Text} eremuan");
 
                 orduakLibreBerritu();
 
@@ -66,27 +104,16 @@ namespace _3Erronka
 
             try
             {
-                Konexioa.Konexioa K = new Konexioa.Konexioa();
-                K.konektatu();
+                int idEremua = Convert.ToInt32(CBeremua.SelectedValue);
+                DateTime data = DTPEguna.Value.Date;
 
-                string query = "Select ordua from erreserba1 where idEremua = @idEremua and erreserbaEguna = @fecha";
-                MySqlCommand cmd = new MySqlCommand(query, K.conn);
-                cmd.Parameters.AddWithValue("@idEremua", CBeremua.SelectedValue);
-                cmd.Parameters.AddWithValue("@fecha", DTPEguna.Value.Date);
+                List<int> okupatutakoOrduak = lortuOkupatutakoOrduak(idEremua, data);
+                var orduakLibreBerrituta = orduakLibre.Where(h => !okupatutakoOrduak.Contains(h.Key)).ToDictionary(pair => pair.Key, pair => pair.Value);
 
-                MySqlDataReader reader = cmd.ExecuteReader();
+                CBOrdua.DataSource = new BindingSource(orduakLibreBerrituta, null);
+                CBOrdua.DisplayMember = "Value";
+                CBOrdua.ValueMember = "Key";
 
-                List<int> orduakOkupatuta = new List<int>();
-                while (reader.Read())
-                {
-                    orduakOkupatuta.Add(reader.GetInt32("ordua"));
-                }
-                reader.Close();
-                K.conn.Close();
-
-                var orduakLibreBerrituta = orduakLibre.Where(h => !orduakOkupatuta.Contains(h)).ToList();
-
-                CBOrdua.DataSource = orduakLibreBerrituta;
 
                 if (orduakLibreBerrituta.Count == 0)
                 {
@@ -122,6 +149,18 @@ namespace _3Erronka
             CBeremua.DataSource = dtEremua.Copy();
             CBeremua.DisplayMember = "izena";
             CBeremua.ValueMember = "idEremua";
+
+            if (CBeremua.Items.Count > 0 && DTPEguna.Value != null)
+            {
+                int idEremua = Convert.ToInt32(CBeremua.SelectedValue);
+                DateTime data = DTPEguna.Value.Date;
+
+                List<int> okupatutakoOrduak = lortuOkupatutakoOrduak(idEremua, data);
+                var orduakLibreBerrituta = orduakLibre.Where(h => !okupatutakoOrduak.Contains(h.Key)).ToDictionary(pair => pair.Key, pair => pair.Value);
+                CBOrdua.DataSource = new BindingSource(orduakLibreBerrituta, null);
+                CBOrdua.DisplayMember = "Value";
+                CBOrdua.ValueMember = "Key";
+            }
 
             CBeremua.SelectedIndexChanged += (s, ev) => orduakLibreBerritu();
             DTPEguna.ValueChanged += (s, ev) => orduakLibreBerritu();
@@ -182,8 +221,7 @@ namespace _3Erronka
             {
                 string query = @"SELECT 
                     er.izena AS 'Eremua',
-                    e.hasieraOrdua AS 'Hasiera Ordua',
-                    e.amaieraOrdua AS 'Amaiera Ordua'
+                    e.ordua AS 'Ordua'
                  FROM erreserba e
                  JOIN eremua er ON e.idEremua = er.idEremua
                  WHERE erreserbaEguna = 'DTPEguna.Value.Date' AND eremua = 'Convert.ToInt32(CBeremua.SelectedValue);'";

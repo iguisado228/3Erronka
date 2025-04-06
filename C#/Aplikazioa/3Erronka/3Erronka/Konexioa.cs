@@ -18,7 +18,6 @@ namespace Konexioa
         public virtual string BaseDeDatos { get; set; } = "erronka3";
         public virtual string SslMode { get; set; } = "None";
 
-        
 
 
 
