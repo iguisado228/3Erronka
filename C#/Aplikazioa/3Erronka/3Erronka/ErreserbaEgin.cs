@@ -189,11 +189,60 @@ namespace _3Erronka
 
         }
 
-        private void CBOrdua_SelectedIndexChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
+        private void ErreserbakAgertuDGV()
+        {
+            try
+            {
+                string query = @"SELECT 
+                    er.izena AS 'Eremua',
+                    e.hasieraOrdua AS 'Hasiera Ordua',
+                    e.amaieraOrdua AS 'Amaiera Ordua'
+                 FROM erreserba e
+                 JOIN eremua er ON e.idEremua = er.idEremua
+                 WHERE erreserbaEguna = 'DTPEguna.Value.Date' AND eremua = 'Convert.ToInt32(CBeremua.SelectedValue);'";
 
+                if (loggedInKluba.idKluba != 999)
+                {
+                    query += " AND idKluba = @idKluba";
+                }
+                else if (loggedInBazkidea.idBazkidea != 999)
+                {
+                    query += " AND idBazkidea = @idBazkidea";
+                }
+
+                Konexioa.Konexioa K = new Konexioa.Konexioa();
+                K.konektatu();
+                MySqlCommand command = new MySqlCommand(query, K.conn);
+
+                if (loggedInKluba.idKluba != 999)
+                {
+                    command.Parameters.AddWithValue("@idKluba", loggedInKluba.idKluba);
+                }
+                else if (loggedInBazkidea.idBazkidea != 999)
+                {
+                    command.Parameters.AddWithValue("@idBazkidea", loggedInBazkidea.idBazkidea);
+                }
+
+                DataTable dat = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(dat);
+
+                dataGridView1.DataSource = dat;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Arazoa erreserbak kargatzean: " + ex.Message);
+            }
+        }
+
+        private void TXTerreserbaHasieraOrdua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
