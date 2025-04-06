@@ -17,7 +17,7 @@ namespace _3Erronka
     {
         private Kluba loggedInKluba;
         private Bazkidea loggedInBazkidea;
-        private List<int> orduakLibre = new List<int>();
+        private List<int> orduakLibre = Enumerable.Range(1, 10).ToList();
 
         internal erreserbaEgin(Kluba kluba, Bazkidea bazkidea)
         {
@@ -25,24 +25,8 @@ namespace _3Erronka
             this.loggedInKluba = kluba ?? new Kluba(999);
             this.loggedInBazkidea = bazkidea ?? new Bazkidea(999);
 
-            for (int i=0; i<=10; i++)
-            {
-                orduakLibre.Add(i);
-            }
 
             CBOrdua.DataSource = orduakLibre;
-
-        }
-
-        private static string orduErrealaLortu(int orduaZenbakia)
-        {
-            if (orduaZenbakia < 1 || orduaZenbakia > 10)
-            {
-                return "Ordu hori ezinezkoa da";
-            }
-
-            int orduErreala = 7 + orduaZenbakia;
-            return $"{orduErreala}:00 - {orduErreala + 1}: 00";
 
         }
 
@@ -61,9 +45,9 @@ namespace _3Erronka
 
                 er.gehitu();
 
-                string orduaBerrituta = orduErrealaLortu(er.ordua);
+                int orduErreala = 7 + er.ordua;
                 MessageBox.Show($"Erreserba egoki burutu da {er.erreserbaEguna.ToShortDateString()} egunean  " +
-                       $" {orduaBerrituta} ordutan {CBeremua.Text} eremuan");
+                       $" {orduErreala}:00 - {orduErreala + 1}:00 ordutan {CBeremua.Text} eremuan");
 
                 orduakLibreBerritu();
 
@@ -100,9 +84,7 @@ namespace _3Erronka
                 reader.Close();
                 K.conn.Close();
 
-                List<int> orduakLibreBerrituta = Enumerable.Range(1, 10)
-                    .Where(h => !orduakOkupatuta.Contains(h))
-                    .ToList();
+                var orduakLibreBerrituta = orduakLibre.Where(h => !orduakOkupatuta.Contains(h)).ToList();
 
                 CBOrdua.DataSource = orduakLibreBerrituta;
 
@@ -232,7 +214,6 @@ namespace _3Erronka
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(dat);
 
-                dataGridView1.DataSource = dat;
             }
             catch (Exception ex)
             {
@@ -241,6 +222,11 @@ namespace _3Erronka
         }
 
         private void TXTerreserbaHasieraOrdua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CBOrdua_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

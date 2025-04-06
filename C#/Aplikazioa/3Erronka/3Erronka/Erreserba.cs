@@ -20,6 +20,7 @@ namespace _3Erronka
         public virtual DateTime erreserbaEguna {get; set;}
         public virtual int ordua { get; set; }
         public virtual int idErreserba { get; set;}
+        public DataTable dt { get; } = new DataTable();
 
     public void gehitu()
     {
@@ -33,9 +34,11 @@ namespace _3Erronka
             try
             {
 
-                MySqlCommand command = new MySqlCommand();
-                command.Connection = k.conn;
-                command.CommandText = "INSERT INTO erreserba1 (idEremua, idBazkidea, idKluba, erreserbaEguna, ordua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5)";
+                string query = @"Insert into erreserba1 (idEremua, idBazkidea, idKluba, erreserbaEguna, ordua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5)";
+                MySqlCommand command = new MySqlCommand(query, k.conn, transaction);
+
+
+                
                 command.Parameters.AddWithValue("@valor1", idEremua);
                 command.Parameters.AddWithValue("@valor2", idBazkidea == 0 ? 999 : idBazkidea);
                 command.Parameters.AddWithValue("@valor3", idKluba == 0 ? 999 : idKluba);
@@ -102,9 +105,10 @@ namespace _3Erronka
 
         }
     }
-    public DataTable dt = new DataTable();
+
     public DataTable bilaketak(string s)
     {
+            dt.Clear();
             Konexioa.Konexioa k = new Konexioa.Konexioa();
             k.konektatu();
 
@@ -112,24 +116,22 @@ namespace _3Erronka
         {
             try
             {
-                //komandoa sortuko dugu
-                MySqlCommand command = new MySqlCommand();
-                command.Connection = k.conn;
-                command.CommandText = s;
-                //Crear un adaptador para llenar el DataTable
+
+                MySqlCommand command = new MySqlCommand(s, k.conn);
+                
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(dt);
             }
             catch (Exception ex)
             {
-                //si hay un error, hacer rollback
+                
                 MessageBox.Show("Bilaketan akatsa: " + ex.Message);
 
 
             }
             finally
             {
-                //cerrar la conexion
+                
                 k.conn.Close();
             }
 
