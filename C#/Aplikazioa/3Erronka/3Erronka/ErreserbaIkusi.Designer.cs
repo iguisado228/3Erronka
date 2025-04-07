@@ -36,9 +36,9 @@
             // BTNAtzera
             // 
             this.BTNAtzera.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNAtzera.Location = new System.Drawing.Point(1757, 796);
+            this.BTNAtzera.Location = new System.Drawing.Point(1643, 875);
             this.BTNAtzera.Name = "BTNAtzera";
-            this.BTNAtzera.Size = new System.Drawing.Size(155, 43);
+            this.BTNAtzera.Size = new System.Drawing.Size(269, 72);
             this.BTNAtzera.TabIndex = 13;
             this.BTNAtzera.Text = "Atzera joan";
             this.BTNAtzera.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(77, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -64,7 +64,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1924, 851);
+            this.ClientSize = new System.Drawing.Size(1924, 959);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNAtzera);
             this.Name = "ErreserbaIkusi";

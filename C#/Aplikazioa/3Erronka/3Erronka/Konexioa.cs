@@ -18,6 +18,11 @@ namespace Konexioa
         public virtual string BaseDeDatos { get; set; } = "erronka3";
         public virtual string SslMode { get; set; } = "None";
 
+
+
+
+
+
         public string konexioKatea()
         {
             return $"Server={Servidor}; Port={Puerto}; Database={BaseDeDatos}; User ID={Usuario}; Password={Contraseña}; SslMode=Preferred;";

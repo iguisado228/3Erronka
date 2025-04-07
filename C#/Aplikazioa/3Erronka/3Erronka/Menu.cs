@@ -64,7 +64,7 @@ namespace _3Erronka
 
         private void eginToolStripMenuItem_Click(object sender, EventArgs e)
         {   
-            ErreserbaEgin erreserbaEgin = new ErreserbaEgin(loggedInKluba, loggedInBazkidea);
+            erreserbaEgin erreserbaEgin = new erreserbaEgin(loggedInKluba, loggedInBazkidea);
             erreserbaEgin.Show();
             this.Hide();
         }
@@ -112,6 +112,13 @@ namespace _3Erronka
         {
             erreserbaKudeatu erKu = new erreserbaKudeatu(loggedInKluba, loggedInBazkidea);
             erKu.Show();
+            this.Hide();
+        }
+
+        private void BTN_SaioaItxi_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
             this.Hide();
         }
     }
