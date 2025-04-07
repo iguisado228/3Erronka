@@ -107,15 +107,16 @@ namespace _3Erronka
                 int idEremua = Convert.ToInt32(CBeremua.SelectedValue);
                 DateTime data = DTPEguna.Value.Date;
 
-                List<int> okupatutakoOrduak = lortuOkupatutakoOrduak(idEremua, data);
-                var orduakLibreBerrituta = orduakLibre.Where(h => !okupatutakoOrduak.Contains(h.Key)).ToDictionary(pair => pair.Key, pair => pair.Value);
+                var orduakLibre = Erreserba.LortuOrduakLibre(idEremua, data);
+         
+                
 
-                CBOrdua.DataSource = new BindingSource(orduakLibreBerrituta, null);
+                CBOrdua.DataSource = new BindingSource(orduakLibre, null);
                 CBOrdua.DisplayMember = "Value";
                 CBOrdua.ValueMember = "Key";
 
 
-                if (orduakLibreBerrituta.Count == 0)
+                if (orduakLibre.Count == 0)
                 {
                     MessageBox.Show("Ez daude orduak libre eremu honentzako egun honetan");
                 }

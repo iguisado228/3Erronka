@@ -159,6 +159,50 @@ namespace _3Erronka
         }
         return dt;
     }
-}
+
+        public static readonly Dictionary<int, string> orduakLibre = Enumerable.Range(1, 10).ToDictionary(i => i, i => $"{7 + i}:00 - {7 + i + 1}:00");
+        public static List<int> lortuOkupatutakoOrduak(int idEremua, DateTime data, int idErreserbaBanatu = 0)
+        {
+            var okupatutakoOrduak = new List<int>();
+            
+            try
+            {
+                Konexioa.Konexioa K = new Konexioa.Konexioa();
+                {
+                    K.konektatu();
+                    string query = @"Select ordua from erreserba where idEremua 
+                                    = @idEremua and erreserbaEguna = @data and 
+                                    idErreserba != @idErreserbaBanatu";
+
+                    using (var com = new MySqlCommand(query, K.conn))
+                    {
+                        com.Parameters.AddWithValue("@idEremua", idEremua);
+                        com.Parameters.AddWithValue("@data", data.Date);
+                        com.Parameters.AddWithValue("@idErreserbaBanatu", idErreserbaBanatu);
+
+                        using (var reader = com.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                okupatutakoOrduak.Add(reader.GetInt32("ordua"));
+                            }
+                        }
+                    }
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Errorea orduak lortzean: " + ex.Message);
+            }
+            return okupatutakoOrduak;
+        }
+
+        public static Dictionary<int, string> LortuOrduakLibre(int idEremua, DateTime data, int idErreserbaExcluir = 0)
+        {
+            var okupatutakoOrduak = lortuOkupatutakoOrduak(idEremua, data, idErreserbaExcluir);
+            return orduakLibre
+                .Where(h => !okupatutakoOrduak.Contains(h.Key))
+                .ToDictionary(p => p.Key, p => p.Value);
+        }
+    }
 }
  

@@ -17,6 +17,7 @@ namespace _3Erronka
     {
         private Kluba loggedInKluba; 
         private Bazkidea loggedInBazkidea;
+        private Dictionary<int, string> orduakLibre = new Dictionary<int, string>();
 
         public erreserbaEzabatu(Kluba kluba, Bazkidea bazkidea)
         {
@@ -24,12 +25,17 @@ namespace _3Erronka
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
 
+            foreach (int i in Enumerable.Range(1, 10))
+            {
+                int hasieraOrdua = 7 + i;
+                orduakLibre.Add(i, $"{hasieraOrdua}: 00 - {hasieraOrdua + 1}:00");
+            }
+
             MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
                             $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
         }
 
-
-        private void erreserbaEzabatu_Load(object sender, EventArgs e)
+            private void erreserbaEzabatu_Load(object sender, EventArgs e)
         {
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -129,6 +135,8 @@ namespace _3Erronka
                 MessageBox.Show("Arazoa erreserbak kargatzean: " + ex.Message);
             }
         }
+
+
 
 
         private void BTN_Atzera_Click(object sender, EventArgs e)
