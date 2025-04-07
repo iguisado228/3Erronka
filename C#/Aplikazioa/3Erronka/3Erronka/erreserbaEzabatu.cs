@@ -31,8 +31,7 @@ namespace _3Erronka
                 orduakLibre.Add(i, $"{hasieraOrdua}: 00 - {hasieraOrdua + 1}:00");
             }
 
-            MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
-                            $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
+           
         }
 
             private void erreserbaEzabatu_Load(object sender, EventArgs e)
@@ -100,7 +99,14 @@ namespace _3Erronka
         {
             try
             {
-                string query = "select idErreserba, idEremua, idBazkidea, idKluba, erreserbaEguna, ordua from erreserba where 1=1";
+                string query = @"SELECT 
+                    e.idErreserba AS 'Erreserba IDa',
+                    er.izena AS 'Eremua',
+                    e.erreserbaEguna AS 'Eguna',
+                    CONCAT (7 + e.ordua, ':00 - ', 7 + e.ordua + 1, ' :00') AS 'Ordua'
+                 FROM erreserba e
+                 JOIN eremua er ON e.idEremua = er.idEremua
+                 WHERE 1=1";
 
                 if (loggedInKluba.idKluba != 999)
                 {

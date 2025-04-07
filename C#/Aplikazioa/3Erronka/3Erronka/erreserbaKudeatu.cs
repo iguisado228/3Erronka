@@ -36,8 +36,7 @@ namespace _3Erronka
             CBeremua.SelectedIndexChanged += CBeremua_SelectedIndexChanged;
             DTP_Eguna.ValueChanged += DTP_Eguna_ValueChanged1;
 
-            MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
-                            $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
+            
         }
 
         private List<int> lortuOkupatutakoOrduak(int idEremua, DateTime data)
@@ -100,7 +99,11 @@ namespace _3Erronka
 
         private void DTP_Eguna_ValueChanged1(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (CBeremua.SelectedValue != null)
+            {
+                orduakLibreBerritu();
+            }
+
         }
 
         private void erreserbaKudeatu_Load(object sender, EventArgs e)
@@ -184,7 +187,7 @@ namespace _3Erronka
                     e.idErreserba AS 'Erreserba IDa',
                     er.izena AS 'Eremua',
                     e.erreserbaEguna AS 'Eguna',
-                    e.ordua
+                    CONCAT (7 + e.ordua, ':00 - ', 7 + e.ordua + 1, ' :00') AS 'Ordua'
                  FROM erreserba e
                  JOIN eremua er ON e.idEremua = er.idEremua
                  WHERE 1=1";
