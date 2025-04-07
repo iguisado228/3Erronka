@@ -46,7 +46,7 @@ namespace _3Erronka
                 Konexioa.Konexioa K = new Konexioa.Konexioa();
                 K.konektatu();
 
-                string query2 = "Select ordua from erreserba1 where idEremua = @idEremua and erreserbaEguna = @data";
+                string query2 = "Select ordua from erreserba where idEremua = @idEremua and erreserbaEguna = @data";
                 MySqlCommand com = new MySqlCommand(query2, K.conn);
                 com.Parameters.AddWithValue("@idEremua", idEremua);
                 com.Parameters.AddWithValue("@data", data.Date);

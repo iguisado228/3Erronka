@@ -47,7 +47,7 @@ namespace _3Erronka
 
                 MySqlCommand command = new MySqlCommand("SELECT e.idErreserba AS 'Erreserbaren IDa', k.izena AS 'Kluba', " +
                     "b.izena AS 'Bazkidea', er.izena AS 'Eremua', e.erreserbaEguna AS 'Eguna', " +
-                    "e.ordua AS 'OrduaZenbakia', CONCAT (7 + e.ordua, ':00 - ', 7 + e.ordua + 1, ' :00') AS 'Ordua' FROM erreserba1 e" +
+                    "e.ordua AS 'OrduaZenbakia', CONCAT (7 + e.ordua, ':00 - ', 7 + e.ordua + 1, ' :00') AS 'Ordua' FROM erreserba e" +
                     " JOIN eremua er ON e.idEremua = er.idEremua LEFT JOIN kluba k ON e.idKluba = k.idKluba" +
                     " LEFT JOIN bazkidea b ON e.idBazkidea = b.idBazkidea WHERE 1=1", K.conn);
 

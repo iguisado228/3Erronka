@@ -22,6 +22,7 @@ namespace Konexioa
 
 
 
+
         public string konexioKatea()
         {
             return $"Server={Servidor}; Port={Puerto}; Database={BaseDeDatos}; User ID={Usuario}; Password={Contraseña}; SslMode=Preferred;";

@@ -33,7 +33,7 @@ namespace _3Erronka
             MySqlTransaction transaction = k.conn.BeginTransaction();
             try
             {
-                    string bilatuQuery = @"select count(*) from erreserba1 where idEremua = @valor1 and erreserbaEguna = @valor4 and ordua = @valor5";
+                    string bilatuQuery = @"select count(*) from erreserba where idEremua = @valor1 and erreserbaEguna = @valor4 and ordua = @valor5";
                     MySqlCommand bilatuCommand = new MySqlCommand(bilatuQuery, k.conn, transaction);
                     bilatuCommand.Parameters.AddWithValue("@valor1", idEremua);
                     bilatuCommand.Parameters.AddWithValue("@valor4", erreserbaEguna);
@@ -48,7 +48,7 @@ namespace _3Erronka
                     }
 
 
-                    string query = @"Insert into erreserba1 (idEremua, idBazkidea, idKluba, erreserbaEguna, ordua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5)";
+                    string query = @"Insert into erreserba (idEremua, idBazkidea, idKluba, erreserbaEguna, ordua) VALUES (@valor1, @valor2, @valor3, @valor4, @valor5)";
                 MySqlCommand command = new MySqlCommand(query, k.conn, transaction);
 
                 command.Parameters.AddWithValue("@valor1", idEremua);
@@ -91,7 +91,7 @@ namespace _3Erronka
                 //komandoa sortuko dugu
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = k.conn;
-                command.CommandText = "DELETE FROM erreserba1 WHERE id = @id";
+                command.CommandText = "DELETE FROM erreserba WHERE id = @id";
                 command.Parameters.AddWithValue("@id", idErreserba);
 
 

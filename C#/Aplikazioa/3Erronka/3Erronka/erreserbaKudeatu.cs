@@ -63,7 +63,7 @@ namespace _3Erronka
         {
             try
             {
-                string query = "select idErreserba from erreserba1 where 1=1";
+                string query = "select idErreserba from erreserba where 1=1";
 
                 if (loggedInKluba.idKluba != 999)
                 {
@@ -111,7 +111,7 @@ namespace _3Erronka
                     er.izena AS 'Eremua',
                     e.erreserbaEguna AS 'Eguna',
                     e.ordua
-                 FROM erreserba1 e
+                 FROM erreserba e
                  JOIN eremua er ON e.idEremua = er.idEremua
                  WHERE 1=1";
 
@@ -155,7 +155,7 @@ namespace _3Erronka
             {
                 try
                 {
-                    string query = "SELECT * FROM erreserba1 WHERE idErreserba = @idErreserba";
+                    string query = "SELECT * FROM erreserba WHERE idErreserba = @idErreserba";
 
                     Konexioa.Konexioa K = new Konexioa.Konexioa();
                     K.konektatu();
