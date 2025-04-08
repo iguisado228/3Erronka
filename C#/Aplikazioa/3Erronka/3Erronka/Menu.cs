@@ -88,8 +88,7 @@ namespace _3Erronka
 
         private void ikusiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Bazkidea: {(loggedInBazkidea != null ? loggedInBazkidea.idBazkidea.ToString() : "NULL")}, " +
-                $"Kluba: {(loggedInKluba != null ? loggedInKluba.idKluba.ToString() : "NULL")}");
+       
             
             ErreserbaIkusi erIk = new ErreserbaIkusi(loggedInKluba, loggedInBazkidea);
             erIk.Show();

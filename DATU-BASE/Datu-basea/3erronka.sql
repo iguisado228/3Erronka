@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
 -- Host: localhost    Database: erronka3
 -- ------------------------------------------------------
--- Server version	8.0.39
+-- Server version	8.0.41
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,7 +32,7 @@ CREATE TABLE `bazkidea` (
   `identifikadorea` varchar(45) NOT NULL,
   `pasahitza` varchar(29) NOT NULL,
   PRIMARY KEY (`idBazkidea`)
-) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `bazkideahistorikoa` (
 
 LOCK TABLES `bazkideahistorikoa` WRITE;
 /*!40000 ALTER TABLE `bazkideahistorikoa` DISABLE KEYS */;
-INSERT INTO `bazkideahistorikoa` VALUES (1,'12345678A','Jon','Etxeberria','688123456','Kale Nagusia 10, Andoain','B-1001','pass123','2025-03-24 09:09:07','UPDATE'),(2,'23456789B','Ane','Garmendia','622987654','Zumea Plaza 5, Andoain','B-1002','secure456','2025-03-24 09:09:07','UPDATE'),(3,'34567890C','Mikel','Olabarria','699112233','Arantzibia Kalea 3, Andoain','B-1003','mypassword','2025-03-24 09:09:07','UPDATE'),(4,'45678901D','Maite','Zuaznabar','666554433','Goiko Plaza 12, Andoain','B-1004','maitepass','2025-03-24 09:09:07','UPDATE'),(5,'56789012E','Ibai','Urdangarin','644332211','Txistulari Kalea 7, Andoain','B-1005','ibaisecret','2025-03-24 09:09:07','UPDATE'),(6,'67890123F','Nerea','Bengoetxea','655778899','Etxeberri Kalea 15, Andoain','B-1006','nerea789','2025-03-24 09:09:07','UPDATE'),(7,'78901234G','Unai','Zubiri','611223344','Sagastialde 8, Andoain','B-1007','unai567','2025-03-24 09:09:07','UPDATE'),(8,'89012345H','Leire','Mendia','699445566','Aitzol Kalea 2, Andoain','B-1008','leirepass','2025-03-24 09:09:07','UPDATE'),(9,'90123456I','Iker','Aldasoro','688112233','Larramendi 9, Andoain','B-1009','iker321','2025-03-24 09:09:07','UPDATE'),(10,'11234567J','Garazi','Lizarralde','677889900','San Juan Plaza 11, Andoain','B-1010','garazi987','2025-03-24 09:09:07','UPDATE'),(11,'22345678K','Xabier','Otegi','655998877','Pagadi Kalea 4, Andoain','B-1011','xabier654','2025-03-24 09:09:07','UPDATE'),(12,'33456789L','Maitane','Agirre','644556677','Olagibel 6, Andoain','B-1012','maitane111','2025-03-24 09:09:07','UPDATE'),(13,'44567890M','Ander','Goikoetxea','688776655','Mendialdea 14, Andoain','B-1013','ander999','2025-03-24 09:09:07','UPDATE'),(14,'55678901N','Ainhoa','Lizeaga','666332211','Arriaga Plaza 3, Andoain','B-1014','ainhoa777','2025-03-24 09:09:07','UPDATE'),(15,'66789012O','Gorka','Elorza','611554433','Ezkurralde 10, Andoain','B-1015','gorka222','2025-03-24 09:09:07','UPDATE'),(16,'77890123P','Oihane','Salaberria','622443322','Etxebeste 5, Andoain','B-1016','oihane888','2025-03-24 09:09:07','UPDATE'),(17,'88901234Q','Beñat','Iturralde','655223344','Sagastialde 12, Andoain','B-1017','benat333','2025-03-24 09:09:07','UPDATE'),(18,'99012345R','Irati','Zubizarreta','699667788','Iraola Kalea 7, Andoain','B-1018','irati444','2025-03-24 09:09:07','UPDATE'),(19,'10123456S','Jokin','Eraso','688990011','Latsunbe Kalea 1, Andoain','B-1019','jokin555','2025-03-24 09:09:07','UPDATE'),(20,'21234567T','Nahia','Etxezarreta','622889977','Txingudi 9, Andoain','B-1020','nahia666','2025-03-24 09:09:07','UPDATE'),(21,'32345678U','Markel','Aranburu','699554433','Goikobidea 11, Andoain','B-1021','markel777','2025-03-24 09:09:07','UPDATE'),(22,'43456789V','Miren','Jauregi','611667788','Lau Haizeta 6, Andoain','B-1022','miren888','2025-03-24 09:09:07','UPDATE'),(23,'54567890W','Eneko','Zaldua','655990022','Sarriegi Kalea 8, Andoain','B-1023','eneko999','2025-03-24 09:09:07','UPDATE'),(24,'65678901X','Uxue','Murgiondo','644221133','San Esteban 5, Andoain','B-1024','uxue000','2025-03-24 09:09:07','UPDATE'),(25,'76789012Y','Hodei','Azkarate','688556677','Larrunbide 10, Andoain','B-1025','hodei111','2025-03-24 09:09:07','UPDATE'),(26,'87890123Z','Amaia','Urrestarazu','622334455','Muguru Kalea 12, Andoain','B-1026','amaia222','2025-03-24 09:09:07','UPDATE'),(27,'98901234A','Iñigo','Eguzkitza','699445577','Altzibar 14, Andoain','B-1027','iñigo333','2025-03-24 09:09:07','UPDATE'),(28,'09012345B','Olatz','Aranguren','688667788','Zarategi Kalea 6, Andoain','B-1028','olatz444','2025-03-24 09:09:07','UPDATE'),(30,'21234567D','Lide','Berasategi','644889900','Zaldibar Kalea 3, Andoain','B-1030','lide666','2025-03-24 09:09:07','UPDATE'),(29,'10123456C','Xanti','Arrillaga','611778899','Mutiloa Kalea 7, Andoain','B-1029','xanti555','2025-03-24 09:09:07','UPDATE'),(32,'a','a','a','a','a','a','a','2025-04-01 07:31:12','UPDATE'),(32,'b','b','b','b','b','b','b','2025-04-01 07:31:40','DELETE');
+INSERT INTO `bazkideahistorikoa` VALUES (1,'12345678A','Jon','Etxeberria','688123456','Kale Nagusia 10, Andoain','B-1001','pass123','2025-03-24 09:09:07','UPDATE'),(2,'23456789B','Ane','Garmendia','622987654','Zumea Plaza 5, Andoain','B-1002','secure456','2025-03-24 09:09:07','UPDATE'),(3,'34567890C','Mikel','Olabarria','699112233','Arantzibia Kalea 3, Andoain','B-1003','mypassword','2025-03-24 09:09:07','UPDATE'),(4,'45678901D','Maite','Zuaznabar','666554433','Goiko Plaza 12, Andoain','B-1004','maitepass','2025-03-24 09:09:07','UPDATE'),(5,'56789012E','Ibai','Urdangarin','644332211','Txistulari Kalea 7, Andoain','B-1005','ibaisecret','2025-03-24 09:09:07','UPDATE'),(6,'67890123F','Nerea','Bengoetxea','655778899','Etxeberri Kalea 15, Andoain','B-1006','nerea789','2025-03-24 09:09:07','UPDATE'),(7,'78901234G','Unai','Zubiri','611223344','Sagastialde 8, Andoain','B-1007','unai567','2025-03-24 09:09:07','UPDATE'),(8,'89012345H','Leire','Mendia','699445566','Aitzol Kalea 2, Andoain','B-1008','leirepass','2025-03-24 09:09:07','UPDATE'),(9,'90123456I','Iker','Aldasoro','688112233','Larramendi 9, Andoain','B-1009','iker321','2025-03-24 09:09:07','UPDATE'),(10,'11234567J','Garazi','Lizarralde','677889900','San Juan Plaza 11, Andoain','B-1010','garazi987','2025-03-24 09:09:07','UPDATE'),(11,'22345678K','Xabier','Otegi','655998877','Pagadi Kalea 4, Andoain','B-1011','xabier654','2025-03-24 09:09:07','UPDATE'),(12,'33456789L','Maitane','Agirre','644556677','Olagibel 6, Andoain','B-1012','maitane111','2025-03-24 09:09:07','UPDATE'),(13,'44567890M','Ander','Goikoetxea','688776655','Mendialdea 14, Andoain','B-1013','ander999','2025-03-24 09:09:07','UPDATE'),(14,'55678901N','Ainhoa','Lizeaga','666332211','Arriaga Plaza 3, Andoain','B-1014','ainhoa777','2025-03-24 09:09:07','UPDATE'),(15,'66789012O','Gorka','Elorza','611554433','Ezkurralde 10, Andoain','B-1015','gorka222','2025-03-24 09:09:07','UPDATE'),(16,'77890123P','Oihane','Salaberria','622443322','Etxebeste 5, Andoain','B-1016','oihane888','2025-03-24 09:09:07','UPDATE'),(17,'88901234Q','Beñat','Iturralde','655223344','Sagastialde 12, Andoain','B-1017','benat333','2025-03-24 09:09:07','UPDATE'),(18,'99012345R','Irati','Zubizarreta','699667788','Iraola Kalea 7, Andoain','B-1018','irati444','2025-03-24 09:09:07','UPDATE'),(19,'10123456S','Jokin','Eraso','688990011','Latsunbe Kalea 1, Andoain','B-1019','jokin555','2025-03-24 09:09:07','UPDATE'),(20,'21234567T','Nahia','Etxezarreta','622889977','Txingudi 9, Andoain','B-1020','nahia666','2025-03-24 09:09:07','UPDATE'),(21,'32345678U','Markel','Aranburu','699554433','Goikobidea 11, Andoain','B-1021','markel777','2025-03-24 09:09:07','UPDATE'),(22,'43456789V','Miren','Jauregi','611667788','Lau Haizeta 6, Andoain','B-1022','miren888','2025-03-24 09:09:07','UPDATE'),(23,'54567890W','Eneko','Zaldua','655990022','Sarriegi Kalea 8, Andoain','B-1023','eneko999','2025-03-24 09:09:07','UPDATE'),(24,'65678901X','Uxue','Murgiondo','644221133','San Esteban 5, Andoain','B-1024','uxue000','2025-03-24 09:09:07','UPDATE'),(25,'76789012Y','Hodei','Azkarate','688556677','Larrunbide 10, Andoain','B-1025','hodei111','2025-03-24 09:09:07','UPDATE'),(26,'87890123Z','Amaia','Urrestarazu','622334455','Muguru Kalea 12, Andoain','B-1026','amaia222','2025-03-24 09:09:07','UPDATE'),(27,'98901234A','Iñigo','Eguzkitza','699445577','Altzibar 14, Andoain','B-1027','iñigo333','2025-03-24 09:09:07','UPDATE'),(28,'09012345B','Olatz','Aranguren','688667788','Zarategi Kalea 6, Andoain','B-1028','olatz444','2025-03-24 09:09:07','UPDATE'),(30,'21234567D','Lide','Berasategi','644889900','Zaldibar Kalea 3, Andoain','B-1030','lide666','2025-03-24 09:09:07','UPDATE'),(29,'10123456C','Xanti','Arrillaga','611778899','Mutiloa Kalea 7, Andoain','B-1029','xanti555','2025-03-24 09:09:07','UPDATE'),(32,'a','a','a','a','a','a','a','2025-04-01 07:31:12','UPDATE'),(32,'b','b','b','b','b','b','b','2025-04-01 07:31:40','DELETE'),(1000,'asdfgh','Oier','Tala','67632618','Urnieta','Tolai','Number1','2025-04-03 07:46:20','UPDATE'),(1000,'No tengo','Oier','Tala','67632618','Urnieta','Tolai','Number1','2025-04-03 07:46:31','DELETE'),(999,'fake','fake','fake','fake','fake','fake','fake','2025-04-03 08:21:39','UPDATE'),(999,'fake','','fake','fake','fake','fake','fake','2025-04-07 06:46:17','UPDATE');
 /*!40000 ALTER TABLE `bazkideahistorikoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,14 +144,13 @@ CREATE TABLE `erreserba` (
   `erreserbaEguna` date NOT NULL,
   `ordua` varchar(45) NOT NULL,
   PRIMARY KEY (`idErreserba`),
-  UNIQUE KEY `uk_erreserba_bakarra` (`idEremua`,`erreserbaEguna`,`ordua`),
-  KEY `fk_erreserba1_bazkidea1_idx` (`idBazkidea`),
-  KEY `fk_erreserba1_kluba1_idx` (`idKluba`),
-  KEY `fk_erreserba1_eremua1_idx` (`idEremua`),
-  CONSTRAINT `fk_erreserba1_bazkidea1` FOREIGN KEY (`idBazkidea`) REFERENCES `bazkidea` (`idBazkidea`),
-  CONSTRAINT `fk_erreserba1_eremua1` FOREIGN KEY (`idEremua`) REFERENCES `eremua` (`idEremua`),
-  CONSTRAINT `fk_erreserba1_kluba1` FOREIGN KEY (`idKluba`) REFERENCES `kluba` (`idKluba`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `fk_erreserba_bazkidea1_idx` (`idBazkidea`),
+  KEY `fk_erreserba_kluba1_idx` (`idKluba`),
+  KEY `fk_erreserba_eremua1_idx` (`idEremua`),
+  CONSTRAINT `fk_erreserba_bazkidea1` FOREIGN KEY (`idBazkidea`) REFERENCES `bazkidea` (`idBazkidea`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `fk_erreserba_eremua1` FOREIGN KEY (`idEremua`) REFERENCES `eremua` (`idEremua`),
+  CONSTRAINT `fk_erreserba_kluba1` FOREIGN KEY (`idKluba`) REFERENCES `kluba` (`idKluba`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -160,7 +159,7 @@ CREATE TABLE `erreserba` (
 
 LOCK TABLES `erreserba` WRITE;
 /*!40000 ALTER TABLE `erreserba` DISABLE KEYS */;
-INSERT INTO `erreserba` VALUES (2,1,1,999,'2025-04-06','1'),(3,1,1,999,'2025-04-06','2'),(4,1,1,999,'2025-04-06','3'),(5,1,1,999,'2025-04-10','1'),(6,2,1,999,'2025-04-10','2'),(7,1,999,1,'2025-04-10','2'),(8,1,1,999,'2025-04-06','4'),(9,9,1,999,'2025-04-09','6');
+INSERT INTO `erreserba` VALUES (29,1,1,999,'2025-04-08','0'),(31,1,1,999,'2025-04-07','3'),(32,2,1,999,'2025-04-09','0'),(33,1,999,1,'2025-04-07','2'),(34,2,1,999,'2025-04-08','2');
 /*!40000 ALTER TABLE `erreserba` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,7 +177,9 @@ CREATE TABLE `erreserbahistorikoa` (
   `idKluba` int DEFAULT NULL,
   `erreserbaEguna` date DEFAULT NULL,
   `aldaketa_data` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `aldaketa_mota` enum('UPDATE','DELETE') DEFAULT NULL
+  `aldaketa_mota` enum('UPDATE','DELETE') DEFAULT NULL,
+  `hasieraOrdua` varchar(45) DEFAULT NULL,
+  `amaieraOrdua` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -188,6 +189,7 @@ CREATE TABLE `erreserbahistorikoa` (
 
 LOCK TABLES `erreserbahistorikoa` WRITE;
 /*!40000 ALTER TABLE `erreserbahistorikoa` DISABLE KEYS */;
+INSERT INTO `erreserbahistorikoa` VALUES (14,1,1,999,'2025-04-01','2025-04-02 08:21:54','DELETE','12','13'),(11,5,999,1,'2025-04-01','2025-04-02 08:22:39','DELETE','23','24'),(20,4,1,999,'2025-04-30','2025-04-02 08:23:48','DELETE','15:00','17:00'),(12,3,1,999,'2025-04-01','2025-04-03 08:44:42','DELETE','11','12');
 /*!40000 ALTER TABLE `erreserbahistorikoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -300,7 +302,7 @@ CREATE TABLE `klubahistorikoa` (
 
 LOCK TABLES `klubahistorikoa` WRITE;
 /*!40000 ALTER TABLE `klubahistorikoa` DISABLE KEYS */;
-INSERT INTO `klubahistorikoa` VALUES (1,'K-2001','Euskalduna1923!',NULL,'Futbola',150,5,'2025-03-24 09:09:55','UPDATE'),(2,'K-2002','LeizaranEskubaloi!',NULL,'Eskubaloia',90,3,'2025-03-24 09:09:55','UPDATE'),(3,'K-2003','GanbaraSaski!',NULL,'Saskibaloia',120,4,'2025-03-24 09:09:55','UPDATE'),(4,'K-2004','123Zurrut!',NULL,'Atletismoa',110,4,'2025-03-24 09:09:55','UPDATE'),(5,'K-2005','EuskaldunMendi!',NULL,'Saskibaloia',25,2,'2025-03-24 09:09:55','UPDATE'),(6,'K-2006','Txirrindularitza!',NULL,'Txirrindularitza',70,2,'2025-03-24 09:09:55','UPDATE'),(7,'K-2007','LeitzKultura!',NULL,'Kultura eta Kirola',60,2,'2025-03-24 09:09:55','UPDATE'),(8,'K-2008','JudoAndoain!',NULL,'Judoa',50,2,'2025-03-24 09:09:55','UPDATE'),(9,'K-2009','GaztePilota!',NULL,'Pilota',40,2,'2025-03-24 09:09:55','UPDATE'),(10,'K-2010','IgeriBuruntza!',NULL,'Igeriketa',30,1,'2025-03-24 09:09:55','UPDATE');
+INSERT INTO `klubahistorikoa` VALUES (1,'K-2001','Euskalduna1923!',NULL,'Futbola',150,5,'2025-03-24 09:09:55','UPDATE'),(2,'K-2002','LeizaranEskubaloi!',NULL,'Eskubaloia',90,3,'2025-03-24 09:09:55','UPDATE'),(3,'K-2003','GanbaraSaski!',NULL,'Saskibaloia',120,4,'2025-03-24 09:09:55','UPDATE'),(4,'K-2004','123Zurrut!',NULL,'Atletismoa',110,4,'2025-03-24 09:09:55','UPDATE'),(5,'K-2005','EuskaldunMendi!',NULL,'Saskibaloia',25,2,'2025-03-24 09:09:55','UPDATE'),(6,'K-2006','Txirrindularitza!',NULL,'Txirrindularitza',70,2,'2025-03-24 09:09:55','UPDATE'),(7,'K-2007','LeitzKultura!',NULL,'Kultura eta Kirola',60,2,'2025-03-24 09:09:55','UPDATE'),(8,'K-2008','JudoAndoain!',NULL,'Judoa',50,2,'2025-03-24 09:09:55','UPDATE'),(9,'K-2009','GaztePilota!',NULL,'Pilota',40,2,'2025-03-24 09:09:55','UPDATE'),(10,'K-2010','IgeriBuruntza!',NULL,'Igeriketa',30,1,'2025-03-24 09:09:55','UPDATE'),(999,'fake','fake','fake','fake',0,0,'2025-04-03 08:21:24','UPDATE'),(999,'fake','fake','','fake',0,0,'2025-04-07 06:46:50','UPDATE');
 /*!40000 ALTER TABLE `klubahistorikoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -386,7 +388,7 @@ CREATE TABLE `mantenua` (
   KEY `fk_mantenua_eremua1_idx` (`idEremua`),
   CONSTRAINT `fk_mantenua_eremua1` FOREIGN KEY (`idEremua`) REFERENCES `eremua` (`idEremua`),
   CONSTRAINT `fk_mantenua_langilea1` FOREIGN KEY (`idLangilea`) REFERENCES `langilea` (`idLangilea`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -395,6 +397,7 @@ CREATE TABLE `mantenua` (
 
 LOCK TABLES `mantenua` WRITE;
 /*!40000 ALTER TABLE `mantenua` DISABLE KEYS */;
+INSERT INTO `mantenua` VALUES (1,1,3,'Konponketa','2025-04-01','konpontzen','Hondatutako atea konpondu'),(2,2,5,'Mantenimendua','2025-04-02','berrikusten','Kirol ekipamendua berrikusi'),(3,3,7,'Konponketa','2025-04-03','konpontzen','Talde jantokiaren atea ordezkatu'),(4,4,1,'Mantenimendua','2025-04-04','berrikusten','Igerilekua garbitu'),(5,5,2,'Konponketa','2025-04-05','konpontzen','Sarbideko atea konpondu'),(6,6,4,'Mantenimendua','2025-04-06','berrikusten','Zaldiko plaka berritu'),(7,7,6,'Konponketa','2025-04-07','konpontzen','Sarbideko kartelak aldatu'),(8,8,3,'Mantenimendua','2025-04-08','berrikusten','Fitness gela berrikusi'),(9,9,5,'Konponketa','2025-04-09','konpontzen','Larrialdi irteera berrikusi'),(10,10,7,'Mantenimendua','2025-04-10','berrikusten','Egokitzapen gela aztertu'),(11,11,1,'Konponketa','2025-04-11','konpontzen','Sistemaren segurtasuna egon'),(12,12,8,'Mantenimendua','2025-04-12','berrikusten','Futbol zelaiaren berdegunea berritu'),(13,13,2,'Konponketa','2025-04-13','konpontzen','Galdutako sarrera berriztu'),(14,14,6,'Mantenimendua','2025-04-14','berrikusten','Aire girotua probatu'),(15,15,4,'Konponketa','2025-04-15','konpontzen','Haurren gunea seguru egon'),(16,1,8,'Mantenimendua','2025-04-16','berrikusten','Sarbide nagusia berrikusi'),(17,2,9,'Konponketa','2025-04-17','konpontzen','Sarbideko geltokiak konpondu'),(18,3,3,'Mantenimendua','2025-04-18','berrikusten','Bulegoen egokitzapenak egin'),(19,4,5,'Konponketa','2025-04-19','konpontzen','Sistemaren egonkortasuna aztertu'),(20,5,7,'Mantenimendua','2025-04-20','berrikusten','Ludotekako materiala berrikusi'),(21,6,2,'Konponketa','2025-04-21','konpontzen','Horma pitzatuak konpondu'),(22,7,6,'Mantenimendua','2025-04-22','berrikusten','Piscina kanpoko jarraipenarekin egon'),(23,8,9,'Konponketa','2025-04-23','konpontzen','Igerilekuaren depurazio sistemaren mantenua'),(24,9,1,'Mantenimendua','2025-04-24','berrikusten','Egokitzapen gela berrikusi'),(25,10,3,'Konponketa','2025-04-25','konpontzen','Aparkalekua garbitu'),(26,11,8,'Mantenimendua','2025-04-26','berrikusten','Zelaiaren zorua berriztu'),(27,12,5,'Konponketa','2025-04-27','konpontzen','Sarbideko altzairu panelak ordezkatu'),(28,13,2,'Mantenimendua','2025-04-28','berrikusten','Jantokiaren garbitasuna egon'),(29,14,7,'Konponketa','2025-04-29','konpontzen','Kanpoko egonaldiko espazioa berriztu'),(30,15,4,'Mantenimendua','2025-04-30','berrikusten','Ikastaro materiala egokitu');
 /*!40000 ALTER TABLE `mantenua` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,6 +427,7 @@ CREATE TABLE `mantenuahistorikoa` (
 
 LOCK TABLES `mantenuahistorikoa` WRITE;
 /*!40000 ALTER TABLE `mantenuahistorikoa` DISABLE KEYS */;
+INSERT INTO `mantenuahistorikoa` VALUES (1,1,3,'Konponketa','2025-04-01','konpontzen','Zerbitzua eguneratu','2025-04-03 07:32:41','DELETE'),(2,2,5,'Mantenimendua','2025-04-02','berrikusten','Softwarea instalatu','2025-04-03 07:32:41','DELETE'),(3,3,7,'Konponketa','2025-04-03','konpontzen','Aparatua aldatu','2025-04-03 07:32:41','DELETE'),(4,4,1,'Mantenimendua','2025-04-04','berrikusten','Kableak konpondu','2025-04-03 07:32:41','DELETE'),(5,5,2,'Konponketa','2025-04-05','konpontzen','Pantaia ordezkatu','2025-04-03 07:32:41','DELETE'),(6,6,4,'Mantenimendua','2025-04-06','berrikusten','Sistema berritu','2025-04-03 07:32:41','DELETE'),(7,7,6,'Konponketa','2025-04-07','konpontzen','Hard diskoa aldatu','2025-04-03 07:32:41','DELETE'),(8,8,3,'Mantenimendua','2025-04-08','berrikusten','Sistemaren eguneraketa egin','2025-04-03 07:32:41','DELETE'),(9,9,5,'Konponketa','2025-04-09','konpontzen','USB portua konpondu','2025-04-03 07:32:41','DELETE'),(10,10,7,'Mantenimendua','2025-04-10','berrikusten','Sistemaren konfigurazioa egon','2025-04-03 07:32:41','DELETE'),(11,11,1,'Konponketa','2025-04-11','konpontzen','Kablea ordezkatu','2025-04-03 07:32:41','DELETE'),(12,12,8,'Mantenimendua','2025-04-12','berrikusten','Softwarea eguneratu','2025-04-03 07:32:41','DELETE'),(13,13,2,'Konponketa','2025-04-13','konpontzen','Zirkuitua berrikusi','2025-04-03 07:32:41','DELETE'),(14,14,6,'Mantenimendua','2025-04-14','berrikusten','Berrinbentarioak egin','2025-04-03 07:32:41','DELETE'),(15,15,4,'Konponketa','2025-04-15','konpontzen','Akatsa konpondu','2025-04-03 07:32:41','DELETE'),(16,1,8,'Mantenimendua','2025-04-16','berrikusten','Softwarearen azterketa egin','2025-04-03 07:32:41','DELETE'),(17,2,9,'Konponketa','2025-04-17','konpontzen','Komponentea aldatu','2025-04-03 07:32:41','DELETE'),(18,3,3,'Mantenimendua','2025-04-18','berrikusten','Segurtasun eguneraketa egin','2025-04-03 07:32:41','DELETE'),(19,4,5,'Konponketa','2025-04-19','konpontzen','Sistemaren proba egin','2025-04-03 07:32:41','DELETE'),(20,5,7,'Mantenimendua','2025-04-20','berrikusten','Aplikazioa berriztu','2025-04-03 07:32:41','DELETE'),(21,6,2,'Konponketa','2025-04-21','konpontzen','Zuloak zigilatu','2025-04-03 07:32:41','DELETE'),(22,7,6,'Mantenimendua','2025-04-22','berrikusten','Zerbitzuak berreskuratu','2025-04-03 07:32:41','DELETE'),(23,8,9,'Konponketa','2025-04-23','konpontzen','Sistemaren egonkorraldea egon','2025-04-03 07:32:41','DELETE'),(24,9,1,'Mantenimendua','2025-04-24','berrikusten','Hardwarea berrikusi','2025-04-03 07:32:41','DELETE'),(25,10,3,'Konponketa','2025-04-25','konpontzen','Erabiltzaile interfazean akatsak konpondu','2025-04-03 07:32:41','DELETE'),(26,11,8,'Mantenimendua','2025-04-26','berrikusten','Segurtasun kontrolak burutu','2025-04-03 07:32:41','DELETE'),(27,12,5,'Konponketa','2025-04-27','konpontzen','Sistemaren sinkronizazioa egin','2025-04-03 07:32:41','DELETE'),(28,13,2,'Mantenimendua','2025-04-28','berrikusten','Ezarpenak egon','2025-04-03 07:32:41','DELETE'),(29,14,7,'Konponketa','2025-04-29','konpontzen','Sistemaren berreskurapena egin','2025-04-03 07:32:41','DELETE'),(30,15,4,'Mantenimendua','2025-04-30','berrikusten','Zerrenda berrikusi','2025-04-03 07:32:41','DELETE');
 /*!40000 ALTER TABLE `mantenuahistorikoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -504,7 +508,7 @@ CREATE TABLE `sarrera` (
   KEY `fk_sarrera_eremua1_idx` (`idEremua`),
   CONSTRAINT `fk_sarrera_eremua1` FOREIGN KEY (`idEremua`) REFERENCES `eremua` (`idEremua`),
   CONSTRAINT `fk_sarrera_langilea` FOREIGN KEY (`idLangilea`) REFERENCES `langilea` (`idLangilea`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -513,6 +517,7 @@ CREATE TABLE `sarrera` (
 
 LOCK TABLES `sarrera` WRITE;
 /*!40000 ALTER TABLE `sarrera` DISABLE KEYS */;
+INSERT INTO `sarrera` VALUES (1,1,3,20),(2,3,7,12),(3,3,5,15),(4,1,5,16),(5,1,8,10),(6,1,4,10),(7,4,3,5),(8,5,1,4);
 /*!40000 ALTER TABLE `sarrera` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -605,4 +610,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-07  8:30:07
+-- Dump completed on 2025-04-07 13:30:47
