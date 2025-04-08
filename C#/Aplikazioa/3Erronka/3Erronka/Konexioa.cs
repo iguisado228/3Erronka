@@ -10,6 +10,7 @@ using System.Windows.Forms;
 namespace Konexioa
 {
     internal class Konexioa
+    
     {
         public virtual string Servidor { get; set; } = "172.16.237.150";
         public virtual string Puerto { get; set; } = "3306";
@@ -17,6 +18,11 @@ namespace Konexioa
         public virtual string Contraseña { get; set; } = "1234";
         public virtual string BaseDeDatos { get; set; } = "erronka3";
         public virtual string SslMode { get; set; } = "None";
+
+
+
+
+
 
         public string konexioKatea()
         {

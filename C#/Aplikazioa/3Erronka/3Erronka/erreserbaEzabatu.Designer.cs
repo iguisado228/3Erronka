@@ -40,11 +40,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(109, 165);
+            this.dataGridView1.Location = new System.Drawing.Point(126, 277);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(838, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(1417, 649);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 113);
+            this.label1.Location = new System.Drawing.Point(120, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(283, 36);
             this.label1.TabIndex = 1;
@@ -61,9 +61,9 @@
             // BTN_Atzera
             // 
             this.BTN_Atzera.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Atzera.Location = new System.Drawing.Point(1690, 896);
+            this.BTN_Atzera.Location = new System.Drawing.Point(1643, 875);
             this.BTN_Atzera.Name = "BTN_Atzera";
-            this.BTN_Atzera.Size = new System.Drawing.Size(222, 51);
+            this.BTN_Atzera.Size = new System.Drawing.Size(269, 72);
             this.BTN_Atzera.TabIndex = 2;
             this.BTN_Atzera.Text = "Atzera joan";
             this.BTN_Atzera.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@
             // 
             this.CErreserba.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CErreserba.FormattingEnabled = true;
-            this.CErreserba.Location = new System.Drawing.Point(1024, 165);
+            this.CErreserba.Location = new System.Drawing.Point(820, 168);
             this.CErreserba.Name = "CErreserba";
             this.CErreserba.Size = new System.Drawing.Size(251, 42);
             this.CErreserba.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1018, 113);
+            this.label2.Location = new System.Drawing.Point(120, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(657, 36);
             this.label2.TabIndex = 4;
@@ -92,7 +92,7 @@
             // BTN_Ezabatu
             // 
             this.BTN_Ezabatu.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Ezabatu.Location = new System.Drawing.Point(1342, 164);
+            this.BTN_Ezabatu.Location = new System.Drawing.Point(1103, 168);
             this.BTN_Ezabatu.Name = "BTN_Ezabatu";
             this.BTN_Ezabatu.Size = new System.Drawing.Size(347, 42);
             this.BTN_Ezabatu.TabIndex = 5;

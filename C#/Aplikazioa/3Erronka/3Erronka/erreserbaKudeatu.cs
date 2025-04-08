@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Konexioa;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace _3Erronka
 
         private Kluba loggedInKluba;
         private Bazkidea loggedInBazkidea;
+        private Dictionary<int, string> orduakLibre = new Dictionary<int, string>();
 
         public erreserbaKudeatu(Kluba kluba, Bazkidea bazkidea)
         {
@@ -23,16 +25,103 @@ namespace _3Erronka
             this.loggedInKluba = kluba;
             this.loggedInBazkidea = bazkidea;
 
-            CErreserba.SelectedIndexChanged += CErreserba_SelectedIndexChanged;
+            foreach (int i in Enumerable.Range(0, 10))
+            {
+                int hasieraOrdua = 7 + i;
+                orduakLibre.Add(i, $"{hasieraOrdua}:00 - {hasieraOrdua + 1}:00");
+            }
 
-            MessageBox.Show($"Kluba: {(kluba != null ? kluba.idKluba.ToString() : "NULL")}, " +
-                            $"Bazkidea: {(bazkidea != null ? bazkidea.idBazkidea.ToString() : "NULL")}");
+
+            CErreserba.SelectedIndexChanged += CErreserba_SelectedIndexChanged;
+            CBeremua.SelectedIndexChanged += CBeremua_SelectedIndexChanged;
+            DTP_Eguna.ValueChanged += DTP_Eguna_ValueChanged1;
+
+            
+        }
+
+        private List<int> lortuOkupatutakoOrduak(int idEremua, DateTime data)
+        {
+            List<int> okupatutakoOrduak = new List<int>();
+
+            try
+            {
+                Konexioa.Konexioa K = new Konexioa.Konexioa();
+                K.konektatu();
+
+                string query = "SELECT ordua FROM erreserba WHERE idEremua = @idEremua AND erreserbaEguna = @data AND idErreserba != @idErreserba";
+                MySqlCommand com = new MySqlCommand(query, K.conn);
+                com.Parameters.AddWithValue("@idEremua", idEremua);
+                com.Parameters.AddWithValue("@data", data.Date);
+                com.Parameters.AddWithValue("@idErreserba", CErreserba.SelectedValue ?? 0);
+
+                MySqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    okupatutakoOrduak.Add(reader.GetInt32("ordua"));
+                }
+                reader.Close();
+                K.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errorea ordu okupatuak lortzean: " + ex.Message);
+            }
+            return okupatutakoOrduak;
+        }
+
+        private void orduakLibreBerritu()
+        {
+            if (CBeremua.SelectedValue == null || DTP_Eguna.Value == null)
+                return;
+
+            try
+            {
+                int idEremua = Convert.ToInt32(CBeremua.SelectedValue);
+                DateTime data = DTP_Eguna.Value.Date;
+
+                List<int> okupatutakoOrduak = lortuOkupatutakoOrduak(idEremua, data);
+                var orduakLibreBerrituta = orduakLibre.Where(h => !okupatutakoOrduak.Contains(h.Key)).ToDictionary(pair => pair.Key, pair => pair.Value);
+
+                CBOrduaEgun.DataSource = new BindingSource(orduakLibreBerrituta, null);
+                CBOrduaEgun.DisplayMember = "Value";
+                CBOrduaEgun.ValueMember = "Key";
+
+                if (orduakLibreBerrituta.Count == 0)
+                {
+                    MessageBox.Show("Ez daude orduak libre eremu honentzako egun honetan");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Arazoa ordu libreak kargatzean: " + ex.Message);
+            }
+        }
+
+        private void DTP_Eguna_ValueChanged1(object sender, EventArgs e)
+        {
+            if (CBeremua.SelectedValue != null)
+            {
+                orduakLibreBerritu();
+            }
+
         }
 
         private void erreserbaKudeatu_Load(object sender, EventArgs e)
         {
-                ErreserbakAgertuCB();
-                ErreserbakAgertuDGV();
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.BackgroundColor = Color.FromArgb(240, 240, 240);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+
+            ErreserbakAgertuCB();
+            ErreserbakAgertuDGV();
            
 
 
@@ -98,8 +187,7 @@ namespace _3Erronka
                     e.idErreserba AS 'Erreserba IDa',
                     er.izena AS 'Eremua',
                     e.erreserbaEguna AS 'Eguna',
-                    e.hasieraOrdua AS 'Hasiera Ordua',
-                    e.amaieraOrdua AS 'Amaiera Ordua'
+                    CONCAT (7 + e.ordua, ':00 - ', 7 + e.ordua + 1, ' :00') AS 'Ordua'
                  FROM erreserba e
                  JOIN eremua er ON e.idEremua = er.idEremua
                  WHERE 1=1";
@@ -155,17 +243,27 @@ namespace _3Erronka
 
                     if (reader.Read())
                     {
+                        CBeremua.SelectedValue = reader["idEremua"];
+                        DTP_Eguna.Value = Convert.ToDateTime(reader["erreserbaEguna"]);
+                        orduakLibreBerritu(); 
+
                         
-                        DTP_Eguna.Text = reader["erreserbaEguna"].ToString();
-                        TXT_hasieraOrdua.Text = reader["hasieraOrdua"].ToString();
-                        TXT_amaieraOrdua.Text = reader["amaieraOrdua"].ToString();
+                        int ordua = Convert.ToInt32(reader["ordua"]);
+                        foreach (KeyValuePair<int, string> item in CBOrduaEgun.Items)
+                        {
+                            if (item.Key == ordua)
+                            {
+                                CBOrduaEgun.SelectedItem = item;
+                                break;
+                            }
+                        }
                     }
 
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al cargar los datos de la reserva: " + ex.Message);
+                    MessageBox.Show("Arazoak erreserbaren informazioa bilatzean: " + ex.Message);
                 }
             }
         }
@@ -225,6 +323,50 @@ namespace _3Erronka
         private void LBL_amaieraOrdua_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_erreserbaEguneratu_Click(object sender, EventArgs e)
+        {
+            if (CErreserba.SelectedValue == null)
+            {
+                MessageBox.Show("Lehenik erreserba bat aukeratu mesedez");
+                return;
+            }
+
+            try
+            {
+                Konexioa.Konexioa K = new Konexioa.Konexioa();
+                K.konektatu();
+
+                string query = @"UPDATE erreserba 
+                           SET idEremua = @idEremua, 
+                               erreserbaEguna = @erreserbaEguna, 
+                               ordua = @ordua 
+                           WHERE idErreserba = @idErreserba";
+
+                MySqlCommand command = new MySqlCommand(query, K.conn);
+                command.Parameters.AddWithValue("@idEremua", CBeremua.SelectedValue);
+                command.Parameters.AddWithValue("@erreserbaEguna", DTP_Eguna.Value.Date);
+                command.Parameters.AddWithValue("@ordua", ((KeyValuePair<int, string>)CBOrduaEgun.SelectedItem).Key);
+                command.Parameters.AddWithValue("@idErreserba", CErreserba.SelectedValue);
+
+                int erantzunak = command.ExecuteNonQuery();
+
+                if (erantzunak > 0)
+                {
+                    MessageBox.Show("Eragiketa egoki burutu da");
+                    ErreserbakAgertuDGV(); // Actualizar el DataGridView
+                }
+                else
+                {
+                    MessageBox.Show("Ezin izan da erreserba eguneratu");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Arazoak erreserba eguneratzean: " + ex.Message);
+            }
+        
         }
     }
 }
